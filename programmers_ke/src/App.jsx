@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div className="bg-purple-700">
-      <h1>Hello World</h1>
+      <NavBar />
     </div>
   )
 }
