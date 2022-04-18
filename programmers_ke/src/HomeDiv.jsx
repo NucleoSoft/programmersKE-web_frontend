@@ -2,6 +2,11 @@ import React from 'react'
 import NavBar from './NavBar'
 
 const HomeDiv = () =>{
+    
+    function OnlineCompiler() {
+        alert('Dang it where is the OC')
+    }
+
     return(
         <div className="bg-hero-image fixed w-full h-[75vh]
                         bg-cover bg-center
@@ -11,6 +16,7 @@ const HomeDiv = () =>{
                         text-[90px] font-[Audiowide]">
             {'>'}_PROGRAMMERS KE 
             </h1>
+            <button onClick={OnlineCompiler}>Take me to the Online Compiler</button>
         </div>
     )
 }

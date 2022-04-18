@@ -1,4 +1,4 @@
-import { AiOutlineCode } from 'react-icons/ai'
+import { VscTerminalPowershell } from 'react-icons/vsc'
 import { BsPeopleFill, BsNewspaper } from 'react-icons/bs'
 import { FaRegLightbulb } from 'react-icons/fa'
 import { HiOutlineDesktopComputer } from 'react-icons/hi'
@@ -14,16 +14,16 @@ const NavBar = () =>
           <NavItem icon={<HiOutlineDesktopComputer size="20"/>} />
           <NavItem icon={<RiChatQuoteLine size="20"/>} />
           <NavItem icon={<BsNewspaper size="20"/>} />
-          <NavItem icon={<AiOutlineCode size="20" />} />
+          <NavItem icon={<VscTerminalPowershell size="20" />} />
       </div>
     )
 }
 
 const NavItem = ({icon}) =>{
   return (
-  <div className="navItem">
+  <button className="navItem">
     {icon}
-  </div>
+  </button>
   )
 }
 

@@ -8,8 +8,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "firebase": "^9.6.11",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-firebase-hooks": "^5.0.3",
     "react-icons": "^4.3.1",
     "tailwindcss-scrollbar": "^0.1.0"
   },
