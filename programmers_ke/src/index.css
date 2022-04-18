@@ -3,7 +3,24 @@
 @tailwind utilities;
 
 @layer components{
-    .navBar-link{
-      @apply 
+
+    .navItem{
+      @apply text-[#33ffff] bg-black p-4 bg-opacity-50
+      rounded-xl hover:w-60 hover:bg-opacity-100 
+      hover:shadow-secondary hover:shadow-lg backdrop-blur-sm
     }
+
+    .codeIcon{
+      @apply relative flex justify-center items-center
+     text-primary bg-slate-400 rounded-xl h-12 w-12
+     mx-auto hover:bg-slate-900 hover:text-secondary 
+     hover:rounded-full transition-all delay-300 
+    }
+}
+
+body{
+  background-image: linear-gradient(to bottom, #000, #6600cc, #00ff55);
+  height: auto;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
 }

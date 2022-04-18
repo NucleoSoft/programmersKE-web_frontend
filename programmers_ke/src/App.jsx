@@ -1,14 +1,15 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import HomeDiv from './HomeDiv'
+import Carousel from './Carousel'
+import LanguageMenu from './LanguageMenu'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="bg-purple-700">
-      <NavBar />
+    <div>
+      <HomeDiv />
+      <Carousel />
+      <LanguageMenu />
     </div>
+    
   )
 }
 
