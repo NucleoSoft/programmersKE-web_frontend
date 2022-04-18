@@ -12,24 +12,30 @@ The Tech Stack( experimental, will still undergo development and future changes)
 
 Frontend: 
 
--HTML
+  -HTML
 
--React.JS for the UI
+  -React.JS for the UI
 
--Tailwind-CSS for styling 
+  -Tailwind-CSS for styling 
 
--PostCSS to purge out any unused CSS scripts 
+  -PostCSS to purge out any unused CSS scripts 
 
 API and Middlemen: 
 
--Django will mostly do the job here 
+  -Django will mostly do the job here. 
+  
+  -Firebase
 
 Backend and web service: 
 
--Django for the utilities. The project will be based on a .NET architecture to integrate easily with Azure and Microsoft SQL. 
+  -Django for the utilities. The project will be based on a .NET architecture to integrate easily with Azure and Microsoft SQL.* 
 
--Azure for web hosting service 
+  -Azure for web hosting service* 
+  
+  (Firebase is currently in use for purposes of scalability)
 
 Web bundling and deployment: 
 
 -Vite.js/ Webpack. Here, I use Vite React and React -javascript as the variant. 
+
+*_REVISED UNDER CAREFUL CONSIDERATION, MAY NOT BE USED APPARENTLY_
