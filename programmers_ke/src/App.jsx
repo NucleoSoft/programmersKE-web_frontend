@@ -1,6 +1,6 @@
-import HomeDiv from './HomeDiv'
-import Carousel from './Carousel'
-import LanguageMenu from './LanguageMenu'
+import HomeDiv from './Components/HomeDiv'
+import Carousel from './Components/Carousel'
+import LanguageMenu from './Components/LanguageMenu'
 
 function App() {
 
