@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'hero-image': 'url(./assets/images/Nairobi.jpg)'
+        'hero-image': 'url(./assets/images/Nairobi.jpeg)'
       },
       colors:
       {

@@ -5,7 +5,7 @@
 @layer components{
 
     .navItem{
-      @apply text-[#33ffff] bg-black p-4 bg-opacity-50
+      @apply text-[#33ffff] bg-black p-4 mx-4 bg-opacity-50
       rounded-xl hover:w-60 hover:bg-opacity-100 
       hover:shadow-secondary hover:shadow-lg backdrop-blur-sm
     }
@@ -13,7 +13,7 @@
     .codeIcon{
       @apply relative flex justify-center items-center
      text-primary bg-slate-400 rounded-xl h-12 w-12
-     mx-auto hover:bg-slate-900 hover:text-secondary 
+     mx-auto my-3 hover:bg-slate-900 hover:text-secondary 
      hover:rounded-full transition-all delay-300 
     }
 }
