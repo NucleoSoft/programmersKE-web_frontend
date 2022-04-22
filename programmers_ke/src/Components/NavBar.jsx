@@ -12,10 +12,11 @@ const NavBar = () =>
 {
     return(
      
-          <div className="fixed h-auto w-3/4 top-0 left-0 mt-5
-                          flex flex-row">
+          <div className="fixed h-auto w-full 
+                          top-0 left-0 mt-2 flex">
             <BrowserRouter>
-            <nav>
+          <nav className="fixed w-2/3 mt-3
+                          flex flex-row justify-evenly">
               <NavItem icon={<FaRegLightbulb size="20"/>} />
               <NavItem icon={<BsPeopleFill size="20"/>} />
               <NavItem icon={<HiOutlineDesktopComputer size="20"/>} />

@@ -5,7 +5,7 @@
 @layer components{
 
     .navItem{
-      @apply text-[#33ffff] bg-black p-4 mx-4 bg-opacity-50
+      @apply text-[#33ffff] bg-black p-4 bg-opacity-50
       rounded-xl hover:w-60 hover:bg-opacity-100 
       hover:shadow-secondary hover:shadow-lg backdrop-blur-sm
     }
