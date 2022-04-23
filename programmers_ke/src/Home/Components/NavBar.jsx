@@ -4,9 +4,10 @@ import { FaRegLightbulb } from 'react-icons/fa'
 import { HiOutlineDesktopComputer } from 'react-icons/hi'
 import { RiChatQuoteLine } from 'react-icons/ri'
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import OnlineCompiler from '../../OnlineCompiler/OnlineCompiler'
+import ErrorPage from '../../Error/404Page'
 
 const NavBar = () =>
 {
@@ -32,6 +33,7 @@ const NavBar = () =>
             </nav>
               <Routes>
                 <Route path="/online_compiler" element={<OnlineCompiler />}/>
+                <Route path="/ErrorPage" element={<ErrorPage/>}/>
               </Routes>
             </BrowserRouter>
            

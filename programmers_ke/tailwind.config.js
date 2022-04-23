@@ -9,7 +9,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'hero-image': 'url(./assets/images/Nairobi.jpeg)'
+        'hero-image': 'url(./assets/images/Nairobi.jpeg)',
+        'error-image': 'url(./assets/blurry-gradient-haikei.svg)',
       },
       colors:
       {
