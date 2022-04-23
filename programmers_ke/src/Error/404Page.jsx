@@ -1,7 +1,7 @@
 function errorPage()
 {
     return(
-        <div>
+        <div className="h-screen ">
             <h1 className="text-[70px] text-center font-[TechnoBoard]
                         text-primary mt-10">Yikess!</h1>
             <h3 className="text-center m-2 text-primary font-[Audiowide]

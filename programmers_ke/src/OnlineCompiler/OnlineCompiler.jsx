@@ -1,3 +1,9 @@
+import { AiFillCopy } from 'react-icons/ai';
+import { BsSaveFill } from 'react-icons/bs';
+import { DiOnedrive } from 'react-icons/di';
+import { FaCopy, FaSave } from 'react-icons/fa';
+import { HiSave, HiSaveAs } from 'react-icons/hi';
+import { RiSettings3Fill } from 'react-icons/ri';
 import CodeBar from './CodeBar'
 import CodeSpace from './CodeSpace';
 
@@ -12,9 +18,22 @@ function OnlineCompiler(){
                 interactive online playground. Supports most popular
                 languages at the moment.<br /> More coming soon 
             </p>
+            <div className='h-auto w-1/5 my-3 flex flex-row'>
+                <Settings icon={<DiOnedrive size="28"/>}/>
+                <Settings icon={<HiSave size="24"/>}/>
+                <Settings icon={<FaCopy size="19"/>}/>
+            </div>
             <CodeSpace/>
         </div>
     )
+}
+
+const Settings = ({icon}) => {
+  return (
+    <button className="settingsIcon">
+        {icon}
+    </button>
+  )
 }
 
 export default OnlineCompiler;
