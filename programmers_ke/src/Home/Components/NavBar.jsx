@@ -1,13 +1,13 @@
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import OnlineCompiler from '../../OnlineCompiler/OnlineCompiler'
+import ErrorPage from '../../Error/404Page'
+
 import { VscTerminalPowershell } from 'react-icons/vsc'
 import { BsPeopleFill, BsNewspaper, BsSearch } from 'react-icons/bs'
 import { FaRegLightbulb } from 'react-icons/fa'
 import { HiOutlineDesktopComputer } from 'react-icons/hi'
 import { RiChatQuoteLine } from 'react-icons/ri'
-
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
-import { Link } from 'react-router-dom'
-import OnlineCompiler from '../../OnlineCompiler/OnlineCompiler'
-import ErrorPage from '../../Error/404Page'
 
 const NavBar = () =>
 {

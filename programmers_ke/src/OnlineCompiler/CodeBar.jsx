@@ -13,7 +13,7 @@ const CodeBar = () =>{
         <div className="fixed h-screen bg-slate-300 w-16
                         top-0 left-0 shadow-primary
                         hover:shadow-secondary shadow-lg transition-all 
-                        delay-300 flex flex-col z-10">
+                        delay-300 flex flex-col z-20">
             {/* <BrowserRouter> */}
                     <CodeIcon icon={<AiFillBackward size="25" />} />
                     <Line />             

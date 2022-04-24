@@ -11,6 +11,7 @@ module.exports = {
       backgroundImage: {
         'hero-image': 'url(./assets/images/Nairobi.jpeg)',
         'error-image': 'url(./assets/blurry-gradient-haikei.svg)',
+        'footer-image': 'url(./assets/wave-haikei.svg)',
       },
       colors:
       {

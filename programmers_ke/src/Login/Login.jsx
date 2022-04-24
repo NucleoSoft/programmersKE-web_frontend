@@ -10,13 +10,13 @@ import { useCollectionData } from 'react-firebase-hooks/firestore'
 
 firebase.initializeApp()
 {
-    //apiKey: "AIzaSyA4MPaIljJRjYiMRPK5mhF_aIbrM6OUi4M",
-    //authDomain: "programmers-ke.firebaseapp.com",
-    //projectId: "programmers-ke",
-    //storageBucket: "programmers-ke.appspot.com",
-    //messagingSenderId: "276887789667",
-    //appId: "1:276887789667:web:6a3a1480f0e4d3a2261856",
-    //measurementId: "G-BNNM4F8SPR"
+    apiKey: "AIzaSyA4MPaIljJRjYiMRPK5mhF_aIbrM6OUi4M";
+    authDomain: "programmers-ke.firebaseapp.com";
+    projectId: "programmers-ke";
+    storageBucket: "programmers-ke.appspot.com";
+    messagingSenderId: "276887789667";
+    appId: "1:276887789667:web:6a3a1480f0e4d3a2261856";
+    measurementId: "G-BNNM4F8SPR";
 }
 
 const auth = firebase.auth();
@@ -25,7 +25,7 @@ const analytics = firebase.analytics();
 
 function Login(){
     return(
-        <div>
+        <div className="fixed bg-primary h-screen w-full">
             <SignIn />
         </div>
     )
