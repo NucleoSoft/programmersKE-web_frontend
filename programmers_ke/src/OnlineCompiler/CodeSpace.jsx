@@ -3,8 +3,19 @@ import React from 'react'
 const CodeSpace = () => {
   return (
     <div className=" bg-slate-400
-                     opacity-50 w-full h-2/3 bottom-0 right-0
+                     w-full h-3/4 bottom-0 right-0
                      rounded-md">
+      <p className="text-right text-slate-900 font-[Audiowide] mr-2 p-3">
+        Introducing our very own online interactive playground.<br />
+        Practice your coding and improve<br/> your skills here, 
+        based on what you've learnt as well.<br /> Supports most popular
+        languages at the moment.<br /> More coming soon
+      </p>
+      <hr className='w-5/6 mx-auto border-slate-900' />
+      <button className='bg-slate-900 ml-[82%] mt-12 rounded-lg
+                         text-white p-3 w-1/6'>
+        Let's Go
+      </button>
     </div>
   )
 }
