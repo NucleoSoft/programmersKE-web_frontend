@@ -2,10 +2,6 @@ import CodeBar from './CodeBar'
 import CodeSpace from './CodeSpace';
 import CodeSide from './CodeSide';
 
-import { DiOnedrive } from 'react-icons/di';
-import { FaCopy } from 'react-icons/fa';
-import { HiSave } from 'react-icons/hi';
-import { RiCloseFill } from 'react-icons/ri';
 import { VscCopy, VscDebug, VscRunAll } from 'react-icons/vsc';
 import { BsSave } from 'react-icons/bs';
 

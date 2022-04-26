@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import OnlineCompiler from '../../OnlineCompiler/OnlineCompiler'
@@ -6,13 +7,13 @@ import Login from '../../Login/Login'
 import Home from '../Home'
 
 import { VscTerminalPowershell } from 'react-icons/vsc'
-import { BsPeopleFill, BsNewspaper, BsSearch } from 'react-icons/bs'
+import { BsPeopleFill, BsNewspaper, BsSearch, BsPersonFill } from 'react-icons/bs'
 import { FaRegLightbulb } from 'react-icons/fa'
 import { HiOutlineDesktopComputer } from 'react-icons/hi'
 import { RiChatQuoteLine } from 'react-icons/ri'
 
 
-const NavBar = () =>
+const NavBar = (props) =>
 {
     return(
      
@@ -35,7 +36,9 @@ const NavBar = () =>
             </div>
               <div className='pr-4 flex flex-row'>
                 <SearchBar icon={<BsSearch size="20" />} />
-                <Profile/>
+                <Profile>
+                   <ProfileMenu/>
+                </Profile>
               </div>
             </nav>
               <Routes>
@@ -77,14 +80,37 @@ const SearchBar = ({icon}) => {
   )
 }
 
-const Profile = () => {
+const Profile = (props) => {
+  const [open, setopen] = useState(false);
   return (
-    <div className="px-6 items-center flex flex-row mx-auto">
-        <img src="../../../assets/images/Nairobi2.jpg" className='w-10 h-10 
-                  rounded-full border-secondary border-2' />
-    </div>
+    <button className="mx-10 items-center flex flex-row" onClick={() => setopen(!open)}>
+    <img src="../../../assets/layered-steps-haikei.svg" className='w-12 h-12 
+                  rounded-full bg-cover group'/>
+
+      {open && props.children}
+    </button>
   )
 }
 
+const ProfileMenu = () => {
+  const ProfileItem = (props) => {
+   return(
+     <>
+        <a href='#' className='flex flex-row px-4 text-secondary'>
+          <span className='mx-2'>{props.leftIcon}</span>
+          {props.children}
+          {/* <span className>{props.rightIcon}</span> */}
+        </a>
+     </>
+   )
+  }
+  return (
+    <div className='absolute top-16 right-16 bg-black 
+                    bg-opacity-40 backdrop-blur-lg w-1/5
+                    rounded-lg h-auto p-4 z-20'>
+      <ProfileItem leftIcon={<BsPersonFill size="24" />}> Account </ProfileItem>
+    </div>
+  )
+}
 
 export default NavBar;

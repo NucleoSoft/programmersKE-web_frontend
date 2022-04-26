@@ -3,7 +3,7 @@ import React from 'react'
 const CodeSpace = () => {
   return (
     <div className=" bg-slate-400
-                     w-full h-3/4 bottom-0 right-0
+                     ml-16 h-3/4 bottom-0 right-0
                      rounded-md">
       <p className="text-right text-slate-900 font-[Audiowide] mr-2 p-3">
         Introducing our very own online interactive playground.<br />

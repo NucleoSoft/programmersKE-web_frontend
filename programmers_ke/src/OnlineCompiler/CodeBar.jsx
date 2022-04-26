@@ -1,11 +1,12 @@
 import { BrowserRouter, Route, Routes, Link } from 'react-router-dom'
 
+import Home from '../Home/Home'
+
 import { BsPlus } from 'react-icons/bs'
 import { FaJava } from 'react-icons/fa'
 import { SiKotlin, SiCsharp, SiCplusplus, SiJavascript} from 'react-icons/si'
 import { AiFillBackward } from 'react-icons/ai'
 import { DiDart, DiPython } from 'react-icons/di'
-import Home from '../Home/Home'
 import { RiSettings3Fill } from 'react-icons/ri'
 
 const CodeBar = () =>{

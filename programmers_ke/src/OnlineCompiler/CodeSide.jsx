@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { RiCloseFill } from 'react-icons/ri';
+import { VscArrowSmallDown } from 'react-icons/vsc';
 
 const CodeSide = () => {
-    const [isOpen, setOpen] = useState(false);
     return (
         <div className="h-screen w-1/4 backdrop-blur-md 
                         shadow-lg bg-slate-600 bg-opacity-40 
@@ -13,9 +13,8 @@ const CodeSide = () => {
                 <Close icon={<RiCloseFill size="24"/>}/>
             </div>
             <Line/>
-            <div>
-                <h1 className=''>
-                Dark Mode</h1>
+            <div className='my-3'>
+               <MenuItem icon={<VscArrowSmallDown size='20'/>}/>
             </div>
         </div>
     )
@@ -37,6 +36,15 @@ const Line = () => {
         <hr className='border-white h-3 my-3
                         w-4/5 mx-auto' />
     )
+}
+
+const MenuItem = ({icon}) => {
+  return (
+    <button className='w-11/12 px-5 flex flex-row justify-end'>
+        <h1 className='px-4'>Theme</h1>
+        {icon} 
+    </button>
+  )
 }
 
 export default CodeSide

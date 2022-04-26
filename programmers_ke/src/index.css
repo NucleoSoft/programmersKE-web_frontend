@@ -35,7 +35,7 @@
 
     .SideTabIcon
     {
-      @apply w-8 h-8 my-8 flex justify-center items-center text-white hover:bg-gradient-to-t from-white via-transparent to-transparent
+      @apply w-8 h-8 my-8 flex backdrop-blur-md justify-center items-center text-white hover:bg-gradient-to-t from-white via-transparent to-transparent
       bg-transparent rounded-md mx-auto text-center hover:shadow-md hover:shadow-white
       transition-all
     }
