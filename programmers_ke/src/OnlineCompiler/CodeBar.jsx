@@ -1,15 +1,15 @@
 import { BrowserRouter, Route, Routes, Link } from 'react-router-dom'
-
 import Home from '../Home/Home'
-
+import React, { useState } from 'react'
+import { VscArrowSmallDown } from 'react-icons/vsc';
 import { BsPlus } from 'react-icons/bs'
 import { FaJava } from 'react-icons/fa'
 import { SiKotlin, SiCsharp, SiCplusplus, SiJavascript} from 'react-icons/si'
 import { AiFillBackward } from 'react-icons/ai'
 import { DiDart, DiPython } from 'react-icons/di'
-import { RiSettings3Fill } from 'react-icons/ri'
+import { RiSettings3Fill, RiCloseFill } from 'react-icons/ri'
 
-const CodeBar = () =>{
+const CodeBar = (props) =>{
     return(
         <div className="fixed h-screen bg-slate-300 w-16
                         top-0 left-0 shadow-primary
@@ -27,7 +27,9 @@ const CodeBar = () =>{
                     <CodeIcon icon={<SiJavascript size="17"/>} /> */}
                     <Line/>
                     <CodeIcon icon={<BsPlus size="25" />} />
-                    <CodeIcon icon={<RiSettings3Fill size="20" />} />
+                    <SettingsIcon icon={<RiSettings3Fill size="20" />} >
+                       <CodeSide/> 
+                    </SettingsIcon>
 {/* 
                 <Routes>
                     <Route path="/" element={< Home />} />
@@ -50,5 +52,54 @@ const Line = () => {
   )
 }
 
+const SettingsIcon = (props, {icon}) => {
+  const [open, settoOpen] = useState(false);
+  return (
+    <button className='codeIcon' onClick={() => settoOpen(!open)}>
+        {icon}
+        {open && props.children}
+    </button>
+  )
+}
+
+const CodeSide = () => {
+    const SideItem = (props) =>{
+        return(
+            <>
+                <a href='#' className='text-slate-900 flex flex-row pr-5 justify-end py-2'>
+                    {props.children}
+                </a>
+            </>
+        )
+    }
+    return (
+        <div className="h-[64%] top-0 w-1/5 backdrop-blur-md pt-8
+                        shadow-md left-16 bg-slate-600 bg-opacity-40 
+                        fixed rounded-r-lg">
+            <SideItem>Dark Mode</SideItem>
+            <SideItem>Dark Mode</SideItem>
+            <SideItem>Dark Mode</SideItem>
+            <SideItem>Dark Mode</SideItem>
+            <SideItem>Dark Mode</SideItem>
+        </div>
+    )
+}
+
+
+// const Line = () => {
+//     return (
+//         <hr className='border-white h-3 my-3
+//                         w-4/5 mx-auto' />
+//     )
+// }
+
+// const MenuItem = ({ icon }) => {
+//     return (
+//         <button className='w-11/12 px-5 flex flex-row justify-end'>
+//             <h1 className='px-4'>Theme</h1>
+//             {icon}
+//         </button>
+//     )
+// }
 
 export default CodeBar;
