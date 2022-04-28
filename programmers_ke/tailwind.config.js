@@ -5,7 +5,7 @@ module.exports = {
   content: [
     './src/**/*.{js,jsx,ts,tsx}'
   ],
-  darkmode: 'class',
+  darkMode: 'class',
   theme: {
     extend: {
       backgroundImage: {
@@ -15,8 +15,18 @@ module.exports = {
       },
       colors:
       {
+        transparent: 'transparent',
+        currentColor: 'currentColor',
         primary: '#6600cc',
         secondary: '#00ff55',
+        'sky-blue': '#33ffff',
+      },
+      fontFamily:
+      {
+        'adventpro': '"Advent Pro"',
+        'zrnic': 'Zrnic',
+        'audiowide': 'Audiowide',
+        'novaflat' : '"Nova Flat"',
       }
     },
   },

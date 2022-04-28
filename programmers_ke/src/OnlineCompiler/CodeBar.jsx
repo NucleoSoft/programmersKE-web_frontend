@@ -1,6 +1,8 @@
 import { BrowserRouter, Route, Routes, Link } from 'react-router-dom'
-import Home from '../Home/Home'
+import useDarkMode from '../hooks/useDarkMode';
 import React, { useState } from 'react'
+import Home from '../Home/Home'
+
 import { VscArrowSmallDown } from 'react-icons/vsc';
 import { BsPlus } from 'react-icons/bs'
 import { FaJava } from 'react-icons/fa'
@@ -12,9 +14,9 @@ import { RiSettings3Fill, RiCloseFill } from 'react-icons/ri'
 const CodeBar = (props) =>{
     return(
         <div className="fixed h-screen bg-slate-300 w-16
-                        top-0 left-0 shadow-primary
-                        hover:shadow-secondary shadow-lg transition-all 
-                        delay-300 flex flex-col z-20">
+                        top-0 left-0 shadow-primary dark:shadow-secondary dark:bg-slate-800
+                        hover:shadow-secondary dark:hover:shadow-primary shadow-lg transition-all 
+                        delay-300 flex flex-col z-20 ">
             {/* <BrowserRouter> */}
                     <CodeIcon icon={<AiFillBackward size="25" />} />
                     <Line />             
@@ -48,7 +50,7 @@ const CodeIcon = ({icon}) =>{
 
 const Line = () => {
   return (
-    <hr className="w-3/4 mx-2 border-primary"/>
+    <hr className="w-3/4 mx-2 border-primary dark:border-secondary"/>
   )
 }
 
@@ -63,11 +65,18 @@ const SettingsIcon = (props, {icon}) => {
 }
 
 const CodeSide = () => {
-    const SideItem = (props) =>{
+    const SideItem = (props) => {
+        const [darkTheme, setdarkTheme] = useDarkMode();
+        const handleMode = () => setdarkTheme(!darkTheme);
         return(
             <>
                 <a href='#' className='text-slate-900 flex flex-row pr-5 justify-end py-2'>
                     {props.children}
+                    <span className='ml-2' onClick={handleMode}>
+                        {darkTheme ? (<img src='../../assets/icons/sun-svgrepo-com.svg' className='w-5 h-5'/>)
+                         : (<img src='../../assets/icons/moon-svgrepo-com.svg' className='w-5 h-5'/>)}
+                         {props.leftIcon}
+                    </span>
                 </a>
             </>
         )
@@ -77,10 +86,7 @@ const CodeSide = () => {
                         shadow-md left-16 bg-slate-600 bg-opacity-40 
                         fixed rounded-r-lg">
             <SideItem>Dark Mode</SideItem>
-            <SideItem>Dark Mode</SideItem>
-            <SideItem>Dark Mode</SideItem>
-            <SideItem>Dark Mode</SideItem>
-            <SideItem>Dark Mode</SideItem>
+           
         </div>
     )
 }

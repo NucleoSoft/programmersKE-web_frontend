@@ -10,7 +10,7 @@ import { VscTerminalPowershell } from 'react-icons/vsc'
 import { BsPeopleFill, BsNewspaper, BsSearch, BsPersonFill } from 'react-icons/bs'
 import { FaRegLightbulb } from 'react-icons/fa'
 import { HiOutlineDesktopComputer } from 'react-icons/hi'
-import { RiChatQuoteLine } from 'react-icons/ri'
+import { RiChatQuoteLine, RiLoginBoxLine } from 'react-icons/ri'
 
 
 const NavBar = (props) =>
@@ -84,7 +84,7 @@ const Profile = (props) => {
   const [open, setopen] = useState(false);
   return (
     <button className="mx-10 items-center flex flex-row" onClick={() => setopen(!open)}>
-    <img src="../../../assets/layered-steps-haikei.svg" className='w-12 h-12 
+    <img src="../../../assets/layered-steps-haikei.svg" className='w-7 h-7 
                   rounded-full bg-cover group'/>
 
       {open && props.children}
@@ -96,7 +96,7 @@ const ProfileMenu = () => {
   const ProfileItem = (props) => {
    return(
      <>
-        <a href='#' className='flex flex-row px-4 text-secondary'>
+        <a href='#' className='w-11/12 flex flex-row px-4 text-white my-3'>
           <span className='mx-2'>{props.leftIcon}</span>
           {props.children}
           {/* <span className>{props.rightIcon}</span> */}
@@ -104,11 +104,27 @@ const ProfileMenu = () => {
      </>
    )
   }
+  const ProfileItem2 = (props) => {
+    return (
+      <>
+        <button className='bg-primary flex flex-row w-11/12 my-3 py-2
+                            text-secondary mx-auto rounded-lg'>
+          <span className='mx-2 my-auto'>{props.leftIcon}</span>
+          {props.children}
+          {/* <span className>{props.rightIcon}</span> */}
+        </button>
+      </>
+    )
+  }
   return (
-    <div className='absolute top-16 right-16 bg-black 
-                    bg-opacity-40 backdrop-blur-lg w-1/5
+    <div className='absolute top-16 right-16 
+                    bg-black bg-opacity-70 w-1/5
                     rounded-lg h-auto p-4 z-20'>
-      <ProfileItem leftIcon={<BsPersonFill size="24" />}> Account </ProfileItem>
+      <img src="../../../assets/layered-steps-haikei.svg" className='w-12 h-12 
+                  rounded-full bg-cover group mx-auto'/>
+      <Link to='/login'>
+        <ProfileItem2 leftIcon={<RiLoginBoxLine size="20"/>}>Login</ProfileItem2>
+      </Link>
     </div>
   )
 }
