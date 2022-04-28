@@ -70,14 +70,14 @@ const CodeSide = () => {
         const handleMode = () => setdarkTheme(!darkTheme);
         return(
             <>
-                <a href='#' className='text-slate-900 flex flex-row pr-5 justify-end py-2'>
+                <button className='text-slate-900 flex flex-row pr-5 justify-end py-2'>
                     {props.children}
                     <span className='ml-2' onClick={handleMode}>
-                        {darkTheme ? (<img src='../../assets/icons/sun-svgrepo-com.svg' className='w-5 h-5'/>)
-                         : (<img src='../../assets/icons/moon-svgrepo-com.svg' className='w-5 h-5'/>)}
+                        {darkTheme ? (<img src='../../assets/icons/moon-svgrepo-com.svg' className='w-5 h-5'/>)
+                         : (<img src='../../assets/icons/sun-svgrepo-com.svg' className='w-5 h-5'/>)}
                          {props.leftIcon}
                     </span>
-                </a>
+                </button>
             </>
         )
     }
@@ -85,7 +85,7 @@ const CodeSide = () => {
         <div className="h-[64%] top-0 w-1/5 backdrop-blur-md pt-8
                         shadow-md left-16 bg-slate-600 bg-opacity-40 
                         fixed rounded-r-lg">
-            <SideItem>Dark Mode</SideItem>
+            <SideItem>Theme</SideItem>
            
         </div>
     )
