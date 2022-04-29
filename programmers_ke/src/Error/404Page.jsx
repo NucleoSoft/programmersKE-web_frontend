@@ -6,11 +6,11 @@ function errorPage()
     return(
         <div className="fixed top-0 left-0 h-screen bg-error-image 
                         w-full bg-no-repeat bg-cover">
-            <h1 className="text-[70px] text-center font-[Audiowide]
+            <h1 className="text-[70px] text-center font-audiowide
                         text-white mt-10">Yikess!</h1>
-            <h3 className="text-center m-2 text-primary font-[Audiowide]
+            <h3 className="text-center m-2 text-primary font-novaflat
                             text-[30px]">This page does not exist!</h3>
-            <span className="text-center text-secondary text-lg font-[Audiowide]">
+            <span className="text-center text-secondary text-lg font-audiowide">
 
             </span>
             <Back />

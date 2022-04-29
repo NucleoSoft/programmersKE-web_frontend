@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100;200;300;400;500;600;700&family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100;200;300;400;500;600;700&family=Audiowide&family=Nova+Flat&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -8,12 +7,10 @@
 
 @layer components{
 
-    .navItem{
-      @apply text-[#33ffff] bg-primary p-4 bg-opacity-50
-      rounded-xl hover:w-60 hover:bg-black
-      hover:shadow-secondary hover:shadow-lg backdrop-blur-sm
-    }
-
+    /* .backGround{
+      @apply fixed top-0 left-0 bg-gradient-to-br from-primary to-secondary
+      h-screen w-screen overflow-x-hidden bg-scroll 
+    } */
     .searchBar{
       @apply relative bg-slate-400 p-2 bg-opacity-50
       rounded-l-xl w-60 flex flex-row my-1.5 
@@ -26,7 +23,7 @@
      text-primary bg-slate-400 rounded-xl h-12 w-12
      mx-auto my-3 hover:bg-slate-900 hover:text-secondary 
      hover:rounded-full transition-all delay-300 focus:border-primary
-     focus:bg-slate-900 focus:text-[#33ffff] focus:border-2 
+     focus:bg-slate-900 focus:text-sky-blue focus:border-2 
 
      dark:bg-slate-900 dark:hover:bg-slate-400 dark:text-secondary
      dark:hover:text-primary dark:focus:border-secondary dark:focus:text-sky-blue
@@ -46,8 +43,53 @@
 
     .SideTabIcon
     {
-      @apply w-8 h-8 my-8 flex backdrop-blur-md justify-center items-center text-white hover:bg-gradient-to-t from-white via-transparent to-transparent
-      bg-transparent rounded-md mx-auto text-center hover:shadow-md hover:shadow-white
+      @apply w-8 h-8 my-8 flex backdrop-blur-md justify-center items-center text-white hover:bg-gradient-to-t from-primary via-transparent to-transparent
+      bg-transparent rounded-md mx-auto text-center hover:shadow-md hover:shadow-sky-blue hover:text-secondary
       transition-all
     }
 }
+
+.aurora-outer {
+    background: linear-gradient(-50deg, #00ff55 0%, #6600cc 70%, #6600cc 100%);
+    background-size: 200%;
+    animation: aurora 5s infinite ease-in-out;
+}
+
+.aurora-inner {
+    background: radial-gradient(rgba(0, 0, 0, 0.5), #000 100%);
+    background-size: 200%;
+    animation: aurora 25s infinite ease-in-out;
+}
+
+@keyframes aurora {
+    0% {
+        background-position: left top;
+    }
+    25% {
+        background-position: right top;
+    }
+    50% {
+        background-position: right bottom;
+    }
+    75% {
+        background-position: left bottom;
+    }
+    100% {
+        background-position: left top;
+    }
+}
+.aurora-inner {
+    display: block;
+    height: 100vh;
+    width: screen;
+    position: relative;
+}
+
+.aurora-outer {
+    display: block;
+    height: 100vh;
+    width: screen;
+    position: relative;
+}
+
+

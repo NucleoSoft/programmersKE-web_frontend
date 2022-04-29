@@ -19,8 +19,8 @@ const NavBar = (props) =>
      
           <div>
             <BrowserRouter>
-          <nav className="fixed w-full py-2 bg-black 
-                          bg-opacity-70 backdrop-blur-md
+          <nav className="fixed w-full py-2
+                          backdrop-blur-md
                           flex flex-row justify-between">
               {/* <Logo/> */}
             <div className="w-[60%] flex flex-row justify-around">
@@ -56,16 +56,22 @@ const NavBar = (props) =>
 
 // const Logo = () => {
 //   return (
-//     <img src='../../../assets/Logo.svg'
-//           className="left-0 w-10"/>
+//       <img src='../../../assets/Logo.svg'
+//             className="w-10 ml-1"/>
 //   )
 // }
 
 const NavItem = ({icon}) =>{
   return (
-  <button className="navItem">
-    {icon}
-  </button>
+    <div className="relative">
+      <div className="absolute -inset-0.5 opacity-75 bg-gradient-to-r to-secondary from-primary rounded-xl blur-sm group-hover:opacity-100 animate-tilt"></div>
+    <button className="text-sky-blue bg-black p-4
+                      rounded-xl hover:w-60 relative group">
+      {icon}
+    </button>
+    
+    </div>
+   
   )
 }
 
@@ -120,8 +126,8 @@ const ProfileMenu = () => {
     <div className='absolute top-16 right-16 
                     bg-black bg-opacity-70 w-1/5
                     rounded-lg h-auto p-4 z-20'>
-      <img src="../../../assets/layered-steps-haikei.svg" className='w-12 h-12 
-                  rounded-full bg-cover group mx-auto'/>
+      <img src="../../../assets/layered-steps-haikei.svg" className='w-16 h-16 
+                  rounded-full bg-cover group ml-[65%]'/>
       <Link to='/login'>
         <ProfileItem2 leftIcon={<RiLoginBoxLine size="20"/>}>Login</ProfileItem2>
       </Link>
@@ -129,4 +135,4 @@ const ProfileMenu = () => {
   )
 }
 
-export default NavBar;
+export default NavBar

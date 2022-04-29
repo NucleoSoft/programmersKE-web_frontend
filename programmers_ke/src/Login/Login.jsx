@@ -1,8 +1,8 @@
 import React, { useRef, useState } from 'react'
 
-// import firebase from 'firebase/app'
-// import 'firebase/firestore'
-// import 'firebase/auth'
+// import firebase from 'firebase/compat/app'
+// import 'firebase/compat/firestore'
+// import 'firebase/compat/auth'
 // import 'firebase/analytics'
 
 // import { useAuthState } from 'react-firebase-hooks/auth'
@@ -25,13 +25,19 @@ import React, { useRef, useState } from 'react'
 
 function Login(){
     return(
-        <div className="fixed bg-gradient-to-b from-black via-primary to-secondary
-                        h-screen w-full">
-            <div className="fixed right-10 w-5/12 
-            backdrop-blur-md mt-32
-            backdrop-brightness-125 rounded-lg">
-                <BoilerplateLogo />
-                <SignIn />
+        <div className="aurora-outer">
+            <div className="aurora-inner">
+                <div className="fixed right-32 w-4/12 
+                backdrop-blur-md mt-16
+                backdrop-brightness-125 rounded-lg">
+                    <BoilerplateLogo />
+                    <h1 className="font-zrnic text-[30px] text-secondary text-center">Welcome Back!</h1>
+                    <Form/>
+                    <h1 className='ml-12 font-adventpro text-[15px] text-white'>Piss I forgot my password!</h1>
+                    <SignIn />
+                    <SignInOps/>
+                    <h1 className='text-white font-adventpro text-center py-2'>New to Programmers_KE? Join us over here!</h1>
+                </div>
             </div>
         </div>
     )
@@ -45,14 +51,32 @@ function SignIn(){
     // }
     return(
         //onclick={googleSignIn}
-        <div className='flex flex-col p-4'>
-        <button> 
-            
+        <div className='flex flex-col p-2'>
+        <button className="bg-primary p-2 w-3/5 mx-auto my-2 border-purple-800 hover:bg-green-600
+                            hover:text-white rounded-lg transition-all delay-300">
+            <span className="font-novaflat">Log in</span>
         </button>
-        <button className="bg-primary p-2 w-4/5 mx-auto my-3 border-purple-800 hover:border-2
-                            hover:text-secondary rounded-lg transition-all delay-300">
-            <span>Sign in</span>
-        </button>
+        </div>
+    )
+}
+
+function SignInOps() {
+    // const googleSignIn = () =>{
+
+    //     const provider = new firebase.auth.GoogleAuthProvider();
+    //     auth.signInWithPopup(provider);
+    // }
+    return (
+       
+        <div className='flex flex-row my-2 w-full'>
+            <button className='flex flex-row bg-white w-[35%] mx-auto p-2 rounded-lg my-2'>
+                <span className='font-novaflat my-auto ml-3 text-sm'>Sign in with</span>
+                <img src='../../assets/icons/google-svgrepo-com.svg' className='w-8 ml-2' />
+            </button>
+            <button className='flex flex-row bg-white w-[35%] mx-auto p-2 rounded-lg my-2'>
+                <span className='font-novaflat my-auto ml-3 text-sm'>Sign in with</span>
+                <img src='../../assets/icons/github-svgrepo-com.svg' className='w-8 ml-2' />
+            </button>
         </div>
     )
 }
@@ -60,8 +84,26 @@ function SignIn(){
 const BoilerplateLogo = () => {
   return (
     <div>
-        <img src="../../assets/Logo.svg" className='w-20 ml-[45%]' />
+        <img src="../../assets/Logo.svg" className='w-20 ml-[43%]' />
         <hr className="border-secondary mx-auto my-4 w-72"/>
+    </div>
+  )
+}
+
+function Form() {
+    const formSubmit = (e) =>
+    {
+        e.preventDefault()
+
+        let email = e.target.elements.email?.value
+        let password = e.target.elements.password?.value
+    }
+  return (
+    <div>
+        <form onSubmit = { formSubmit } className="flex flex-col justify-center">
+            <input className='w-4/5 mx-auto my-2 p-2 rounded-lg shadow-md' type='email' id='email' placeholder='Email or username'/>
+            <input className='w-4/5 mx-auto my-2 p-2 rounded-lg shadow-md' type='password' id='password' placeholder='Password'/>
+        </form>
     </div>
   )
 }

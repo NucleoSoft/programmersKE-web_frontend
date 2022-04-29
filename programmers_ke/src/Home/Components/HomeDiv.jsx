@@ -1,4 +1,4 @@
-import NavBar from "./NavBar";
+
 
 const HomeDiv = () =>{
     
@@ -6,9 +6,8 @@ const HomeDiv = () =>{
         <div className="bg-hero-image fixed w-full h-[75vh]
                         bg-cover bg-center
                         rounded-b-xl top-0">
-        <NavBar />
             <h1 className="text-secondary ml-[15%] mt-[30vh]
-                        text-[90px] font-[Audiowide]">
+                        text-[90px] font-audiowide">
             {'>'}_PROGRAMMERS KE 
             </h1>
         </div>

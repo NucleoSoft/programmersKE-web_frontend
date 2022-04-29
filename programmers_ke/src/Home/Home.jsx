@@ -1,16 +1,21 @@
 import HomeDiv from './Components/HomeDiv'
+import NavBar from "./Components/NavBar";
+  
 import SideTab from './Components/SideTab'
 import Carousel from './Components/Carousel'
 import LanguageMenu from './Components/LanguageMenu'
 
 function Home() {
     return (
-        <div className="fixed top-0 left-0 bg-gradient-to-b from-black via-primary to-secondary
-                        h-screen w-screen overflow-x-hidden">
-            <HomeDiv />
-            {/* <SideTab/> */}
-            <Carousel />
-            <LanguageMenu />
+        <div className="aurora-outer">
+            <div className="aurora-inner">
+                <NavBar />
+                {/* <HomeDiv /> */}
+                <h1 className="fixed right-10 top-[30%] font-zrnic text-[60px] text-white">Introducing the next genertion<br/> of learning programming</h1>
+                <SideTab/>
+                <Carousel />
+                <LanguageMenu />
+            </div>
         </div>
     )
 }
