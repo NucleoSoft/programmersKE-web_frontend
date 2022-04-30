@@ -13,8 +13,8 @@
     } */
     .searchBar{
       @apply relative bg-slate-400 p-2 bg-opacity-50
-      rounded-l-xl w-60 flex flex-row my-1.5 
-      shadow-lg backdrop-blur-sm font-adventpro font-medium focus:border-none 
+      rounded-l-xl w-80 flex flex-row my-0.5
+      shadow-lg backdrop-blur-sm font-novaflat 
       focus:bg-white
     }
 
@@ -43,8 +43,10 @@
 
     .SideTabIcon
     {
-      @apply w-8 h-8 my-8 flex backdrop-blur-md justify-center items-center text-white hover:bg-gradient-to-t from-primary via-transparent to-transparent
-      bg-transparent rounded-md mx-auto text-center hover:shadow-md hover:shadow-sky-blue hover:text-secondary
+      @apply w-8 h-8 my-8 flex backdrop-blur-md justify-center items-center
+      text-white bg-transparent rounded-md mx-auto text-center hover:shadow-md 
+      hover:shadow-sky-blue hover:text-secondary focus:shadow-md 
+      focus:shadow-sky-blue focus:text-secondary
       transition-all
     }
 }
@@ -52,42 +54,65 @@
 .aurora-outer {
     background: linear-gradient(-50deg, #00ff55 0%, #6600cc 70%, #6600cc 100%);
     background-size: 200%;
-    animation: aurora 5s infinite ease-in-out;
+    animation: aurora 5s infinite linear;
 }
 
 .aurora-inner {
-    background: radial-gradient(rgba(0, 0, 0, 0.5), #000 100%);
+    background: radial-gradient(rgba(0, 0, 0, 0.7), #000 100%);
     background-size: 200%;
-    animation: aurora 25s infinite ease-in-out;
+    animation: aura 10s infinite ease-in-out;
+}
+
+@keyframes aura {
+    0% {
+        background-position: right top;
+    }
+    25% {
+        background-position: left top;
+    }
+    50% {
+        background-position: left bottom;
+    }
+    75% {
+        background-position: right bottom;
+    }
+    100% {
+        background-position: right top;
+    }
 }
 
 @keyframes aurora {
     0% {
         background-position: left top;
+        rotate: 0deg;
     }
     25% {
         background-position: right top;
+        rotate: 90deg;
     }
     50% {
         background-position: right bottom;
+        rotate: 180deg;
     }
     75% {
         background-position: left bottom;
+        rotate: 270deg;
     }
     100% {
         background-position: left top;
+        rotate: 360deg;
     }
 }
 .aurora-inner {
     display: block;
-    height: 100vh;
+    height: 120vh;
     width: screen;
     position: relative;
 }
 
 .aurora-outer {
     display: block;
-    height: 100vh;
+    height: 120vh;
     width: screen;
     position: relative;
 }

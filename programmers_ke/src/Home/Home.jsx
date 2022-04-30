@@ -11,7 +11,21 @@ function Home() {
             <div className="aurora-inner">
                 <NavBar />
                 {/* <HomeDiv /> */}
-                <h1 className="fixed right-10 top-[30%] font-zrnic text-[60px] text-white">Introducing the next genertion<br/> of learning programming</h1>
+                <h1 className="absolute left-24 top-[20%] font-audiowide text-[45px] 
+                               text-left text-white text-shadow-md shadow-white">
+                            Introducing the next generation<br/> of learning programming
+                </h1>
+                <hr className="absolute left-24 top-[40%] w-6/12 border-primary" />
+                <p className="absolute left-24 top-[43%] font-adventpro text-left
+                              text-lg text-secondary text-shadow-lg shadow-secondary" >
+                    "An intuitive platform of resourceful knowledge in tech and programming.<br/>
+                    Built around the problem based approach, interactive lessons and <br/> a well figured out user experience"
+                </p>
+                <button className="absolute left-24 top-[60%] text-[17px] w-2/12 p-3 backdrop-blur-sm rounded-full
+                                    backdrop-brightness-125 font-novaflat text-secondary drop-shadow-md
+                                    hover:text-shadow-md hover:shadow-white hover:text-white hover:rounded-lg
+                                    hover:bg-primary hover:drop-shadow-[0_0_8px_#6600cc] transition-all delay-300">
+                    Get Started</button>
                 <SideTab/>
                 <Carousel />
                 <LanguageMenu />

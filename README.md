@@ -39,3 +39,20 @@ Web bundling and deployment:
 -Vite.js/ Webpack. Here, I use Vite React and React -javascript as the variant. 
 
 *_REVISED UNDER CAREFUL CONSIDERATION, MAY NOT BE USED APPARENTLY_
+
+
+#Installation Instructions
+
+Since this is an open-source Progressive Web Application, to contribute or add improvements to this project, you'll need to set it up with the predefined dependencies (read the package.json file)
+
+Clone the project
+
+  >git clone https://github.com/Manu254rce/ProgrammersKE.git
+
+From the VSCode terminal, install the dependencies from package.json
+
+  >npm install
+
+Then host the project at http://localhost:3000/ 
+
+  >npm run dev

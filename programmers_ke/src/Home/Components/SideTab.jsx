@@ -17,9 +17,9 @@ function SideTab() {
 
 const SideTabIcon = ({icon}) => {
   return (
-    <div className='SideTabIcon'>
+    <button className='SideTabIcon'>
         {icon}
-    </div>
+    </button>
   )
 }
 

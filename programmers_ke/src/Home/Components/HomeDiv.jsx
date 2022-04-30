@@ -1,5 +1,3 @@
-
-
 const HomeDiv = () =>{
     
     return(
