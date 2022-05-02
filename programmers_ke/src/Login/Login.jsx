@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react'
+import Blob from './Blob'
 
 // import firebase from 'firebase/compat/app'
 // import 'firebase/compat/firestore'
@@ -27,9 +28,10 @@ function Login(){
     return(
         <div className="aurora-outer">
             <div className="aurora-inner">
+                {/* <Blob/> */}
                 <div className="fixed right-32 w-4/12 
-                backdrop-blur-md mt-16
-                backdrop-brightness-125 rounded-lg">
+                backdrop-blur-md mt-16 border-[1px] border-white
+                backdrop-brightness-150 rounded-lg drop-shadow-lg">
                     <BoilerplateLogo />
                     <h1 className="font-zrnic text-[30px] text-secondary text-center">Welcome Back!</h1>
                     <Form/>

@@ -18,7 +18,9 @@ const CodeBar = (props) =>{
                         hover:shadow-secondary dark:hover:shadow-primary shadow-lg transition-all 
                         delay-300 flex flex-col z-20 ">
             {/* <BrowserRouter> */}
-                    <CodeIcon icon={<AiFillBackward size="25" />} />
+                    <Link to="/start">
+                        <CodeIcon icon={<AiFillBackward size="25" />} />
+                    </Link>
                     <Line />             
                     <CodeIcon icon={<FaJava size="25"/>} />
                     <CodeIcon icon={<DiPython size="25"/>} />
@@ -54,11 +56,11 @@ const Line = () => {
   )
 }
 
-const SettingsIcon = (props, {icon}) => {
+const SettingsIcon = (props) => {
   const [open, settoOpen] = useState(false);
   return (
     <button className='codeIcon' onClick={() => settoOpen(!open)}>
-        {icon}
+        {props.icon}
         {open && props.children}
     </button>
   )
@@ -70,7 +72,7 @@ const CodeSide = () => {
         const handleMode = () => setdarkTheme(!darkTheme);
         return(
             <>
-                <button className='text-slate-900 flex flex-row pr-5 justify-end py-2'>
+                <button className='text-slate-900 dark:text-white flex flex-row pr-5 justify-end py-2'>
                     {props.children}
                     <span className='ml-2' onClick={handleMode}>
                         {darkTheme ? (<img src='../../assets/icons/moon-svgrepo-com.svg' className='w-5 h-5'/>)

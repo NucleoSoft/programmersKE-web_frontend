@@ -13,7 +13,7 @@
     } */
     .searchBar{
       @apply relative bg-slate-400 p-2 bg-opacity-50
-      rounded-l-xl w-80 flex flex-row my-0.5
+      rounded-l-xl w-72 flex flex-row my-auto
       shadow-lg backdrop-blur-sm font-novaflat 
       focus:bg-white
     }
@@ -116,5 +116,4 @@
     width: screen;
     position: relative;
 }
-
 

@@ -1,10 +1,5 @@
 import { useState } from 'react'
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
-import { Link } from 'react-router-dom'
-import OnlineCompiler from '../../OnlineCompiler/OnlineCompiler'
-import ErrorPage from '../../Error/404Page'
-import Login from '../../Login/Login'
-import Home from '../Home'
+import { BrowserRouter, Link } from 'react-router-dom'
 
 import { VscTerminalPowershell } from 'react-icons/vsc'
 import { BsPeopleFill, BsNewspaper, BsSearch, BsPersonFill } from 'react-icons/bs'
@@ -13,25 +8,30 @@ import { HiOutlineDesktopComputer } from 'react-icons/hi'
 import { RiChatQuoteLine, RiLoginBoxLine } from 'react-icons/ri'
 
 
-const NavBar = (props) =>
+const NavBar = () =>
 {
     return(
      
           <div>
-            <BrowserRouter>
-          <nav className="absolute w-full pt-3 top-0 left-0
+          <nav className="absolute w-full mt-3 top-0 left-0
                           backdrop-blur-md
                           flex flex-row justify-between">
               {/* <Logo/> */}
             <div className="w-[60%] flex flex-row justify-around my-1.5">
               <Link to="/tutorials">
-                  <NavItem icon={<FaRegLightbulb size="15"/>} /> 
+                  <NavItem icon={<FaRegLightbulb size="15"/>}>
+                    <Dropdown />
+                  </NavItem> 
               </Link>
               <Link to="/community">
-                  <NavItem icon={<BsPeopleFill size="15"/>} /> 
+                  <NavItem icon={<BsPeopleFill size="15"/>}>
+                    <Dropdown />
+                  </NavItem>
               </Link>
               <Link to="/tech">
-                  <NavItem icon={<HiOutlineDesktopComputer size="15"/>} /> 
+                  <NavItem icon={<HiOutlineDesktopComputer size="15"/>}>
+                    <Dropdown />
+                  </NavItem> 
               </Link>
               <Link to="/blogs">
                   <NavItem icon={<RiChatQuoteLine size="15"/>} />
@@ -44,48 +44,54 @@ const NavBar = (props) =>
               </Link>
             </div>
               <div className='pr-4 flex flex-row'>
-                <SearchBar icon={<BsSearch size="20" />} />
+                <SearchBar icon={<BsSearch size="15" />} />
                 <Profile>
                    <ProfileMenu/>
                 </Profile>
               </div>
             </nav>
-              <Routes>
-                {/* <Route path="/" element={<Home/>}/> */}
-                <Route path="/tutorials" element={<OnlineCompiler />} />
-                <Route path="/community" element={<OnlineCompiler />} />
-                <Route path="/tech" element={<OnlineCompiler />} />
-                <Route path="/blogs" element={<OnlineCompiler />} />
-                <Route path="/news" element={<OnlineCompiler />} />
-                <Route path="/online_compiler" element={<OnlineCompiler />}/>
-                <Route path="/login" element={<Login />} />
-                <Route path="/ErrorPage" element={<ErrorPage/>}/>
-              </Routes>
-            </BrowserRouter>
           </div>
       
     )
 }
 
-
-// const Logo = () => {
-//   return (
-//       <img src='../../../assets/Logo.svg'
-//             className="w-10 ml-1"/>
-//   )
-// }
-
-const NavItem = ({icon}) =>{
+const NavItem = (props) =>{
+  const [openNav, setOpenNav] = useState(false)
   return (
     <div className="relative">
       <div className="absolute -inset-0.5 opacity-75 bg-gradient-to-r to-secondary from-primary rounded-xl blur-sm group-hover:opacity-100 animate-tilt"></div>
     <button className="text-sky-blue bg-black p-3
-                      rounded-xl hover:w-60 relative group">
-      {icon}
+                      rounded-xl relative group" 
+                      onMouseEnter={() =>setOpenNav(!openNav)} onMouseLeave={() =>setOpenNav(!openNav)}>
+      {openNav && props.children}
+      {props.icon}
     </button>
     
     </div>
    
+  )
+}
+
+const Dropdown = () => {
+  const DropLink = (props) => {
+    return (
+      <li>
+        <h1 className='text-white'>
+          {props.children}
+        </h1>
+      </li>
+    )
+  }
+  return (
+    <div className='fixed w-full h-auto top-14 left-0
+                    bg-black bg-opacity-50 rounded-b-lg
+                    backdrop-blur-md'>
+      <ul>
+          <DropLink>
+            Getting Started
+          </DropLink>
+      </ul>
+    </div>
   )
 }
 
@@ -94,7 +100,7 @@ const SearchBar = ({icon}) => {
     <div className="flex flex-row">
       <input className="searchBar" type="search" placeholder='Search'  />
       <button className="bg-primary hover:bg-secondary transition-all delay-300 
-                      text-white hover:text-primary px-3 my-0.5 rounded-r-xl ">{icon}
+                      text-white hover:text-primary h-10 px-3 my-auto rounded-r-xl ">{icon}
       </button>
     </div>
   )
@@ -128,7 +134,7 @@ const ProfileMenu = () => {
     return (
       <>
         <button className='bg-primary flex flex-row w-11/12 my-3 py-2
-                            text-secondary mx-auto rounded-lg font-novaflat'>
+                          text-secondary mx-auto rounded-lg font-novaflat'>
           <span className='mx-2 my-auto'>{props.leftIcon}</span>
           {props.children}
           {/* <span className>{props.rightIcon}</span> */}
