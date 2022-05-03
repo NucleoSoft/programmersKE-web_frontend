@@ -1,5 +1,3 @@
-import * as KUTE from 'kute.js'
-
 import HomeDiv from './Components/HomeDiv'
 import NavBar from './Components/NavBar'
 import Footer from './Components/Footer'

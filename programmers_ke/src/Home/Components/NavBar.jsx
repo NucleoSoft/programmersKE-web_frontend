@@ -13,7 +13,7 @@ const NavBar = () =>
     return(
      
           <div>
-          <nav className="absolute w-full mt-3 top-0 left-0
+          <nav className="absolute w-full top-0 left-0
                           backdrop-blur-md
                           flex flex-row justify-between">
               {/* <Logo/> */}

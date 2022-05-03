@@ -17,7 +17,6 @@ const CodeBar = (props) =>{
                         top-0 left-0 shadow-primary dark:shadow-secondary dark:bg-slate-800
                         hover:shadow-secondary dark:hover:shadow-primary shadow-lg transition-all 
                         delay-300 flex flex-col z-20 ">
-            {/* <BrowserRouter> */}
                     <Link to="/start">
                         <CodeIcon icon={<AiFillBackward size="25" />} />
                     </Link>
@@ -34,12 +33,6 @@ const CodeBar = (props) =>{
                     <SettingsIcon icon={<RiSettings3Fill size="20" />} >
                        <CodeSide/> 
                     </SettingsIcon>
-{/* 
-                <Routes>
-                    <Route path="/" element={< Home />} />
-                </Routes> */}
-                
-            {/* </BrowserRouter> */}
         </div>
     )
 }
@@ -68,13 +61,13 @@ const SettingsIcon = (props) => {
 
 const CodeSide = () => {
     const SideItem = (props) => {
-        const [darkTheme, setdarkTheme] = useDarkMode();
-        const handleMode = () => setdarkTheme(!darkTheme);
+        const [darkTheme, setdarkTheme] = useDarkMode(false);
+        const handleTheme = () => setdarkTheme(!darkTheme);
         return(
             <>
-                <button className='text-slate-900 dark:text-white flex flex-row pr-5 justify-end py-2'>
+                <button onClick={handleTheme}>
                     {props.children}
-                    <span className='ml-2' onClick={handleMode}>
+                    <span className='ml-2'>
                         {darkTheme ? (<img src='../../assets/icons/moon-svgrepo-com.svg' className='w-5 h-5'/>)
                          : (<img src='../../assets/icons/sun-svgrepo-com.svg' className='w-5 h-5'/>)}
                          {props.leftIcon}
