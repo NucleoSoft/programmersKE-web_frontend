@@ -69,13 +69,13 @@ function Social() {
   return (
     <section>
       <div className='flex flex-row items-end ml-6'>
-        <img src="../../../assets/icons/twitternocolor-svgrepo-com.svg" 
+        <img src="../../../assets/icons/NoColor/twitternocolor-svgrepo-com.svg" 
         width={24} className='py-3 mr-5'/>
         <img src="../../../assets/icons/github-svgrepo-com.svg" 
         width={24} className='py-3 mr-5' />
-        <img src="../../../assets/icons/linkedinnocolor-svgrepo-com.svg" 
+        <img src="../../../assets/icons/NoColor/linkedinnocolor-svgrepo-com.svg" 
         width={24} className='py-3 mr-5' />
-        <img src="../../../assets/icons/slacknocolor-svgrepo-com.svg" 
+        <img src="../../../assets/icons/NoColor/slacknocolor-svgrepo-com.svg" 
         width={24} className='py-3 mr-5' />
       </div>
     </section>

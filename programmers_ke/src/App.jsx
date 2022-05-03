@@ -4,6 +4,8 @@ import ErrorPage from './Error/404Page'
 import Start from "./Start/Start"
 import Tutorials from "./Tutorials/Tutorials"
 import Community from "./Community/Community"
+import Blogs from "./Blogs/Blogs"
+import News from "./News/News"
 import Tech from "./Tech/Tech"
 import OnlineCompiler from './OnlineCompiler/OnlineCompiler'
 import Login from './Login/Login'
@@ -18,8 +20,8 @@ function App() {
           <Route path="/tutorials" element={<Tutorials />} />
           <Route path="/community" element={<Community />} />
           <Route path="/tech" element={<Tech />} />
-          <Route path="/blogs" element={<OnlineCompiler />} />
-          <Route path="/news" element={<OnlineCompiler />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/news" element={<News />} />
           <Route path="/online_compiler" element={<OnlineCompiler />} />
           <Route path="/login" element={<Login />} />
           <Route element={<ErrorPage />} />
