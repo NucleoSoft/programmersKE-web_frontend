@@ -1,3 +1,5 @@
+// import * as LottiePlayer from "@lottiefiles/lottie-player";
+
 import Home from "./Home/Home"
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import ErrorPage from './Error/404Page'
@@ -27,8 +29,23 @@ function App() {
           <Route element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>
+      {/* <WebLoader /> */}
     </div>
   )
 }
+
+{/* function WebLoader() {
+  return (
+    <div>
+      <lottie-player
+          autoplay
+          loop
+          mode="normal"
+          src="https://assets7.lottiefiles.com/packages/lf20_wg5tbh5j.json"
+          style="width: 320px">
+      </lottie-player>
+    </div>
+  )
+} */}
 
 export default App
