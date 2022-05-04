@@ -12,10 +12,10 @@ const NavBar = () =>
 {
     return(
      
-          <div>
+        <div>
           <nav className="absolute w-full top-0 left-0
                           backdrop-blur-md
-                          flex flex-row justify-between">
+                          flex flex-row justify-between z-20">
               {/* <Logo/> */}
             <div className="w-[60%] flex flex-row justify-around my-1.5">
               <Link to="/tutorials">
@@ -50,7 +50,7 @@ const NavBar = () =>
                 </Profile>
               </div>
             </nav>
-          </div>
+        </div>
       
     )
 }
@@ -60,7 +60,7 @@ const NavItem = (props) =>{
   return (
     <div className="relative">
       <div className="absolute -inset-0.5 opacity-75 bg-gradient-to-r to-secondary from-primary rounded-xl blur-sm group-hover:opacity-100 animate-tilt"></div>
-    <button className="text-sky-blue bg-black p-3
+    <button className="text-primary dark:text-sky-blue bg-white dark:bg-black p-3
                       rounded-xl relative group" 
                       onMouseEnter={() =>setOpenNav(!openNav)} onMouseLeave={() =>setOpenNav(!openNav)}>
       {openNav && props.children}
@@ -143,8 +143,8 @@ const ProfileMenu = () => {
     )
   }
   return (
-    <div className='absolute top-16 right-16 
-                    bg-black bg-opacity-70 w-1/5
+    <div className='absolute top-16 right-16 bg-white 
+                    dark:bg-black bg-opacity-70 w-1/5
                     rounded-lg h-auto p-4 z-20'>
       <img src="../../../assets/layered-steps-haikei.svg" className='w-16 h-16 
                   rounded-full bg-cover group ml-[65%]'/>

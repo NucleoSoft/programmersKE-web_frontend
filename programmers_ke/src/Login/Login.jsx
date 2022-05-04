@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 import Blob from './Blob'
 
 // import firebase from 'firebase/compat/app'
@@ -38,7 +39,11 @@ function Login(){
                     <h1 className='ml-12 font-adventpro text-[15px] text-white'>Piss I forgot my password!</h1>
                     <SignIn />
                     <SignInOps/>
-                    <h1 className='text-white font-adventpro text-center py-2'>New to Programmers_KE? Join us over here!</h1>
+                    <h1 className='text-white font-adventpro text-center py-2'>New to Programmers_KE? Join us over 
+                        <Link to="/signup">
+                            <span className='text-secondary'> here!</span>
+                        </Link>
+                    </h1>
                 </div>
             </div>
         </div>
@@ -73,11 +78,11 @@ function SignInOps() {
         <div className='flex flex-row my-2 w-full'>
             <button className='flex flex-row bg-white w-[35%] mx-auto p-2 rounded-lg my-2'>
                 <span className='font-novaflat my-auto ml-3 text-sm'>Sign in with</span>
-                <img src='../../assets/icons/google-svgrepo-com.svg' className='w-8 ml-2' />
+                <img src='../../assets/icons/color_/google-svgrepo-com.svg' className='w-8 ml-2' />
             </button>
             <button className='flex flex-row bg-white w-[35%] mx-auto p-2 rounded-lg my-2'>
                 <span className='font-novaflat my-auto ml-3 text-sm'>Sign in with</span>
-                <img src='../../assets/icons/github-svgrepo-com.svg' className='w-8 ml-2' />
+                <img src='../../assets/icons/color_/github-svgrepo-com.svg' className='w-8 ml-2' />
             </button>
         </div>
     )

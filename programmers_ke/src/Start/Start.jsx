@@ -32,17 +32,17 @@ function Start() {
             </button>
           </div>
           <div className="grid grid-flow-col w-full mt-24 p-3 h-4/5 gap-3">
-              <section className="backdrop-blur-md backdrop-brightness-125 
+              <section className="backdrop-blur-md backdrop-brightness-125 drop-shadow-lg
                                   col-span-2 rounded-lg border-1 border-white">
                   1
               </section>
-              <section className="backdrop-blur-md backdrop-brightness-125 
+              <section className="backdrop-blur-md backdrop-brightness-125 drop-shadow-lg
                                   col-span-6 rounded-lg border-1 border-white">
                   2
               </section>
-               <section className="backdrop-blur-md backdrop-brightness-125 
-                                  col-span-3 rounded-lg border-1 border-white">
-                  2
+               <section className="backdrop-blur-md backdrop-brightness-125 drop-shadow-lg
+                                  col-span-1 rounded-lg border-1 border-white">
+                  3
               </section>
           </div>
             <button className="bg-primary p-2 rounded-lg"

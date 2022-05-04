@@ -30,9 +30,9 @@ const CodeBar = (props) =>{
                     <CodeIcon icon={<SiJavascript size="17"/>} /> */}
                     <Line/>
                     <CodeIcon icon={<BsPlus size="25" />} />
-                    <SettingsIcon icon={<RiSettings3Fill size="20" />} >
+                    {/* <SettingsIcon icon={<RiSettings3Fill size="20" />} >
                        <CodeSide/> 
-                    </SettingsIcon>
+                    </SettingsIcon> */}
         </div>
     )
 }
@@ -49,42 +49,42 @@ const Line = () => {
   )
 }
 
-const SettingsIcon = (props) => {
-  const [open, settoOpen] = useState(false);
-  return (
-    <button className='codeIcon' onClick={() => settoOpen(!open)}>
-        {props.icon}
-        {open && props.children}
-    </button>
-  )
-}
+// const SettingsIcon = (props) => {
+//   const [open, settoOpen] = useState(false);
+//   return (
+//     <button className='codeIcon' onClick={() => settoOpen(!open)}>
+//         {props.icon}
+//         {open && props.children}
+//     </button>
+//   )
+// }
 
-const CodeSide = () => {
-    const SideItem = (props) => {
-        const [darkTheme, setdarkTheme] = useDarkMode(false);
-        const handleTheme = () => setdarkTheme(!darkTheme);
-        return(
-            <>
-                <button onClick={handleTheme}>
-                    {props.children}
-                    <span className='ml-2'>
-                        {darkTheme ? (<img src='../../assets/icons/moon-svgrepo-com.svg' className='w-5 h-5'/>)
-                         : (<img src='../../assets/icons/sun-svgrepo-com.svg' className='w-5 h-5'/>)}
-                         {props.leftIcon}
-                    </span>
-                </button>
-            </>
-        )
-    }
-    return (
-        <div className="h-[64%] top-0 w-1/5 backdrop-blur-md pt-8
-                        shadow-md left-16 bg-slate-600 bg-opacity-40 
-                        fixed rounded-r-lg">
-            <SideItem>Theme</SideItem>
+// const CodeSide = () => {
+//     const SideItem = (props) => {
+//         const [darkTheme, setdarkTheme] = useDarkMode(false);
+//         const handleTheme = () => setdarkTheme(!darkTheme);
+//         return(
+//             <>
+//                 <button onClick={handleTheme}>
+//                     {props.children}
+//                     <span className='ml-2'>
+//                         {darkTheme ? (<img src='../../assets/icons/moon-svgrepo-com.svg' className='w-5 h-5'/>)
+//                          : (<img src='../../assets/icons/sun-svgrepo-com.svg' className='w-5 h-5'/>)}
+//                          {props.leftIcon}
+//                     </span>
+//                 </button>
+//             </>
+//         )
+//     }
+//     return (
+//         <div className="h-[64%] top-0 w-1/5 backdrop-blur-md pt-8
+//                         shadow-md left-16 bg-slate-600 bg-opacity-40 
+//                         fixed rounded-r-lg">
+//             <SideItem>Theme</SideItem>
            
-        </div>
-    )
-}
+//         </div>
+//     )
+// }
 
 
 // const Line = () => {
