@@ -11,6 +11,7 @@ import News from "./News/News"
 import Tech from "./Tech/Tech"
 import OnlineCompiler from './OnlineCompiler/OnlineCompiler'
 import Login from './Login/Login'
+import Ukraine from "./About_Ukraine/Ukraine"
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/news" element={<News />} />
           <Route path="/online_compiler" element={<OnlineCompiler />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/ukraine" element={<Ukraine />} />
           <Route element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>

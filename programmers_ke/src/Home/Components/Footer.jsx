@@ -97,7 +97,7 @@ function Footer() {
                   </div>
                   <div className='backdrop-blur-md
                                  rounded-r-lg drop-shadow-lg
-                                row-span-2'>
+                                row-span-4'>
                     <h1 className='footerheader'>Other Projects</h1>
                      <Line/>
                      <FooterLink>Asteroid</FooterLink>

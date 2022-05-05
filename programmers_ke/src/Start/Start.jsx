@@ -1,6 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import NavBar from '../Home/Components/NavBar'
-import Footer from '../Home/Components/Footer'
 
 import useDarkMode from '../hooks/useDarkMode';
 
@@ -25,11 +25,13 @@ function Start() {
                   is willing to provide support for those affected directly
                   or indirectly by the ongoing war in Ukraine.Learn more how
                   we can collaborate to help</h1>
+            <Link to='/ukraine'>
             <button className="my-2 px-2 bg-yellow-600 rounded-lg font-novaflat text-black text-sm
                               hover:ring-2 hover:ring-blue-500 hover:bg-blue-700 hover:text-white
                               hover:text-shadow-md hover:shadow-white transition-all delay-300">
               Let's Go
             </button>
+            </Link>
           </div>
           <div className="grid grid-flow-col w-full mt-24 p-3 h-4/5 gap-3">
               <section className="backdrop-blur-md backdrop-brightness-125 drop-shadow-lg
@@ -58,7 +60,9 @@ function Start() {
 
 const ChatBot = () => {
   return (
-    <div className='fixed bottom-5 right-5 rounded-full'>Chatbot</div>
+    <div className='fixed bottom-12 right-12 rounded-full bg-white'>
+        Cht
+    </div>
   )
 }
 
