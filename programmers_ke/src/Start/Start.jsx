@@ -34,16 +34,16 @@ function Start() {
             </Link>
           </div>
           <div className="grid grid-flow-col w-full mt-24 p-3 h-4/5 gap-3">
-              <section className="backdrop-blur-md backdrop-brightness-125 drop-shadow-lg
+              <section className="bg-slate-200 dark:bg-slate-900 drop-shadow-lg
                                   col-span-2 rounded-lg border-1 border-white">
                   1
               </section>
-              <section className="backdrop-blur-md backdrop-brightness-125 drop-shadow-lg
-                                  col-span-6 rounded-lg border-1 border-white">
+              <section className="bg-slate-200 dark:bg-slate-900 drop-shadow-lg
+                                  col-span-7 rounded-lg border-1 border-white">
                   2
               </section>
-               <section className="backdrop-blur-md backdrop-brightness-125 drop-shadow-lg
-                                  col-span-1 rounded-lg border-1 border-white">
+               <section className="bg-slate-200 dark:bg-slate-900 drop-shadow-lg
+                                  col-span-3 rounded-lg border-1 border-white">
                   3
               </section>
           </div>
@@ -60,9 +60,11 @@ function Start() {
 
 const ChatBot = () => {
   return (
-    <div className='fixed bottom-12 right-12 rounded-full bg-white'>
-        Cht
-    </div>
+    <button className='fixed bottom-12 right-12 rounded-full bg-white p-3 
+            drop-shadow-[0_0_5px_#6600cc] hover:drop-shadow-[0_0_8px_#fff]
+            transition-all delay-300'>
+        <img src='../../assets/icons/utils/chatbot-svgrepo-com.svg' className='w-8'/>
+    </button>
   )
 }
 

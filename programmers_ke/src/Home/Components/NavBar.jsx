@@ -11,26 +11,83 @@ import { RiChatQuoteLine, RiLoginBoxLine } from 'react-icons/ri'
 const NavBar = () =>
 {
     return(
-     
         <div>
           <nav className="absolute w-full top-0 left-0
                           backdrop-blur-md
                           flex flex-row justify-between z-20">
-              {/* <Logo/> */}
             <div className="w-[60%] flex flex-row justify-around my-1.5">
               <Link to="/tutorials">
                   <NavItem icon={<FaRegLightbulb size="15"/>}>
-                    <Dropdown />
+                      <div className='fixed top-14 left-0 bg-slate-300
+                                    dark:bg-slate-900 dark:bg-opacity-90 p-3
+                                    w-full h-[350px] bg-opacity-90 grid grid-flow-auto gap-2'>
+                        <section className='col-span-5 flex flex-col items-end'>
+                          <span className='text-primary dark:text-secondary 
+                                          font-audiowide text-[30px] my-1'>TUTORIALS</span>
+                          <hr className='ml-10 border-[1px] border-primary dark:border-secondary w-3/5'/>
+                        </section>
+                        <section className='row-span-6 col-span-1 overflow-y-scroll'>
+                          <ul>
+                            <DropdownLink>Getting Started</DropdownLink>
+                            <DropdownLink>The Computer Structure</DropdownLink>
+                            <DropdownLink>Logical Processing</DropdownLink>
+                            <DropdownLink>Computer Programming</DropdownLink>
+                            <DropdownLink>The Internet and the Web</DropdownLink>
+                          </ul>
+                        </section>
+                         <section className='row-span-6 col-span-4 grid grid-flow-col'>
+                           <div className='col-span-2'>
+                             {/* <img src='../../../assets/images/Tutorials2.png' className='bg-cover'/> */}
+                           </div>
+                           <div className='bg-white dark:bg-black col-span-3 rounded-r-lg'>2</div>
+                         </section>
+                      </div>
                   </NavItem> 
               </Link>
               <Link to="/community">
                   <NavItem icon={<BsPeopleFill size="15"/>}>
-                    <Dropdown />
+                     <div className='fixed top-14 left-0 bg-gradient-to-r from-secondary to-primary 
+                                    w-full h-[400px]'>
+                      <div className='fixed bg-slate-900 backdrop-blur-md
+                                    w-full h-[400px] bg-opacity-90'>
+
+                      </div>
+                    </div>
                   </NavItem>
               </Link>
               <Link to="/tech">
                   <NavItem icon={<HiOutlineDesktopComputer size="15"/>}>
-                    <Dropdown />
+                     <div className='fixed top-14 left-0 bg-slate-300
+                                    dark:bg-slate-900 dark:bg-opacity-90 p-3
+                                    w-full h-[350px] bg-opacity-90 grid grid-flow-auto gap-2'>
+                        <section className='col-span-5 flex flex-col items-end'>
+                          <span className='text-primary dark:text-secondary 
+                                          font-audiowide text-[30px] my-1'>TECH</span>
+                          <hr className='ml-10 border-[1px] border-primary dark:border-secondary w-3/5'/>
+                        </section>
+                        <section className='row-span-6 col-span-1 overflow-y-scroll'>
+                          <ul>
+                            <DropdownLink>Android Development</DropdownLink>
+                            <DropdownLink>Windows Development</DropdownLink>
+                            <DropdownLink>E-commerce</DropdownLink>
+                            <DropdownLink>Web Development</DropdownLink>
+                            <DropdownLink>Open Source Software</DropdownLink>
+                            <DropdownLink>Apple Development</DropdownLink>
+                            <DropdownLink>Social Media</DropdownLink>
+                            <DropdownLink>Robotics</DropdownLink>
+                            <DropdownLink>Web 3.0: Blockchain Development</DropdownLink>
+                            <DropdownLink>Cybersecurity</DropdownLink>
+                            <DropdownLink>Machine Learning and AI</DropdownLink>
+                            <DropdownLink>Advanced Engineering</DropdownLink>
+                          </ul>
+                        </section>
+                         <section className='row-span-6 col-span-4 grid grid-flow-col'>
+                           <div className='col-span-2'>
+                             {/* <img src='../../../assets/images/Tutorials2.png' className='bg-cover'/> */}
+                           </div>
+                           <div className='bg-white dark:bg-black col-span-3 rounded-r-lg'>2</div>
+                         </section>
+                      </div>
                   </NavItem> 
               </Link>
               <Link to="/blogs">
@@ -60,38 +117,14 @@ const NavItem = (props) =>{
   return (
     <div className="relative">
       <div className="absolute -inset-0.5 opacity-75 bg-gradient-to-r to-secondary from-primary rounded-xl blur-sm group-hover:opacity-100 animate-tilt"></div>
-    <button className="text-primary dark:text-sky-blue bg-white dark:bg-black p-3
-                      rounded-xl relative group" 
-                      onMouseEnter={() =>setOpenNav(!openNav)} onMouseLeave={() =>setOpenNav(!openNav)}>
-      {openNav && props.children}
-      {props.icon}
-    </button>
-    
+        <button className="text-primary dark:text-sky-blue bg-white dark:bg-black p-3
+                          rounded-xl relative group" 
+                          onMouseEnter={() =>setOpenNav(!openNav)} onMouseLeave={() =>setOpenNav(!openNav)}>
+          {openNav && props.children}
+          {props.icon}
+        </button>
     </div>
    
-  )
-}
-
-const Dropdown = () => {
-  const DropLink = (props) => {
-    return (
-      <li>
-        <h1 className='text-white'>
-          {props.children}
-        </h1>
-      </li>
-    )
-  }
-  return (
-    <div className='fixed w-full h-auto top-14 left-0
-                    bg-black bg-opacity-50 rounded-b-lg
-                    backdrop-blur-md'>
-      <ul>
-          <DropLink>
-            Getting Started
-          </DropLink>
-      </ul>
-    </div>
   )
 }
 
@@ -154,5 +187,22 @@ const ProfileMenu = () => {
     </div>
   )
 }
+
+const DropdownLink = (props) => {
+  return (
+    <li>
+        <h1 className='my-3 font-novaflat text-left text-sm ml-10 p-2
+                      text-primary hover:text-shadow-md shadow-primary
+                      hover:bg-white
+                      dark:text-secondary dark:hover:text-sky-blue
+                      dark:hover:text-shadow-md dark:hover:shadow-sky-blue 
+                    dark:hover:bg-black hover:rounded-md transition-all delay-300'>
+          {props.children}
+        </h1>
+        <hr className='w-3/4 mx-auto border-black dark:border-sky-blue'/>
+    </li>
+  )
+}
+
 
 export default NavBar
