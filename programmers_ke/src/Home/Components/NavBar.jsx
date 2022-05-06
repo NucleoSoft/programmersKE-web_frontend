@@ -45,15 +45,7 @@ const NavBar = () =>
                   </NavItem> 
               </Link>
               <Link to="/community">
-                  <NavItem icon={<BsPeopleFill size="15"/>}>
-                     <div className='fixed top-14 left-0 bg-gradient-to-r from-secondary to-primary 
-                                    w-full h-[400px]'>
-                      <div className='fixed bg-slate-900 backdrop-blur-md
-                                    w-full h-[400px] bg-opacity-90'>
-
-                      </div>
-                    </div>
-                  </NavItem>
+                  <NavItem icon={<BsPeopleFill size="15"/>} />
               </Link>
               <Link to="/tech">
                   <NavItem icon={<HiOutlineDesktopComputer size="15"/>}>
