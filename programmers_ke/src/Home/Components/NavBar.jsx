@@ -20,26 +20,39 @@ const NavBar = () =>
                   <NavItem icon={<FaRegLightbulb size="15"/>}>
                       <div className='fixed top-14 left-0 bg-slate-300
                                     dark:bg-slate-900 dark:bg-opacity-90 p-3
-                                    w-full h-[350px] bg-opacity-90 grid grid-flow-auto gap-2'>
+                                    w-full h-[350px] bg-opacity-90 grid grid-flow-auto gap-3'>
                         <section className='col-span-5 flex flex-col items-end'>
                           <span className='text-primary dark:text-secondary 
                                           font-audiowide text-[30px] my-1'>TUTORIALS</span>
-                          <hr className='ml-10 border-[1px] border-primary dark:border-secondary w-3/5'/>
+                          <hr className='ml-10 border-primary dark:border-secondary w-full'/>
                         </section>
-                        <section className='row-span-6 col-span-1 overflow-y-scroll'>
+                        <section className='row-span-6 col-span-1 overflow-y-scroll scrollBar p-2'>
                           <ul>
                             <DropdownLink>Getting Started</DropdownLink>
-                            <DropdownLink>The Computer Structure</DropdownLink>
-                            <DropdownLink>Logical Processing</DropdownLink>
+                            <DropdownLink>The Computer</DropdownLink>
+                            <DropdownLink>Data Structures and Algorithms</DropdownLink>
+                            <DropdownLink>Logical Thinking and Problem Solving</DropdownLink>
+                            <DropdownLink>System Analysis and Design</DropdownLink>
                             <DropdownLink>Computer Programming</DropdownLink>
                             <DropdownLink>The Internet and the Web</DropdownLink>
                           </ul>
                         </section>
-                         <section className='row-span-6 col-span-4 grid grid-flow-col'>
-                           <div className='col-span-2'>
-                             {/* <img src='../../../assets/images/Tutorials2.png' className='bg-cover'/> */}
+                         <section className='row-span-6 drop-shadow-lg 
+                                            col-span-4 grid grid-flow-col'>
+                           <div className='col-span-4 overflow-hidden 
+                                            rounded-l-lg bg-nav-image1 bg-cover'>
+                            
                            </div>
-                           <div className='bg-white dark:bg-black col-span-3 rounded-r-lg'>2</div>
+                           <div className='bg-white dark:bg-black col-span-1 rounded-r-lg'>
+                             <p className='text-slate-900 dark:text-white font-adventpro text-[18px]
+                                           text-right p-3 my-auto'>
+                               Whether you're starting out as a newbie in Computer Science with<br/>
+                               zero knowledge, or whetting your appetite to the <br/> 
+                               next level of tech, these series of lessons and resources <br/> 
+                               are built with that in mind. Start out in CS with confidence <br/> 
+                               from the most basic level, or sharpen up what you already know.
+                             </p>
+                            </div>
                          </section>
                       </div>
                   </NavItem> 
@@ -51,13 +64,13 @@ const NavBar = () =>
                   <NavItem icon={<HiOutlineDesktopComputer size="15"/>}>
                      <div className='fixed top-14 left-0 bg-slate-300
                                     dark:bg-slate-900 dark:bg-opacity-90 p-3
-                                    w-full h-[350px] bg-opacity-90 grid grid-flow-auto gap-2'>
+                                    w-full h-[350px] bg-opacity-90 grid grid-flow-auto gap-3'>
                         <section className='col-span-5 flex flex-col items-end'>
                           <span className='text-primary dark:text-secondary 
                                           font-audiowide text-[30px] my-1'>TECH</span>
-                          <hr className='ml-10 border-[1px] border-primary dark:border-secondary w-3/5'/>
+                          <hr className='ml-10 border-primary dark:border-secondary w-full'/>
                         </section>
-                        <section className='row-span-6 col-span-1 overflow-y-scroll'>
+                        <section className='row-span-6 col-span-1 overflow-y-scroll scrollBar p-2'>
                           <ul>
                             <DropdownLink>Android Development</DropdownLink>
                             <DropdownLink>Windows Development</DropdownLink>
@@ -66,6 +79,7 @@ const NavBar = () =>
                             <DropdownLink>Open Source Software</DropdownLink>
                             <DropdownLink>Apple Development</DropdownLink>
                             <DropdownLink>Social Media</DropdownLink>
+                            <DropdownLink>Game Development</DropdownLink>
                             <DropdownLink>Robotics</DropdownLink>
                             <DropdownLink>Web 3.0: Blockchain Development</DropdownLink>
                             <DropdownLink>Cybersecurity</DropdownLink>
@@ -73,11 +87,22 @@ const NavBar = () =>
                             <DropdownLink>Advanced Engineering</DropdownLink>
                           </ul>
                         </section>
-                         <section className='row-span-6 col-span-4 grid grid-flow-col'>
-                           <div className='col-span-2'>
-                             {/* <img src='../../../assets/images/Tutorials2.png' className='bg-cover'/> */}
+                         <section className='row-span-6 drop-shadow-lg 
+                                            col-span-4 grid grid-flow-col'>
+                           <div className='col-span-4 bg-nav-image2 bg-cover rounded-l-lg'>
+                            
                            </div>
-                           <div className='bg-white dark:bg-black col-span-3 rounded-r-lg'>2</div>
+                           <div className='bg-white dark:bg-black col-span-1 rounded-r-lg'>
+                              <p className='text-slate-900 dark:text-white font-adventpro text-[18px]
+                                           text-right p-3 my-auto'>
+                               Ready to hop on to the next level of being a tech pro? <br/>
+                               These series of lessons and paths will help you take your<br/> 
+                               elementary level knowledge to the advanced stage, with real-life <br/>
+                               projects, to work on, problems to solve both big or small, trends<br/> 
+                               to catch up with and actual projects, to benchmark with as case studies.<br/> 
+                               It's basically PBL on steroids!
+                             </p>
+                           </div>
                          </section>
                       </div>
                   </NavItem> 
@@ -183,15 +208,14 @@ const ProfileMenu = () => {
 const DropdownLink = (props) => {
   return (
     <li>
-        <h1 className='my-3 font-novaflat text-left text-sm ml-10 p-2
-                      text-primary hover:text-shadow-md shadow-primary
-                      hover:bg-white
-                      dark:text-secondary dark:hover:text-sky-blue
+        <h1 className='my-3 font-novaflat text-left text-sm ml-10 p-2 
+                      text-primary hover:text-black hover:text-shadow-md shadow-primary 
+                      hover:bg-white dark:text-secondary dark:hover:text-sky-blue
                       dark:hover:text-shadow-md dark:hover:shadow-sky-blue 
                     dark:hover:bg-black hover:rounded-md transition-all delay-300'>
           {props.children}
         </h1>
-        <hr className='w-3/4 mx-auto border-black dark:border-sky-blue'/>
+        <hr className='w-3/4 mx-auto border-white dark:border-black'/>
     </li>
   )
 }

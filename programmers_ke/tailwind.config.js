@@ -71,8 +71,9 @@ module.exports = {
         'hero-image': 'url(./assets/images/Nairobi.jpeg)',
         'error-image': 'url(./assets/blurry-gradient-haikei.svg)',
         'footer-image': 'url(./assets/wave-haikei.svg)',
-        'nav-image':'url(./assets/images/Tutorials2.png)',
-        'image': 'url(./assets/images/Mariupol.png)',
+        'nav-image1':'url(./assets/images/Tutorials2.png)',
+        'nav-image2':'url(./assets/images/Tech.png)',
+        'war-image': 'url(./assets/images/Mariupol.png)',
       },
       colors:
       {

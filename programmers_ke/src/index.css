@@ -11,6 +11,15 @@
       @apply fixed top-0 left-0 bg-gradient-to-br from-primary to-secondary
       h-screen w-screen overflow-x-hidden bg-scroll 
     } */
+    .scrollBar
+    {
+        @apply scrollbar scrollbar-w-1 scrollbar-thumb-rounded-md 
+        drop-shadow-lg 
+        scrollbar-thumb-secondary scrollbar-track-black 
+        hover:scrollbar-track-primary
+        transition-all delay-300
+    }
+
     .searchBar{
       @apply relative bg-slate-400 p-2 bg-opacity-50
       rounded-l-xl w-72 flex flex-row my-auto
