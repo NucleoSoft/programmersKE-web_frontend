@@ -28,7 +28,7 @@ function App() {
           <Route path="/online_compiler" element={<OnlineCompiler />} />
           <Route path="/login" element={<Login />} />
           <Route path="/ukraine" element={<Ukraine />} />
-          <Route element={<ErrorPage />} />
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>
       {/* <WebLoader /> */}

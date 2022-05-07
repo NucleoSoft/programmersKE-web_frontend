@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom'
 
 function errorPage()
 {
+  const error_details = () => {
+      
+  }
     return(
         <div className="fixed top-0 left-0 h-screen bg-error-image 
                         w-full bg-no-repeat bg-cover">
@@ -11,9 +14,11 @@ function errorPage()
             <h3 className="text-center m-2 text-primary font-novaflat
                             text-[30px]">This page does not exist!</h3>
             <span className="text-center text-secondary text-lg font-audiowide">
-
+                Error Details : {error_details}
             </span>
-            <Back />
+            <Link to="/">
+              <Back />
+            </Link>
             <Footer />
         </div>
     )

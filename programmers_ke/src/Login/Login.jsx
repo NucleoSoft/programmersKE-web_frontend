@@ -2,28 +2,7 @@ import React, { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Blob from './Blob'
 
-// import firebase from 'firebase/compat/app'
-// import 'firebase/compat/firestore'
-// import 'firebase/compat/auth'
-// import 'firebase/analytics'
-
-// import { useAuthState } from 'react-firebase-hooks/auth'
-// import { useCollectionData } from 'react-firebase-hooks/firestore'
-
-// firebase.initializeApp()
-// {
-//     apiKey: "AIzaSyA4MPaIljJRjYiMRPK5mhF_aIbrM6OUi4M";
-//     authDomain: "programmers-ke.firebaseapp.com";
-//     projectId: "programmers-ke";
-//     storageBucket: "programmers-ke.appspot.com";
-//     messagingSenderId: "276887789667";
-//     appId: "1:276887789667:web:6a3a1480f0e4d3a2261856";
-//     measurementId: "G-BNNM4F8SPR";
-// }
-
-// const auth = firebase.auth();
-// const firestore = firebase.firestore();
-// const analytics = firebase.analytics();
+import { googleSignIn } from './Firebase.js'
 
 function Login(){
     return(
@@ -51,13 +30,9 @@ function Login(){
 }
 
 function SignIn(){
-    // const googleSignIn = () =>{
-
-    //     const provider = new firebase.auth.GoogleAuthProvider();
-    //     auth.signInWithPopup(provider);
-    // }
+    
     return(
-        //onclick={googleSignIn}
+
         <div className='flex flex-col p-2'>
         <button className="bg-primary p-2 w-3/5 mx-auto my-2 border-purple-800 hover:bg-green-600
                             hover:text-white rounded-lg transition-all delay-300">
@@ -68,21 +43,17 @@ function SignIn(){
 }
 
 function SignInOps() {
-    // const googleSignIn = () =>{
-
-    //     const provider = new firebase.auth.GoogleAuthProvider();
-    //     auth.signInWithPopup(provider);
-    // }
     return (
-       
+
         <div className='flex flex-row my-2 w-full'>
-            <button className='flex flex-row bg-white w-[35%] mx-auto p-2 rounded-lg my-2'>
-                <span className='font-novaflat my-auto ml-3 text-sm'>Sign in with</span>
-                <img src='../../assets/icons/color_/google-svgrepo-com.svg' className='w-8 ml-2' />
+            <button className='flex flex-row bg-white mx-auto p-2 rounded-lg my-2' onClick={googleSignIn}>
+                <img src='../../assets/icons/color_/google-svgrepo-com.svg' className='w-7' />
             </button>
-            <button className='flex flex-row bg-white w-[35%] mx-auto p-2 rounded-lg my-2'>
-                <span className='font-novaflat my-auto ml-3 text-sm'>Sign in with</span>
-                <img src='../../assets/icons/color_/github-svgrepo-com.svg' className='w-8 ml-2' />
+            <button className='flex flex-row bg-white mx-auto p-2 rounded-lg my-2'>
+                <img src='../../assets/icons/color_/github-svgrepo-com.svg' className='w-7' />
+            </button>
+             <button className='flex flex-row bg-white mx-auto p-2 rounded-lg my-2'>
+                <img src='../../assets/icons/color_/twitter-svgrepo-com.svg' className='w-7' />
             </button>
         </div>
     )

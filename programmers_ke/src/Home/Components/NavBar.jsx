@@ -19,8 +19,8 @@ const NavBar = () =>
               <Link to="/tutorials">
                   <NavItem icon={<FaRegLightbulb size="15"/>}>
                       <div className='fixed top-14 left-0 bg-slate-300
-                                    dark:bg-slate-900 dark:bg-opacity-90 p-3
-                                    w-full h-[350px] bg-opacity-90 grid grid-flow-auto gap-3'>
+                                    dark:bg-slate-900 p-3
+                                    w-full h-[350px] grid grid-flow-auto gap-3'>
                         <section className='col-span-5 flex flex-col items-end'>
                           <span className='text-primary dark:text-secondary 
                                           font-audiowide text-[30px] my-1'>TUTORIALS</span>
@@ -49,8 +49,9 @@ const NavBar = () =>
                                Whether you're starting out as a newbie in Computer Science with<br/>
                                zero knowledge, or whetting your appetite to the <br/> 
                                next level of tech, these series of lessons and resources <br/> 
-                               are built with that in mind. Start out in CS with confidence <br/> 
-                               from the most basic level, or sharpen up what you already know.
+                               are built with all that in mind. Start out in CS with confidence <br/> 
+                               from the most basic level, or sharpen up what you already know. Follows<br/>
+                               a problem-based approach.
                              </p>
                             </div>
                          </section>
@@ -63,8 +64,8 @@ const NavBar = () =>
               <Link to="/tech">
                   <NavItem icon={<HiOutlineDesktopComputer size="15"/>}>
                      <div className='fixed top-14 left-0 bg-slate-300
-                                    dark:bg-slate-900 dark:bg-opacity-90 p-3
-                                    w-full h-[350px] bg-opacity-90 grid grid-flow-auto gap-3'>
+                                    dark:bg-slate-900 p-3
+                                    w-full h-[350px] grid grid-flow-auto gap-3'>
                         <section className='col-span-5 flex flex-col items-end'>
                           <span className='text-primary dark:text-secondary 
                                           font-audiowide text-[30px] my-1'>TECH</span>
@@ -99,8 +100,8 @@ const NavBar = () =>
                                These series of lessons and paths will help you take your<br/> 
                                elementary level knowledge to the advanced stage, with real-life <br/>
                                projects, to work on, problems to solve both big or small, trends<br/> 
-                               to catch up with and actual projects, to benchmark with as case studies.<br/> 
-                               It's basically PBL on steroids!
+                               to catch up with and actual projects, to benchmark with tech corps<br/>
+                               as case studies. It's basically PBL on steroids!
                              </p>
                            </div>
                          </section>
@@ -133,7 +134,8 @@ const NavItem = (props) =>{
   const [openNav, setOpenNav] = useState(false)
   return (
     <div className="relative">
-      <div className="absolute -inset-0.5 opacity-75 bg-gradient-to-r to-secondary from-primary rounded-xl blur-sm group-hover:opacity-100 animate-tilt"></div>
+      <div className="absolute -inset-0.5 opacity-75 bg-gradient-to-r to-secondary from-primary rounded-xl 
+                            blur-sm group-hover:opacity-100 animate-tilt"></div>
         <button className="text-primary dark:text-sky-blue bg-white dark:bg-black p-3
                           rounded-xl relative group" 
                           onMouseEnter={() =>setOpenNav(!openNav)} onMouseLeave={() =>setOpenNav(!openNav)}>

@@ -7,7 +7,7 @@ function Footer() {
                     bg-gradient-to-tr from-primary via-black to-secondary">
         <div className="bg-slate-900 bg-opacity-80
                         h-full rounded-t-md grid grid-flow-col">
-          <section className='col-span-2 rounded-tl-md backdrop-brightness-150'>
+          <section className='col-span-5 rounded-tl-md backdrop-brightness-150'>
             <div className='row-span-1'>
                 <img src='../../../assets/Logo.svg' width={120} className="mx-auto my-16"/>
             </div>
@@ -19,6 +19,7 @@ function Footer() {
                 <h1 className='text-primary font-audiowide text-[35px] ml-[50%] pt-2
                               text-shadow-md shadow-primary'>
                   {'>_'}PROGRAMMERS_KE</h1>
+                   <span className='text-white font-adventpro ml-[87%]'>2022</span>
               </div>
               <div className="row-span-6 grid grid-flow-col gap-3 p-4">
                 <section className='row-span-2 grid grid-flow-row gap-3'>
@@ -107,6 +108,7 @@ function Footer() {
               </div>
                <div className="row-span-3">
                   <hr className='w-4/5 ml-[15%] border-secondary my-3'/>
+                <div className='flex flex-row'>
                   <span className='font-adventpro ml-10 text-white'>
                     See more on how you can contribute to efforts against the war in Ukraine
                   </span>
@@ -115,6 +117,16 @@ function Footer() {
                                       hover:text-shadow-md hover:shadow-white'>
                     Let's Go!
                   </button>
+                  
+                  <button className='rounded-md p-2 ml-72 text-sm text-white font-novaflat
+                                      hover:bg-white hover:text-black transition-all delay-300
+                                      ring-white ring-2 flex flex-row'>
+                  <span>
+                    English
+                  </span>
+                    <img src='../../assets/icons/utils/en_AU.png' className='w-5 ml-2'/>
+                  </button>
+                </div>
               </div>
           </section>
         </div>

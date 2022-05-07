@@ -21,7 +21,9 @@ const CodeBar = (props) =>{
                         <CodeIcon icon={<AiFillBackward size="25" />} />
                     </Link>
                     <Line />             
-                    <CodeIcon icon={<FaJava size="25"/>} />
+                    <CodeIcon icon={<FaJava size="25"/>}>
+                        
+                    </CodeIcon> 
                     <CodeIcon icon={<DiPython size="25"/>} />
                     <CodeIcon icon={<DiDart size="25" />} />
                     {/* <CodeIcon icon={<SiCplusplus size="20"/>} />
@@ -37,9 +39,15 @@ const CodeBar = (props) =>{
     )
 }
  
-const CodeIcon = ({icon}) =>{
+const CodeIcon = (props) =>{
     return (
-    <button className="codeIcon">{icon}</button>
+    <button className="codeIcon group">
+        {props.icon}
+        <h1 className='codeIconToolTip group-hover:scale-100'>
+            tooltip
+        </h1>
+    </button>
+    
     )
 }
 

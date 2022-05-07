@@ -32,11 +32,19 @@
      text-primary bg-slate-400 rounded-xl h-12 w-12
      mx-auto my-3 hover:bg-slate-900 hover:text-secondary 
      hover:rounded-full transition-all delay-300 focus:border-primary
-     focus:bg-slate-900 focus:text-sky-blue focus:border-2 
+     focus:bg-slate-900 focus:text-sky-blue focus:border-2 focus:rounded-full
 
      dark:bg-slate-900 dark:hover:bg-slate-400 dark:text-secondary
      dark:hover:text-primary dark:focus:border-secondary dark:focus:text-sky-blue
-     dark:focus:bg-slate-400
+     dark:focus:bg-primary dark:focus:rounded-full
+    }
+
+    .codeIconToolTip
+    {
+        @apply fixed left-16 bg-slate-900 
+        dark:bg-slate-300 p-1 rounded-md text-white text-[12px]
+        dark:text-slate-900 scale-0 transition-all 
+        delay-300 font-novaflat
     }
 
     .settingsIcon{
