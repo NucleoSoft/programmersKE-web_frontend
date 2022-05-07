@@ -45,15 +45,18 @@ function SignIn(){
 function SignInOps() {
     return (
 
-        <div className='flex flex-row my-2 w-full'>
-            <button className='flex flex-row bg-white mx-auto p-2 rounded-lg my-2' onClick={googleSignIn}>
+        <div className='flex flex-row my-2 w-full justify-center'>
+            <button className='bg-white mx-auto p-2 rounded-lg my-2 group' onClick={googleSignIn}>
                 <img src='../../assets/icons/color_/google-svgrepo-com.svg' className='w-7' />
+                 <Tooltip>Google</Tooltip>
             </button>
-            <button className='flex flex-row bg-white mx-auto p-2 rounded-lg my-2'>
+            <button className='bg-white mx-auto p-2 rounded-lg my-2 group'>
                 <img src='../../assets/icons/color_/github-svgrepo-com.svg' className='w-7' />
+                 <Tooltip>Github</Tooltip>
             </button>
-             <button className='flex flex-row bg-white mx-auto p-2 rounded-lg my-2'>
+             <button className='bg-white mx-auto p-2 rounded-lg my-2 group'>
                 <img src='../../assets/icons/color_/twitter-svgrepo-com.svg' className='w-7' />
+                <Tooltip>Twitter</Tooltip>
             </button>
         </div>
     )
@@ -67,6 +70,17 @@ const BoilerplateLogo = () => {
     </div>
   )
 }
+
+const Tooltip = (props) => {
+  return (
+    <h1 className='text-sm text-sky-blue font-adventpro bg-slate-900 p-1
+                    rounded-md absolute text-shadow-sm shadow-sky-blue
+                    scale-0 group-hover:scale-100 transition-all delay-300'>
+        {props.children}
+    </h1> 
+  )
+}
+
 
 function Form() {
     const formSubmit = (e) =>

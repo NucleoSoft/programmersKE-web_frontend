@@ -1,5 +1,5 @@
-import CodeBar from './CodeBar'
-import CodeSpace from './CodeSpace';
+import CodeBar from './components/CodeBar'
+import CodeSpace from './components/CodeSpace'
 
 
 import { VscCopy, VscDebug, VscRunAll } from 'react-icons/vsc';

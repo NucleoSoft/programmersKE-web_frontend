@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { BrowserRouter, Link } from 'react-router-dom'
+// import { motion } from 'framer-motion'
 
 import { VscTerminalPowershell } from 'react-icons/vsc'
 import { BsPeopleFill, BsNewspaper, BsSearch, BsPersonFill } from 'react-icons/bs'
