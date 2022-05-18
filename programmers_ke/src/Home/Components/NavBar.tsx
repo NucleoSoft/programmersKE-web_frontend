@@ -61,7 +61,7 @@ const NavBar = () =>
                   </NavItem> 
               </Link>
               <Link to="/community">
-                  <NavItem icon={<BsPeopleFill size="15"/>} />
+                  <NavItem icon={<BsPeopleFill size="15" />} children={undefined} />
               </Link>
               <Link to="/tech">
                   <NavItem icon={<HiOutlineDesktopComputer size="15"/>}>
@@ -111,13 +111,13 @@ const NavBar = () =>
                   </NavItem> 
               </Link>
               <Link to="/blogs">
-                  <NavItem icon={<RiChatQuoteLine size="15"/>} />
+                  <NavItem icon={<RiChatQuoteLine size="15" />} children={undefined} />
               </Link>
               <Link to="/news">
-                  <NavItem icon={<BsNewspaper size="15"/>} />
+                  <NavItem icon={<BsNewspaper size="15" />} children={undefined} />
               </Link>
               <Link to="/online_compiler">
-                  <NavItem icon={<VscTerminalPowershell size="15" />} />
+                  <NavItem icon={<VscTerminalPowershell size="15" />} children={undefined} />
               </Link>
             </div>
               <div className='pr-4 flex flex-row'>
@@ -132,7 +132,9 @@ const NavBar = () =>
     )
 }
 
-const NavItem = (props) =>{
+const NavItem = (props: 
+  { children: any; icon: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined 
+  }) =>{
   const [openNav, setOpenNav] = useState(false)
   return (
     <div className="relative">
@@ -160,12 +162,12 @@ const SearchBar = ({icon}) => {
   )
 }
 
-const Profile = (props) => {
+const Profile = (props: { children: any }) => {
   const [open, setopen] = useState(false);
   return (
     <button className="mx-10 items-center flex flex-row" onClick={() => setopen(!open)}>
     <img alt='profilePic' src="../../../assets/layered-steps-haikei.svg" className='w-8 h-8 
-                  rounded-full bg-cover group'/>
+              rounded-full border-sky-blue border-2 bg-cover group'/>
 
       {open && props.children}
     </button>
@@ -173,7 +175,10 @@ const Profile = (props) => {
 }
 
 const ProfileMenu = () => {
-  const ProfileItem = (props: { leftIcon: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; children: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined }) => {
+  const ProfileItem = (props: { 
+    leftIcon: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; 
+    children: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined 
+    }) => {
    return(
      <>
         <a href='#' className='w-11/12 flex flex-row px-4 text-white my-3'>
@@ -184,7 +189,10 @@ const ProfileMenu = () => {
      </>
    )
   }
-  const ProfileItem2 = (props: { leftIcon: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; children: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined }) => {
+  const ProfileItem2 = (props: { 
+    leftIcon: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; 
+    children: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined 
+    }) => {
     return (
       <>
         <button className='bg-primary flex flex-row w-11/12 my-3 py-2
@@ -198,7 +206,7 @@ const ProfileMenu = () => {
   }
   return (
     <div className='absolute top-16 right-16 bg-white 
-                    dark:bg-black bg-opacity-70 w-1/5
+                    dark:bg-black dark:bg-opacity-70 bg-opacity-70 w-1/5
                     rounded-lg h-auto p-4 z-20'>
       <img alt='profilePic' src="../../../assets/layered-steps-haikei.svg" className='w-16 h-16 
                   rounded-full bg-cover group ml-[65%]'/>

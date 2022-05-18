@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '../Home/Components/NavBar'
 
@@ -25,7 +26,7 @@ function Start() {
                   or indirectly by the ongoing war in Ukraine.Learn more how
                   we can collaborate to help</h1>
             <Link to='/ukraine'>
-            <button className="my-2 px-2 bg-yellow-600 rounded-lg font-novaflat text-black text-sm
+            <button className="my-2 px-2 bg-yellow-500 rounded-lg font-novaflat text-black text-sm
                               hover:ring-2 hover:ring-blue-500 hover:bg-blue-700 hover:text-white
                               hover:text-shadow-md hover:shadow-white transition-all delay-300">
               Let's Go
@@ -39,7 +40,7 @@ function Start() {
               </section>
               <section className="bg-slate-200 dark:bg-slate-900 drop-shadow-lg
                                   col-span-7 rounded-lg border-1 border-white">
-                  2
+                  <h1 className='font-zrnic'>Hi there, Lamo</h1>
               </section>
                <section className="bg-slate-200 dark:bg-slate-900 drop-shadow-lg
                                   col-span-3 rounded-lg border-1 border-white">

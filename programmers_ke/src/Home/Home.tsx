@@ -4,6 +4,7 @@ import Footer from './Components/Footer'
 import SideTab from './Components/SideTab'
 import Carousel from './Components/Carousel'
 import LanguageMenu from './Components/LanguageMenu'
+import React from 'react'
 
 function Home() {
   return (
