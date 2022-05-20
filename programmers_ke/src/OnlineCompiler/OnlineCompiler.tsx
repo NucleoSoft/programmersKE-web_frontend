@@ -1,9 +1,10 @@
 import CodeBar from './components/CodeBar'
 import CodeSpace from './components/CodeSpace'
-
+import CodeEditor from './components/CodeEditor';
 
 import { VscCopy, VscDebug, VscRunAll } from 'react-icons/vsc';
 import { BsSave } from 'react-icons/bs';
+import React from 'react';
 
 
 function OnlineCompiler(){
@@ -19,24 +20,12 @@ function OnlineCompiler(){
             <h1 className="font-audiowide p-2 w-full text-primary 
                            text-[70px] text-right dark:text-secondary
                            text-shadow-md shadow-primary dark:shadow-secondary">Online Compiler</h1>
-            <div className='h-auto w-1/6 my-3 flex flex-row ml-[82%]'>
-                <Settings icon={<VscRunAll size="20" />} />
-                <Settings icon={<VscDebug size="20" />} />
-                <Settings icon={<BsSave size="16"/>}/>
-                <Settings icon={<VscCopy size="19"/>}/>
-            </div>
-            <CodeSpace/>
+            {/* <CodeSpace/> */}
+            <CodeEditor/>
         </div>
     </div>
     )
 }
 
-const Settings = ({icon}) => {
-  return (
-    <button className="settingsIcon">
-        {icon}
-    </button>
-  )
-}
 
 export default OnlineCompiler

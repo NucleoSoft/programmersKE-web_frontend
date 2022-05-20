@@ -13,7 +13,7 @@ import { AiFillBackward } from 'react-icons/ai'
 import { DiDart, DiPython } from 'react-icons/di'
 import { RiSettings3Fill, RiCloseFill } from 'react-icons/ri'
 
-const CodeBar = (props) =>{
+const CodeBar = (props: any) =>{
     return(
         <div className="fixed h-screen bg-slate-300 w-16
                         top-0 left-0 shadow-primary dark:shadow-secondary dark:bg-slate-800
@@ -46,7 +46,7 @@ const CodeBar = (props) =>{
     )
 }
  
-const CodeIcon = (props) =>{
+const CodeIcon = (props: { icon: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; children: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; }) =>{
     return (
     <button className="codeIcon group">{props.icon}
         <h1 className='codeIconToolTip group-hover:scale-100'>
@@ -57,7 +57,7 @@ const CodeIcon = (props) =>{
     )
 }
 
-const AddIcon = (props) =>{
+const AddIcon = (props: { icon: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; children: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; }) =>{
     const [openmodal, setopenmodal] = useState(false)
 
     return (
