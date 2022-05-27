@@ -2,10 +2,7 @@ import CodeBar from './components/CodeBar'
 import CodeSpace from './components/CodeSpace'
 import CodeEditor from './components/CodeEditor';
 
-import { VscCopy, VscDebug, VscRunAll } from 'react-icons/vsc';
-import { BsSave } from 'react-icons/bs';
 import React from 'react';
-
 
 function OnlineCompiler(){
 

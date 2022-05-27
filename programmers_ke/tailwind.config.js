@@ -73,6 +73,7 @@ module.exports = {
         'footer-image': 'url(./assets/wave-haikei.svg)',
         'nav-image1':'url(./assets/images/Tutorials2.png)',
         'nav-image2':'url(./assets/images/Tech.png)',
+        'nav-image3':'url(./assets/images/Community.png)',
         'war-image': 'url(./assets/images/Mariupol.png)',
       },
       colors:

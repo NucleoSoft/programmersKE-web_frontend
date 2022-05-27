@@ -33,7 +33,7 @@ const NavBar = () =>
                             <DropdownLink>Getting Started</DropdownLink>
                             <DropdownLink>The Computer</DropdownLink>
                             <DropdownLink>Data Structures and Algorithms</DropdownLink>
-                            <DropdownLink>Logical Thinking and Problem Solving</DropdownLink>
+                            <DropdownLink>Logical Thinking</DropdownLink>
                             <DropdownLink>System Analysis and Design</DropdownLink>
                             <DropdownLink>Computer Programming</DropdownLink>
                             <DropdownLink>The Internet and the Web</DropdownLink>
@@ -61,7 +61,43 @@ const NavBar = () =>
                   </NavItem> 
               </Link>
               <Link to="/community">
-                  <NavItem icon={<BsPeopleFill size="15" />} children={undefined} />
+                  <NavItem icon={<BsPeopleFill size="15" />} >
+                    <div className='fixed top-14 left-0 bg-slate-300
+                                    dark:bg-slate-900 p-3
+                                    w-full h-[350px] grid grid-flow-auto gap-3'>
+                        <section className='col-span-5 flex flex-col items-end'>
+                          <span className='text-primary dark:text-secondary 
+                                          font-audiowide text-[30px] my-1'>COMMUNITY</span>
+                          <hr className='ml-10 border-primary dark:border-secondary w-full'/>
+                        </section>
+                        <section className='row-span-6 col-span-1 overflow-y-scroll scrollBar p-2'>
+                          <ul>
+                            <DropdownLink>Our Story</DropdownLink>
+                            <DropdownLink>Forums</DropdownLink>
+                            <DropdownLink>Work with Us</DropdownLink>
+                            <DropdownLink>Feedback Hub</DropdownLink>
+                            <DropdownLink>Support and Queries</DropdownLink>
+                            <DropdownLink>Events and Webinars</DropdownLink>
+                          </ul>
+                        </section>
+                         <section className='row-span-6 drop-shadow-lg 
+                                            col-span-4 grid grid-flow-col'>
+                           <div className='col-span-4 bg-nav-image3 bg-cover rounded-l-lg'>
+                            
+                           </div>
+                           <div className='bg-white dark:bg-black col-span-1 rounded-r-lg'>
+                              <p className='text-slate-900 dark:text-white font-adventpro text-[18px]
+                                           text-right p-3 my-auto'>
+                               It's said that one of the best ways to learn is sharing <br/>
+                               knowledge, communing with others and engaging in experiences. <br/> 
+                               Right here, find the right gang of people that suit your needs, and <br/>
+                               explore available doors of opportunity from various tech communities.<br/>
+                               Heck, you could even become better at networking with other people! 
+                             </p>
+                           </div>
+                         </section>
+                      </div>
+                  </NavItem>
               </Link>
               <Link to="/tech">
                   <NavItem icon={<HiOutlineDesktopComputer size="15"/>}>
@@ -116,7 +152,7 @@ const NavBar = () =>
               <Link to="/news">
                   <NavItem icon={<BsNewspaper size="15" />} children={undefined} />
               </Link>
-              <Link to="/online_compiler">
+              <Link to="/online_compiler" target="_blank">
                   <NavItem icon={<VscTerminalPowershell size="15" />} children={undefined} />
               </Link>
             </div>

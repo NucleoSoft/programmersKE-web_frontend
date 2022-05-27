@@ -13,6 +13,7 @@ import { AiFillBackward } from 'react-icons/ai'
 import { DiDart, DiPython } from 'react-icons/di'
 import { RiSettings3Fill, RiCloseFill } from 'react-icons/ri'
 
+
 const CodeBar = (props: any) =>{
     return(
         <div className="fixed h-screen bg-slate-300 w-16
@@ -46,11 +47,19 @@ const CodeBar = (props: any) =>{
     )
 }
  
-const CodeIcon = (props: { icon: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; children: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; }) =>{
+const CodeIcon = (props: { icon: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined;
+                           children: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; }) =>{
+    
+    const Close = (props) => {
+      return (
+        <button className='items-center ml-2 hover:text-red-600'>{props.icon}</button>
+      )
+    }
     return (
     <button className="codeIcon group">{props.icon}
         <h1 className='codeIconToolTip group-hover:scale-100'>
             {props.children}
+            <Close icon={<RiCloseFill size={15}/>}/>
         </h1>
     </button>
     
@@ -76,6 +85,5 @@ const Line = () => {
     <hr className="w-3/4 mx-2 border-primary dark:border-secondary"/>
   )
 }
-
 
 export default CodeBar;

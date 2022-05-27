@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function Footer() {
   return (
-    <div className="absolute h-4/5 rounded-t-md w-full top-[600vh]
+    <div className="absolute h-auto rounded-t-md w-full top-[600vh]
                     bg-gradient-to-tr from-primary via-black to-secondary">
         <div className="bg-slate-900 bg-opacity-80
                         h-full rounded-t-md grid grid-flow-col">
@@ -25,11 +25,12 @@ function Footer() {
                 <section className='row-span-2 grid grid-flow-row gap-3'>
                   <div className='backdrop-blur-md
                                rounded-r-lg drop-shadow-lg
-                                row-span-4'>
+                                row-span-4 flex flex-col'>
                     <h1 className='footerheader'>Tutorials</h1>
                      <Line/>
                       <FooterLink>Getting Started</FooterLink>
-                      <FooterLink>The Computer Structure</FooterLink>
+                      <FooterLink>The Computer</FooterLink>
+                      <FooterLink>Logical Thinking</FooterLink>
                       <FooterLink>Computer Programming</FooterLink>
                       <FooterLink>Internet and the Web</FooterLink>
                   </div>
@@ -43,14 +44,14 @@ function Footer() {
                       <h1 className='footerheader'>Tech</h1>
                       <Line/>
                     <div className='flex flex-row'>
-                      <div>
+                      <div className='flex flex-col'>
                         <FooterLink>Web Development</FooterLink>
                         <FooterLink>Internetworking</FooterLink>
                         <FooterLink>Mobile Development</FooterLink>
                         <FooterLink>Open Source Software</FooterLink>
                         <FooterLink>Android Development</FooterLink>
                       </div>
-                      <div>
+                      <div className='flex flex-col'>
                         <FooterLink>Cybersecurity</FooterLink>
                         <FooterLink>Windows Development</FooterLink>
                         <FooterLink>Blockchain Development</FooterLink>
@@ -65,7 +66,7 @@ function Footer() {
                  <section className='row-span-2 grid grid-flow-row gap-3'>
                   <div className='backdrop-blur-md
                                rounded-r-lg drop-shadow-lg
-                                row-span-3'>
+                                row-span-3 flex flex-col'>
                     <h1 className='footerheader'>Community</h1>
                      <Line/>
                       <FooterLink>Our Story</FooterLink>
@@ -76,7 +77,7 @@ function Footer() {
                   <div className='backdrop-blur-md
                                rounded-r-lg drop-shadow-lg
                                 row-span-6'>
-                    <Link to="/online_compiler">   
+                    <Link to="/online_compiler" target="_blank">   
                       <span className='footerheader flex flex-row group'>Online Compiler
                         <img src='../../../assets/icons/utils/link-svgrepo-com.svg' 
                         className='w-4 mx-1 my-auto opacity-0 group-hover:opacity-100'/>
@@ -88,7 +89,7 @@ function Footer() {
                  <section className='row-span-2 grid grid-flow-row gap-3'>
                   <div className='backdrop-blur-md
                                 rounded-r-lg drop-shadow-lg
-                                row-span-2'>
+                                row-span-2 flex flex-col'>
                     <h1 className='footerheader'>Resources</h1>
                      <Line/>
                       <FooterLink>The Open Source community</FooterLink>
@@ -98,7 +99,7 @@ function Footer() {
                   </div>
                   <div className='backdrop-blur-md
                                  rounded-r-lg drop-shadow-lg
-                                row-span-4'>
+                                row-span-4 flex flex-col'>
                     <h1 className='footerheader'>Other Projects</h1>
                      <Line/>
                      <FooterLink>Asteroid</FooterLink>
@@ -106,8 +107,7 @@ function Footer() {
                   </div>
                 </section>
               </div>
-               <div className="row-span-3">
-                  <hr className='w-4/5 ml-[15%] border-secondary my-3'/>
+               <div className="row-span-3 p-3">
                 <div className='flex flex-row'>
                   <span className='font-adventpro ml-10 text-white'>
                     See more on how you can contribute to efforts against the war in Ukraine
@@ -124,7 +124,7 @@ function Footer() {
                   <span>
                     English
                   </span>
-                    <img src='../../assets/icons/utils/en_AU.png' className='w-5 ml-2'/>
+                    <img src='../../assets/icons/utils/en_GB.png' className='w-5 ml-2'/>
                   </button>
                 </div>
               </div>
@@ -158,9 +158,9 @@ const Line = () => {
 
 const FooterLink = (props) => {
   return (
-    <h1 className='footerlink'>
+    <a className='footerlink'>
       {props.children}
-    </h1>
+    </a>
   )
 }
 

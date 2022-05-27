@@ -3,33 +3,33 @@ import { Link } from 'react-router-dom'
 
 function errorPage()
 {
-  const error_details = () => {
-      
-  }
     return(
-        <div className="fixed top-0 left-0 h-screen bg-error-image 
+        <div className="h-screen bg-error-image 
                         w-full bg-no-repeat bg-cover">
+           <img alt='404image' src="../../assets/images/404.png" width='1000px' className='mx-auto'/>
+            <div className='absolute top-32 w-full z-10'>
             <h1 className="text-[70px] text-center font-audiowide
-                        text-white mt-10">Yikess!</h1>
-            <h3 className="text-center m-2 text-primary font-novaflat
-                            text-[30px]">This page does not exist!</h3>
-            <span className="text-center text-secondary text-lg font-audiowide">
-                Error Details : {error_details}
-            </span>
+                        text-white text-shadow-md shadow-white">Yikess!</h1>
+            <h3 className="text-center m-2 text-white text-shadow-md mt-4 shadow-white font-novaflat
+                            text-[30px]">Yep! This is on you. You definitely fucked up</h3>
+            <h1 className="text-center text-primary text-shadow-sm shadow-primary my-3 text-lg font-adventpro">
+                Either the page you tried visiting doesn't exist, or you made a typo.<br/>But don't worry, at least the homepage exists!
+            </h1>
             <Link to="/">
               <Back />
             </Link>
-            <Footer />
+            </div>
+        <Footer />
         </div>
     )
 }
 
 const Back = () => {
   return (
-    <div className=" fixed w-full flex flex-row justify-center my-5">
-          <button className="bg-black text-white 
-                                    rounded-xl py-4 px-4 
-                                    hover:bg-primary hover:text-secondary transition-all delay-300">
+    <div className=" absolute w-full flex flex-row justify-center my-5">
+          <button className="bg-primary text-white 
+                              rounded-xl p-3 font-novaflat
+                             hover:text-secondary transition-all delay-300">
               Go Back to Home
           </button>
     </div>
@@ -39,7 +39,7 @@ const Back = () => {
 const Footer = () => {
   return (
     <div>
-        <img alt='footer' src='../../assets/wave-haikei.svg' className='w-full'/>
+      <img alt='footer' src='../../assets/wave-haikei.svg' className='w-full absolute bottom-0'/>
     </div>
   )
 }
