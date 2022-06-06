@@ -1,4 +1,5 @@
 // import * as LottiePlayer from "@lottiefiles/lottie-player";
+import React from "react"
 
 import Home from "./Home/Home"
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
@@ -12,7 +13,9 @@ import Tech from "./Tech/Tech"
 import OnlineCompiler from './OnlineCompiler/OnlineCompiler'
 import Login from './Login/Login'
 import Ukraine from "./About_Ukraine/Ukraine"
-import React from "react"
+import Profile from "./Profile/Profile"
+import Signup from "./Signup/Signup"
+import Settings from "./Settings/Settings"
 
 function App() {
   return (
@@ -28,6 +31,9 @@ function App() {
           <Route path="/news" element={<News />} />
           <Route path="/online_compiler" element={<OnlineCompiler />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup/>} />
+          <Route path="/profile" element={<Profile/>} />
+          <Route path="/settings" element={<Settings/>}/>
           <Route path="/ukraine" element={<Ukraine />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>

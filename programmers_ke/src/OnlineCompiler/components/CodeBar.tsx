@@ -3,7 +3,6 @@ import useDarkMode from '../../hooks/useDarkMode';
 import React, { useState } from 'react'
 import Home from '../../Home/Home'
 import { motion } from 'framer-motion';
-import Modal from './Modal';
 
 import { VscArrowSmallDown } from 'react-icons/vsc';
 import { BsPlus } from 'react-icons/bs'
@@ -21,9 +20,9 @@ const CodeBar = (props: any) =>{
                         hover:shadow-secondary dark:hover:shadow-primary shadow-lg transition-all 
                         delay-300 flex flex-col z-20 ">
                     <Link to="/start">
-                        <CodeIcon icon={<AiFillBackward size="25" />}>
+                        <BackIcon icon={<AiFillBackward size="25" />}>
                             Go Back Home
-                        </CodeIcon>
+                        </BackIcon>
                     </Link>
                     <Line />             
                     <CodeIcon icon={<FaJava size="25"/>}>
@@ -50,19 +49,35 @@ const CodeBar = (props: any) =>{
 const CodeIcon = (props: { icon: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined;
                            children: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; }) =>{
     
-    const Close = (props) => {
+    const Close = (props: { icon: string | number | boolean | React.ReactFragment | React.ReactPortal | React.ReactElement<any, string | React.JSXElementConstructor<any>> | null | undefined; }) => {
       return (
-        <button className='items-center ml-2 hover:text-red-600'>{props.icon}</button>
+        <button className='ml-2 hover:text-red-600'>{props.icon}</button>
       )
     }
     return (
     <button className="codeIcon group">{props.icon}
+        <div className='grid grid-flow-col'>
         <h1 className='codeIconToolTip group-hover:scale-100'>
             {props.children}
-            <Close icon={<RiCloseFill size={15}/>}/>
+            <Close icon={<RiCloseFill size={14}/>}/>
         </h1>
+        </div>
     </button>
     
+    )
+}
+
+const BackIcon = (props: {
+    icon: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined;
+    children: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined;
+}) => {
+    return (
+        <button className="codeIcon group">{props.icon}
+                <h1 className='codeIconToolTip group-hover:scale-100'>
+                    {props.children}
+                </h1>
+        </button>
+
     )
 }
 

@@ -2,12 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '../Home/Components/NavBar'
 
-import useDarkMode from '../hooks/useDarkMode';
 import StartContent from './components/StartContent';
 
 function Start() {
-  const [darkMode, setdarkMode] = useDarkMode();
-  const handleMode = () => setdarkMode(!darkMode)
+ 
   return (
     <div className="fixed w-full h-screen  
                 bg-gradient-to-r from-primary via-slate-300 to-secondary
@@ -35,11 +33,7 @@ function Start() {
             </Link>
           </div>
           <StartContent/>
-            <button className="bg-primary p-2 rounded-lg"
-                    onClick={handleMode}>
-                Dark Theme
-            </button>
-            <ChatBot />
+          <ChatBot />
         </div>
       </div>
     </div>

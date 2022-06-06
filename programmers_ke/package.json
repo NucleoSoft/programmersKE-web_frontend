@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@headlessui/react": "^1.6.4",
     "@heroicons/react": "^1.0.6",
     "@lottiefiles/lottie-player": "^1.5.7",
     "@react-three/fiber": "^8.0.13",

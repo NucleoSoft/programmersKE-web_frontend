@@ -48,12 +48,12 @@ const NavBar = () =>
                            <div className='bg-white dark:bg-black col-span-1 rounded-r-lg'>
                              <p className='text-slate-900 dark:text-white font-adventpro text-[18px]
                                            text-right p-3 my-auto'>
-                               Whether you're starting out as a newbie in Computer Science with<br/>
-                               zero knowledge, or whetting your appetite to the <br/> 
+                               Whether you're starting out as a newbie in Computer Science <br />
+                               with zero knowledge, or whetting your appetite to the <br/> 
                                next level of tech, these series of lessons and resources <br/> 
                                are built with all that in mind. Start out in CS with confidence <br/> 
-                               from the most basic level, or sharpen up what you already know. Follows<br/>
-                               a problem-based approach.
+                               from the most basic level, or sharpen up what you already know.<br />
+                               Follows a problem-based approach.
                              </p>
                             </div>
                          </section>
@@ -139,7 +139,7 @@ const NavBar = () =>
                                elementary level knowledge to the advanced stage, with real-life <br/>
                                projects, to work on, problems to solve both big or small, trends<br/> 
                                to catch up with and actual projects, to benchmark with tech corps<br/>
-                               as case studies. It's basically PBL on steroids!
+                               as case studies. It's PBL on steroids!
                              </p>
                            </div>
                          </section>
@@ -244,8 +244,10 @@ const ProfileMenu = () => {
     <div className='absolute top-16 right-16 bg-white 
                     dark:bg-black dark:bg-opacity-70 bg-opacity-70 w-1/5
                     rounded-lg h-auto p-4 z-20'>
-      <img alt='profilePic' src="../../../assets/layered-steps-haikei.svg" className='w-16 h-16 
+      <Link to={'/profile'}>
+        <img alt='profilePic' src="../../../assets/layered-steps-haikei.svg" className='w-16 h-16 
                   rounded-full bg-cover group ml-[65%]'/>
+      </Link>
       <Link to='/login'>
         <ProfileItem2 leftIcon={<RiLoginBoxLine size="20"/>}>Login</ProfileItem2>
       </Link>

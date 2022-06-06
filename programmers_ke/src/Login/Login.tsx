@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { Link } from 'react-router-dom'
 import Blob from './Blob'
 
@@ -32,7 +32,6 @@ function Login(){
 function SignIn(){
     
     return(
-
         <div className='flex flex-col p-2'>
         <button className="bg-primary p-2 w-3/5 mx-auto my-2 border-purple-800 hover:bg-green-600
                             hover:text-white rounded-lg transition-all delay-300">
@@ -83,18 +82,13 @@ const Tooltip = (props) => {
 
 
 function Form() {
-    const formSubmit = (e: { preventDefault: () => void; target: { elements: { email: { value: any }; password: { value: any } } } }) =>
-    {
-        e.preventDefault()
-
-        let email = e.target.elements.email?.value
-        let password = e.target.elements.password?.value
-    }
+  const emailRef = useRef()
+  const passwordRef = useRef()
   return (
     <div>
-        <form onSubmit = { formSubmit } className="flex flex-col justify-center">
-            <input className='w-4/5 mx-auto my-2 p-2 rounded-lg shadow-md' type='email' id='email' placeholder='Email or username'/>
-            <input className='w-4/5 mx-auto my-2 p-2 rounded-lg shadow-md' type='password' id='password' placeholder='Password'/>
+        <form className="flex flex-col justify-center">
+            <input className='w-4/5 mx-auto my-2 p-2 rounded-lg shadow-md' required ref={emailRef} type='email' id='email' placeholder='Email or username'/>
+            <input className='w-4/5 mx-auto my-2 p-2 rounded-lg shadow-md' required ref={passwordRef} type='password' id='password' placeholder='Password'/>
         </form>
     </div>
   )
