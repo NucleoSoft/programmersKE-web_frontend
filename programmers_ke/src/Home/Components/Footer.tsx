@@ -9,7 +9,7 @@ function Footer() {
                         h-full rounded-t-md grid grid-flow-col">
           <section className='col-span-5 rounded-tl-md backdrop-brightness-150'>
             <div className='row-span-1'>
-                <img src='../../../assets/Logo.svg' width={120} className="mx-auto my-16"/>
+                <img alt='logo' src='../../../assets/Logo.svg' width={120} className="mx-auto my-16"/>
             </div>
              <Line/>
             <Social/>
@@ -79,7 +79,7 @@ function Footer() {
                                 row-span-6'>
                     <Link to="/online_compiler" target="_blank">   
                       <span className='footerheader flex flex-row group'>Online Compiler
-                        <img src='../../../assets/icons/utils/link-svgrepo-com.svg' 
+                        <img alt='link' src='../../../assets/icons/utils/link-svgrepo-com.svg' 
                         className='w-4 mx-1 my-auto opacity-0 group-hover:opacity-100'/>
                       </span>
                     </Link>
@@ -102,8 +102,18 @@ function Footer() {
                                 row-span-4 flex flex-col'>
                     <h1 className='footerheader'>Other Projects</h1>
                      <Line/>
-                     <FooterLink>Asteroid</FooterLink>
-                     <FooterLink>Artistes_KE</FooterLink>
+                     <FooterLink>Asteroid
+                        <img alt='link' src='../../../assets/icons/utils/link-svgrepo-com.svg'
+                        className='w-3 mx-3 my-auto opacity-0 group-hover:opacity-100' />
+                     </FooterLink>
+                     <FooterLink>Artistes_KE
+                        <img alt='link' src='../../../assets/icons/utils/link-svgrepo-com.svg'
+                        className='w-3 mx-3 my-auto opacity-0 group-hover:opacity-100' />
+                     </FooterLink>
+                     <FooterLink>Hadron-IDE
+                        <img alt='link' src='../../../assets/icons/utils/link-svgrepo-com.svg'
+                        className='w-3 mx-3 my-auto opacity-0 group-hover:opacity-100' />
+                     </FooterLink>
                   </div>
                 </section>
               </div>
@@ -117,14 +127,13 @@ function Footer() {
                                       hover:text-shadow-md hover:shadow-white'>
                     Let's Go!
                   </button>
-                  
                   <button className='rounded-md p-2 ml-72 text-sm text-white font-novaflat
                                       hover:bg-white hover:text-black transition-all delay-300
                                       ring-white ring-2 flex flex-row'>
                   <span>
                     English
                   </span>
-                    <img src='../../assets/icons/utils/en_GB.png' className='w-5 ml-2'/>
+                    <img alt='language' src='../../assets/icons/utils/en_GB.png' className='w-5 ml-2'/>
                   </button>
                 </div>
               </div>
@@ -138,13 +147,13 @@ function Footer() {
 function Social() {
   return (
       <div className='flex flex-row mx-auto'>
-        <img src="../../../assets/icons/no_color/twitternocolor-svgrepo-com.svg" 
+        <img alt='socials' src="../../../assets/icons/no_color/twitternocolor-svgrepo-com.svg" 
         width={24} className='py-3 mx-auto'/>
-        <img src="../../../assets/icons/color_/github-svgrepo-com.svg" 
+        <img alt='socials' src="../../../assets/icons/color_/github-svgrepo-com.svg" 
         width={24} className='py-3 mx-auto' />
-        <img src="../../../assets/icons/no_color/linkedinnocolor-svgrepo-com.svg" 
+        <img alt='socials' src="../../../assets/icons/no_color/linkedinnocolor-svgrepo-com.svg" 
         width={24} className='py-3 mx-auto' />
-        <img src="../../../assets/icons/no_color/slacknocolor-svgrepo-com.svg" 
+        <img alt='socials' src="../../../assets/icons/no_color/slacknocolor-svgrepo-com.svg" 
         width={24} className='py-3 mx-auto' />
       </div>
   )
@@ -158,7 +167,8 @@ const Line = () => {
 
 const FooterLink = (props) => {
   return (
-    <a className='footerlink'>
+    <a className='flex flex-row text-sm text-white font-adventpro ml-7 my-2 hover:text-secondary
+        hover:text-shadow-sm hover:shadow-sky-blue group'>
       {props.children}
     </a>
   )

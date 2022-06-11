@@ -1,5 +1,5 @@
 import React from 'react'
-import { RiPencilLine } from 'react-icons/ri'
+import { RiSettings4Line } from 'react-icons/ri'
 import { Link } from 'react-router-dom'
 
 function Profile() {
@@ -20,14 +20,7 @@ function Profile() {
           <img src="../../assets/layered-steps-haikei.svg" width='250' alt="profilePic" className='rounded-full ml-[50%]'/>
         </div>
       </div>
-      <Link to='/settings'>
-        <button className='flex flex-row rounded-lg bg-primary text-white text-sm
-                          font-novaflat p-2 mt-3 ml-[90%]
-                          hover:bg-secondary hover:text-black transition-all'>
-          Edit Profile
-          <RiPencilLine size={20} className='my-auto ml-1'/>
-        </button>
-      </Link>
+    <EditProfile/>
     </div>
   )
 }
@@ -43,6 +36,17 @@ const Socials = () => {
   )
 }
 
-
+const EditProfile = () => {
+  return (
+     
+      <Link to='/settings'>
+        <button className='fixed flex flex-row bottom-14 right-10 rounded-lg bg-primary text-white text-sm
+                           p-2 items-center
+                          hover:bg-secondary hover:text-black transition-all'>
+          <RiSettings4Line size={24} className='m-auto'/>
+        </button>
+      </Link>
+  )
+}
 
 export default Profile

@@ -71,12 +71,6 @@
     {
         @apply text-lg font-zrnic text-white text-shadow-md shadow-white ml-5
     }
-
-    .footerlink
-    {
-        @apply text-sm text-white font-adventpro ml-7 my-2 hover:text-secondary 
-        hover:text-shadow-sm hover:shadow-sky-blue
-    }
 }
 
 .aurora-outer {
