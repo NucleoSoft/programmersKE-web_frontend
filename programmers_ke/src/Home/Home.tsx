@@ -39,7 +39,7 @@ function Home() {
                                     hover:text-shadow-md hover:shadow-white hover:text-white hover:rounded-lg
                                     hover:bg-primary hover:drop-shadow-[0_0_8px_#6600cc] transition-all delay-300"
             >
-              Discover
+              Discover Why
             </button>
           </div>
          
