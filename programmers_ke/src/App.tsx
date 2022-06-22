@@ -22,7 +22,7 @@ function App() {
     <div >
       <BrowserRouter>
         <Routes>
-          <Route path="/" exact element={<Home/>}/>
+          <Route path="/" element={<Home/>}/>
           <Route path="/start" element={<Start/>}/>
           <Route path="/tutorials" element={<Tutorials />} />
           <Route path="/community" element={<Community />} />
