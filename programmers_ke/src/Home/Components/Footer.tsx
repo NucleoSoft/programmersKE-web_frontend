@@ -77,7 +77,7 @@ function Footer() {
                   <div className='backdrop-blur-md
                                rounded-r-lg drop-shadow-lg
                                 row-span-6'>
-                    <Link to="/online_compiler" target="_blank">   
+                    <Link to="/online_compiler">   
                       <span className='footerheader flex flex-row group'>Online Compiler
                         <img alt='link' src='../../../assets/icons/utils/link-svgrepo-com.svg' 
                         className='w-4 mx-1 my-auto opacity-0 group-hover:opacity-100'/>

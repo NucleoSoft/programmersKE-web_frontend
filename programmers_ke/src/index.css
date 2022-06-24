@@ -127,14 +127,14 @@
 }
 .aurora-inner {
     display: block;
-    height: 120vh;
+    height: 200vh;
     width: screen;
     position: relative;
 }
 
 .aurora-outer {
     display: block;
-    height: 120vh;
+    height: 200vh;
     width: screen;
     position: relative;
 }

@@ -152,7 +152,7 @@ const NavBar = () =>
               <Link to="/news">
                   <NavItem icon={<BsNewspaper size="15" />} children={undefined} />
               </Link>
-              <Link to="/online_compiler" target="_blank">
+              <Link to="/online_compiler">
                   <NavItem icon={<VscTerminalPowershell size="15" />} children={undefined} />
               </Link>
             </div>
@@ -168,16 +168,15 @@ const NavBar = () =>
     )
 }
 
-const NavItem = (props: 
-  { children: any; icon: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined 
-  }) =>{
+const NavItem = (props) =>{
   const [openNav, setOpenNav] = useState(false)
   return (
-    <div className="relative">
+    <div className="relative group">
       <div className="absolute -inset-0.5 opacity-75 bg-gradient-to-r to-secondary from-primary rounded-xl 
                             blur-sm group-hover:opacity-100 animate-tilt"></div>
-        <button className="text-primary dark:text-sky-blue bg-white dark:bg-black p-3
-                          rounded-xl relative group" 
+        <button className="text-primary dark:text-secondary bg-white dark:bg-black p-3
+                          rounded-xl relative group-hover:bg-slate-900 group-hover:text-secondary dark:group-hover:bg-slate-300
+                          dark:group-hover:text-primary" 
                           onMouseEnter={() =>setOpenNav(!openNav)} onMouseLeave={() =>setOpenNav(!openNav)}>
           {openNav && props.children}
           {props.icon}
@@ -211,10 +210,7 @@ const Profile = (props: { children: any }) => {
 }
 
 const ProfileMenu = () => {
-  const ProfileItem = (props: { 
-    leftIcon: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; 
-    children: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined 
-    }) => {
+  const ProfileItem = (props) => {
    return(
      <>
         <a href='#' className='w-11/12 flex flex-row px-4 text-white my-3'>
@@ -225,10 +221,7 @@ const ProfileMenu = () => {
      </>
    )
   }
-  const ProfileItem2 = (props: { 
-    leftIcon: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; 
-    children: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined 
-    }) => {
+  const ProfileItem2 = (props) => {
     return (
       <>
         <button className='bg-primary flex flex-row w-11/12 my-3 py-2
@@ -255,7 +248,7 @@ const ProfileMenu = () => {
   )
 }
 
-const DropdownLink = (props: { children: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined }) => {
+const DropdownLink = (props) => {
   return (
     <li>
         <h1 className='my-3 font-novaflat text-left text-sm ml-10 p-2 

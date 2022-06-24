@@ -9,9 +9,7 @@ function Login(){
         <div className="aurora-outer">
             <div className="aurora-inner">
                 {/* <Blob/> */}
-                <div className="fixed right-32 w-4/12 
-                backdrop-blur-md mt-16 border-[1px] border-white
-                backdrop-brightness-150 rounded-lg drop-shadow-lg">
+                <div className="fixed right-10 top-16 w-1/2 backdrop-brightness-150 rounded-lg drop-shadow-md">
                     <BoilerplateLogo />
                     <h1 className="font-zrnic text-[30px] text-secondary text-center">Welcome Back!</h1>
                     <Form/>
@@ -64,8 +62,8 @@ function SignInOps() {
 const BoilerplateLogo = () => {
   return (
     <div>
-        <img alt='Logo' src="../../assets/Logo.svg" className='w-20 ml-[43%]' />
-        <hr className="border-secondary mx-auto my-4 w-72"/>
+        <img alt='Logo' src="../../assets/Logo.svg" className='w-24 mx-auto' />
+        <hr className="border-secondary mx-auto my-4 w-3/4"/>
     </div>
   )
 }
