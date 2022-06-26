@@ -1,13 +1,16 @@
-import HomeDiv from './Components/HomeDiv'
+import Header from './Components/Header'
 import Footer from './Components/Footer'
 import Carousel from './Components/Carousel'
 import LanguageMenu from './Components/LanguageMenu'
-import React from 'react'
+import React, { useEffect } from 'react'
+
+import { useAnimation, motion } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 
 function Home() {
   return (
-    <div className="h-[600vh] bg-white">
-      <HomeDiv/>
+    <div className="h-auto bg-white">
+      <Header/>
       <Carousel />
       <LanguageMenu />
       <Footer />

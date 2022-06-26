@@ -61,15 +61,20 @@
     .SideTabIcon
     {
       @apply w-8 h-8 my-8 flex backdrop-blur-md justify-center items-center
-      text-white bg-transparent rounded-md mx-auto text-center hover:shadow-md 
-      hover:shadow-sky-blue hover:text-secondary focus:shadow-md 
-      focus:shadow-sky-blue focus:text-secondary
+      text-white bg-transparent rounded-md mx-auto text-center hover:shadow-[0_0_7px_#fff] 
+      hover:shadow-sky-blue hover:text-sky-blue
+      focus:shadow-sky-blue focus:text-sky-blue focus:shadow-[0_0_7px_#fff]
       transition-all
     }
 
     .footerheader
     {
         @apply text-lg font-zrnic text-white text-shadow-md shadow-white ml-5
+    }
+
+    .Input
+    {
+        @apply mx-auto my-2 p-2 rounded-lg shadow-inner font-adventpro
     }
 }
 
@@ -127,15 +132,24 @@
 }
 .aurora-inner {
     display: block;
-    height: 200vh;
+    height: 150vh;
     width: screen;
     position: relative;
 }
 
 .aurora-outer {
     display: block;
-    height: 200vh;
+    height: 150vh;
     width: screen;
     position: relative;
 }
 
+.glassDiv
+{
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: brightness(125%);
+    backdrop-filter: brightness(125%);
+    border-radius: 16px;
+    box-shadow: 5px 10px 30px rgba(255, 255, 255, 0.274) inset, 2px 5px 20px rgba(0, 0, 0, 0.425);
+}

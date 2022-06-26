@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom'
 
 function Footer() {
   return (
-    <div className="absolute h-auto rounded-t-md w-full top-[600vh]
+    <div className="h-auto rounded-t-md w-full 
                     bg-gradient-to-tr from-primary via-black to-secondary">
         <div className="bg-slate-900 bg-opacity-80
                         h-full rounded-t-md grid grid-flow-col">
-          <section className='col-span-5 rounded-tl-md backdrop-brightness-150'>
+          <section className='col-span-5 rounded-tl-md backdrop-brightness-125'>
             <div className='row-span-1'>
-                <img alt='logo' src='../../../assets/Logo.svg' width={120} className="mx-auto my-16"/>
+                <img alt='logo' src='../../../assets/Logo.svg' width={120} className="mx-auto my-5"/>
             </div>
              <Line/>
             <Social/>
