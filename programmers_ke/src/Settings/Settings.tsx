@@ -19,7 +19,7 @@ function Settings() {
 }
 
 
-const Toggle = () => {
+export const Toggle = () => {
     const [darkMode, setdarkMode] = useDarkMode();
     const handleMode = () => setdarkMode(!darkMode)
 

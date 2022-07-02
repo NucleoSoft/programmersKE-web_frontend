@@ -168,7 +168,7 @@ const NavBar = () =>
     )
 }
 
-const NavItem = (props) =>{
+const NavItem = (props: { children: React.ReactNode; icon: React.ReactNode}) =>{
   const [openNav, setOpenNav] = useState(false)
   return (
     <div className="relative group">
@@ -186,18 +186,18 @@ const NavItem = (props) =>{
   )
 }
 
-const SearchBar = ({icon}) => {
+export const SearchBar = (props: { icon: React.ReactNode}) => {
   return (
     <div className="flex flex-row">
       <input className="searchBar" type="search" placeholder='Search'  />
       <button className="bg-primary hover:bg-secondary transition-all delay-300 
-                      text-white hover:text-primary h-10 px-3 my-auto rounded-r-xl ">{icon}
+                      text-white hover:text-primary h-10 px-3 my-auto rounded-r-xl ">{props.icon}
       </button>
     </div>
   )
 }
 
-const Profile = (props: { children: any }) => {
+export const Profile = (props: { children: React.ReactNode }) => {
   const [open, setopen] = useState(false);
   return (
     <button className="mx-10 items-center flex flex-row" onClick={() => setopen(!open)}>
@@ -210,7 +210,7 @@ const Profile = (props: { children: any }) => {
 }
 
 const ProfileMenu = () => {
-  const ProfileItem = (props) => {
+  const ProfileItem = (props: { children: React.ReactNode; leftIcon: React.ReactNode}) => {
    return(
      <>
         <a href='#' className='w-11/12 flex flex-row px-4 text-white my-3'>
@@ -221,7 +221,7 @@ const ProfileMenu = () => {
      </>
    )
   }
-  const ProfileItem2 = (props) => {
+  const ProfileItem2 = (props: { children: React.ReactNode; leftIcon: React.ReactNode }) => {
     return (
       <>
         <button className='bg-primary flex flex-row w-11/12 my-3 py-2
@@ -248,7 +248,7 @@ const ProfileMenu = () => {
   )
 }
 
-const DropdownLink = (props) => {
+const DropdownLink = (props: { children: React.ReactNode; }) => {
   return (
     <li>
         <h1 className='my-3 font-novaflat text-left text-sm ml-10 p-2 

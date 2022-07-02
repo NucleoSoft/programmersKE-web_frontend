@@ -25,7 +25,7 @@ function CodeEditor() {
   )
 }
 
-const ActionIcon = (props ) => {
+const ActionIcon = (props: { children: React.ReactNode; icon: React.ReactNode }) => {
   const [openActions, setopenActions] = useState(false)
   return (
     <button className='my-1 ml-[98%] text-black dark:text-white' onClick={ ()=>setopenActions(!openActions)}>
@@ -46,7 +46,7 @@ const ActionMenu = () => {
   )
 }
 
-const ActionButton = (props) => {
+const ActionButton = (props: {icon: React.ReactNode; children: React.ReactNode}) => {
   return (
     <button className='bg-slate-600 text-white rounded-md p-2 shadow-md flex flex-col my-2 group'>
       {props.icon}

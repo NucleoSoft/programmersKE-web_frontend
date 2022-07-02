@@ -1,14 +1,14 @@
-import React, { useRef } from 'react'
+import React, { MutableRefObject, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import Blob from './Blob'
 
-import { googleSignIn } from './Firebase.js'
+import { googleSignIn } from '../Firebase'
 
 function Login(){
     return(
         <div className='bg-gradient-to-br from-primary to-secondary h-screen'>
             <div className='bg-slate-900 h-full bg-opacity-60'>
-            <div className="fixed right-10 top-16 w-5/12 glassDiv">
+            <div className="fixed right-24 top-16 w-5/12 glassDiv">
                 <h1 className="font-zrnic text-[30px] text-secondary text-center my-5">Welcome Back!</h1>
                 <Form/>
                 <a href="#" className='ml-12 font-novaflat text-sm text-white'>Piss I forgot my password!</a>
@@ -43,15 +43,15 @@ function SignInOps() {
     return (
 
         <div className='flex flex-row my-5 w-full justify-center'>
-            <button className='bg-white mx-auto p-2 rounded-lg my-2 group' onClick={googleSignIn}>
+            <button className='SignInOps group' onClick={googleSignIn}>
                 <img src='../../assets/icons/color_/google-svgrepo-com.svg' className='w-7' />
                  <Tooltip>Google</Tooltip>
             </button>
-            <button className='bg-white mx-auto p-2 rounded-lg my-2 group'>
+            <button className='SignInOps group'>
                 <img alt='Github' src='../../assets/icons/color_/github-svgrepo-com.svg' className='w-7' />
                  <Tooltip>Github</Tooltip>
             </button>
-             <button className='bg-white mx-auto p-2 rounded-lg my-2 group'>
+             <button className='SignInOps group'>
                 <img alt='Twitter' src='../../assets/icons/color_/twitter-svgrepo-com.svg' className='w-7' />
                 <Tooltip>Twitter</Tooltip>
             </button>
@@ -59,7 +59,7 @@ function SignInOps() {
     )
 }
 
-const Tooltip = (props) => {
+const Tooltip = (props: { children: React.ReactNode}) => {
   return (
     <h1 className='text-sm text-sky-blue font-adventpro bg-slate-900 p-1
                     rounded-md absolute text-shadow-sm shadow-sky-blue

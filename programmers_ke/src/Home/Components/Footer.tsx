@@ -165,7 +165,7 @@ const Line = () => {
   )
 }
 
-const FooterLink = (props) => {
+const FooterLink = (props: {children: React.ReactNode}) => {
   return (
     <a className='flex flex-row text-sm text-white font-adventpro ml-7 my-2 hover:text-secondary
         hover:text-shadow-sm hover:shadow-sky-blue group'>

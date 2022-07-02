@@ -1,4 +1,5 @@
 import React from 'react'
+import { IconType } from 'react-icons'
 import { BsCode, BsInfoCircle, BsSliders } from 'react-icons/bs'
 import { RiHome2Line } from 'react-icons/ri'
 import { SiFeedly } from 'react-icons/si'
@@ -15,10 +16,10 @@ function SideTab() {
   )
 }
 
-const SideTabIcon = ({icon}) => {
+const SideTabIcon = (props: {icon: React.ReactNode}) => {
   return (
     <button className='SideTabIcon'>
-        {icon}
+        {props.icon}
     </button>
   )
 }

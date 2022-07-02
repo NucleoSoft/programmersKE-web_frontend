@@ -1,6 +1,6 @@
 # ProgrammersKE-Web
 
-A web app version of the Programmers-KE Project, based on giving people a guide into Computer Science and tech, featuring build-up beginner-to-advanced lessons and courses, roadmaps and blending into Africa's ever growing startup ecosystem. 
+A web app version of the Programmers-KE Project, based on giving people a guide into Computer Science and tech, featuring build-up beginner-to-advanced lessons and courses, roadmaps and blending into the ever growing startup ecosystem. 
 
 ## The Tech Stack
 

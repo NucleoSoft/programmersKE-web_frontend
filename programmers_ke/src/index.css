@@ -76,6 +76,12 @@
     {
         @apply mx-auto my-2 p-2 rounded-lg shadow-inner font-adventpro
     }
+
+    .SignInOps
+    {
+        @apply bg-white mx-auto p-2 rounded-lg my-2 drop-shadow-lg
+    }
+    
 }
 
 .aurora-outer {
@@ -150,6 +156,7 @@
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: brightness(125%);
     backdrop-filter: brightness(125%);
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.233), transparent);
     border-radius: 16px;
     box-shadow: 5px 10px 30px rgba(255, 255, 255, 0.274) inset, 2px 5px 20px rgba(0, 0, 0, 0.425);
 }
