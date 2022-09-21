@@ -7,10 +7,6 @@
 
 @layer components{
 
-    /* .backGround{
-      @apply fixed top-0 left-0 bg-gradient-to-br from-primary to-secondary
-      h-screen w-screen overflow-x-hidden bg-scroll 
-    } */
     .scrollBar
     {
         @apply scrollbar scrollbar-w-1 scrollbar-thumb-rounded-md 
@@ -87,55 +83,14 @@
 .aurora-outer {
     background: linear-gradient(-50deg, #00ff55 0%, #6600cc 70%, #6600cc 100%);
     background-size: 200%;
-    animation: aurora 5s infinite linear;
 }
 
 .aurora-inner {
     background: radial-gradient(rgba(0, 0, 0, 0.7), #000 100%);
     background-size: 200%;
-    animation: aura 10s infinite ease-in-out;
 }
 
-@keyframes aura {
-    0% {
-        background-position: right top;
-    }
-    25% {
-        background-position: left top;
-    }
-    50% {
-        background-position: left bottom;
-    }
-    75% {
-        background-position: right bottom;
-    }
-    100% {
-        background-position: right top;
-    }
-}
 
-@keyframes aurora {
-    0% {
-        background-position: left top;
-        rotate: 0deg;
-    }
-    25% {
-        background-position: right top;
-        rotate: 90deg;
-    }
-    50% {
-        background-position: right bottom;
-        rotate: 180deg;
-    }
-    75% {
-        background-position: left bottom;
-        rotate: 270deg;
-    }
-    100% {
-        background-position: left top;
-        rotate: 360deg;
-    }
-}
 .aurora-inner {
     display: block;
     height: 150vh;
@@ -155,7 +110,7 @@
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: brightness(125%);
-    backdrop-filter: brightness(125%);
+    backdrop-filter: brightness(110%);
     background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.233), transparent);
     border-radius: 16px;
     box-shadow: 5px 10px 30px rgba(255, 255, 255, 0.274) inset, 2px 5px 20px rgba(0, 0, 0, 0.425);

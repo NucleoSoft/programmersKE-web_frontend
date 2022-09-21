@@ -17,7 +17,7 @@ function Profile() {
             <hr className="border-black dark:border-white mb-3"/>
             <Socials/>
           </section>
-          <img src="../../assets/layered-steps-haikei.svg" width='250' alt="profilePic" className='rounded-full ml-[50%]'/>
+          <img src="../../assets/default_Profile/layered-steps-haikei-6.svg" width='250' alt="profilePic" className='rounded-full ml-[50%]'/>
         </div>
       </div>
     <EditProfile/>
