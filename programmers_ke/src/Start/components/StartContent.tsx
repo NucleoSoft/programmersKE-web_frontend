@@ -5,7 +5,7 @@ import Learning from './Learning'
 
 function StartContent() {
   return (
-      <div className="grid grid-flow-col w-full mt-24 p-3 h-4/5 gap-3">
+      <div className="grid grid-flow-col w-full mt-24 p-3 h-full gap-2">
          <Learning/>
          <Explore/>
          <Activity/>
