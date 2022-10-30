@@ -1,6 +1,6 @@
 import { initializeApp } from 'firebase/app'
 import { getFirestore } from 'firebase/firestore'
-import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
+import { getAuth, GithubAuthProvider, GoogleAuthProvider, signInWithPopup, TwitterAuthProvider } from 'firebase/auth'
 import { Result } from 'postcss';
 import { getAnalytics } from "firebase/analytics";
 
@@ -8,13 +8,13 @@ import { useAuthState } from 'react-firebase-hooks/auth'
 import { useCollectionData } from 'react-firebase-hooks/firestore'
 
 const firebaseConfig = {
-    apiKey: "AIzaSyA4MPaIljJRjYiMRPK5mhF_aIbrM6OUi4M",
-    authDomain: "programmers-ke.firebaseapp.com",
-    projectId: "programmers-ke",
-    storageBucket: "programmers-ke.appspot.com",
-    messagingSenderId: "276887789667",
-    appId: "1:276887789667:web:6a3a1480f0e4d3a2261856",
-    measurementId: "G-BNNM4F8SPR"
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+    authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING,
+    appId: import.meta.env.VITE_FIREBASE_APP_ID,
+    measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
 // // Initialize Firebase
@@ -23,13 +23,41 @@ export const auth = getAuth(app)
 export const db = getFirestore()
 const analytics = getAnalytics(app);
 
-const provider = new GoogleAuthProvider();
+const googleProvider = new GoogleAuthProvider();
+const githubProvider = new GithubAuthProvider();
+const twitterProvider = new TwitterAuthProvider();
+
 
 export const googleSignIn = () =>
 {
-    signInWithPopup(auth, provider)
+    signInWithPopup(auth, googleProvider)
         
         .then((result) => { 
+            alert(result)
+        })
+
+        .catch((error) => {
+            alert(error)
+        })
+}
+
+export const githubSignIn = () =>
+{
+    signInWithPopup(auth, githubProvider)
+        
+        .then((result) => { 
+            alert(result)
+        })
+
+        .catch((error) => {
+            alert(error)
+        })
+}
+
+export const twitterSignIn = () => {
+    signInWithPopup(auth, twitterProvider)
+
+        .then((result) => {
             alert(result)
         })
 

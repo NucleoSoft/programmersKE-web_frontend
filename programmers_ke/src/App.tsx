@@ -17,27 +17,32 @@ import Profile from "./Profile/Profile"
 import Signup from "./Signup/Signup"
 import Settings from "./Settings/Settings"
 
+import { AuthContext } from './context/AuthContext'
+
 function App() {
   return (
-    <div >
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/start" element={<Start/>}/>
-          <Route path="/tutorials" element={<Tutorials />} />
-          <Route path="/community" element={<Community />} />
-          <Route path="/tech" element={<Tech />} />
-          <Route path="/blogs" element={<Blogs />} />
-          <Route path="/news" element={<News />} />
-          <Route path="/online_compiler" element={<OnlineCompiler />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup/>} />
-          <Route path="/profile" element={<Profile/>} />
-          <Route path="/settings" element={<Settings/>}/>
-          <Route path="/ukraine" element={<Ukraine />} />
-          <Route path="*" element={<ErrorPage />} />
-        </Routes>
-      </BrowserRouter>
+    <div>
+      <AuthContext>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/start" element={<Start />} />
+            <Route path="/tutorials" element={<Tutorials />} />
+            <Route path="/community" element={<Community />} />
+            <Route path="/tech" element={<Tech />} />
+            <Route path="/blogs" element={<Blogs />} />
+            <Route path="/news" element={<News />} />
+            <Route path="/online_compiler" element={<OnlineCompiler />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/settings" element={<Settings />} />
+            <Route path="/ukraine" element={<Ukraine />} />
+            <Route path="*" element={<ErrorPage />} />
+          </Routes>
+        </BrowserRouter>
+      </AuthContext>
+      
       {/* <WebLoader /> */}
     </div>
   )

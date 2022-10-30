@@ -3,36 +3,49 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { Bloom, ChromaticAberration, EffectComposer } from '@react-three/postprocessing';
 import { BlendFunction, KernelSize } from 'postprocessing';
 import React, { useRef, Suspense } from "react";
-import Component from './Component'
-function Model() {
+
+
+function LoginModel() {
     return (
-        <div className="absolute w-1/2 h-3/4 right-0 top-0 
+        <div className="absolute w-full h-screen top-0 left-0
                         bg-transparent">
             <Suspense fallback={null}>
                 <Canvas shadows>
                     <OrbitControls />
-                    <PerspectiveCamera makeDefault fov={60} position={[15, 6, 7]} />
-                    <directionalLight
+                    <PerspectiveCamera makeDefault fov={20} position={[-10, 5, 1]} />
+                    <hemisphereLight
                         position={[-40, 30, 10]}
                         castShadow
                         intensity={1}
                         color={0x6600cc} />
-                    <directionalLight
-                        position={[30, -40, -10]}
+                    {/* <spotLight
+                        position={[10, -10, 10]}
                         castShadow
                         intensity={1}
                         color={0x00ff55} />
-                        {/* <Component /> */}
-                        <mesh
-                            castShadow
-                            receiveShadow>
-                            <sphereGeometry args={[1, 32, 32]} />
-                            <meshStandardMaterial color='yellow'/>
-                        </mesh>
-                        <EffectComposer multisampling={3}>
+                    <directionalLight
+                        position={[40, 30, 20]}
+                        castShadow
+                        intensity={1}
+                        color={0x33ffff} /> */}
+                    <mesh
+                        castShadow
+                        receiveShadow
+                        position={[0, 0, -2]}>
+                        <boxGeometry args={[1, 1, 1]} />
+                        <meshStandardMaterial color='grey' />
+                    </mesh>
+
+                    <mesh
+                        castShadow
+                        receiveShadow
+                        position={[2, 1, 2]}>
+                        <boxGeometry args={[1, 1, 1]} />
+                        <meshStandardMaterial color='grey' />
+                    </mesh>
+                        {/* <EffectComposer multisampling={3}>
                             <Bloom
                                 blendFunction={BlendFunction.ADD}
-                                blurPass={undefined}
                                 intensity={1.5}
                                 height={2000}
                                 kernelSize={KernelSize.LARGE}
@@ -41,11 +54,11 @@ function Model() {
                             <ChromaticAberration 
                                 blendFunction={BlendFunction.NORMAL}
                                 offset={[0.0005, 0.0012]} />
-                        </EffectComposer>
+                        </EffectComposer> */}
                 </Canvas>
             </Suspense>
         </div>
     )
 }
 
-export default Model
+export default LoginModel
