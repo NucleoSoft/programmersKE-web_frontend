@@ -1,6 +1,6 @@
-// import * as LottiePlayer from "@lottiefiles/lottie-player";
-import React from "react"
-
+import lottie from 'lottie-web'
+import animationData from './_animations/WebLoader.json'
+import React, { useEffect, useRef } from "react"
 import Home from "./Home/Home"
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import ErrorPage from './Error/404Page'
@@ -12,16 +12,13 @@ import News from "./News/News"
 import Tech from "./Tech/Tech"
 import OnlineCompiler from './OnlineCompiler/OnlineCompiler'
 import Login from './Login/Login'
-import Ukraine from "./About_Ukraine/Ukraine"
 import Profile from "./Profile/Profile"
 import Signup from "./Signup/Signup"
 import Settings from "./Settings/Settings"
 
-
 function App() {
   return (
     <div>
-
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -36,28 +33,36 @@ function App() {
             <Route path="/signup" element={<Signup />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/settings" element={<Settings />} />
-            <Route path="/ukraine" element={<Ukraine />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
         </BrowserRouter>
       
-      {/* <WebLoader /> */}
+      <WebLoader/>
     </div>
   )
 }
 
-{/* function WebLoader() {
+
+function WebLoader() {
+  const animBox = useRef(null);
+
+  useEffect(() => {
+    lottie.loadAnimation({
+      container: animBox.current!,
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      animationData: animationData
+    });
+  }, []);
+
   return (
-    <div>
-      <lottie-player
-          autoplay
-          loop
-          mode="normal"
-          src="https://assets7.lottiefiles.com/packages/lf20_wg5tbh5j.json"
-          style="width: 320px">
-      </lottie-player>
-    </div>
-  )
-} */}
+    <div
+      ref={animBox}
+      className='fixed z-50 left-0 top-0 bg-slate-900 
+      w-full h-full bg-opacity-50 backdrop-blur-2xl'
+    />
+  );
+}
 
 export default App

@@ -1,61 +1,27 @@
-import { Canvas } from "@react-three/fiber"
-import { Suspense } from "react"
-import { OrbitControls, PerspectiveCamera } from "@react-three/drei"
+// import React, { useRef } from 'react';
+// import { useLoader } from '@react-three/fiber';
+// import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+// import { MeshStandardMaterial, Group, Mesh } from 'three';
 
-function LoginModel() {
-    return (
-        <div className="absolute w-full h-screen top-0 left-0
-                        bg-transparent">
-            <Suspense fallback={null}>
-                <Canvas shadows>
-                    <OrbitControls />
-                    <PerspectiveCamera makeDefault fov={20} position={[-10, 5, 1]} />
-                    <hemisphereLight
-                        position={[-40, 30, 10]}
-                        castShadow
-                        intensity={1}
-                        color={0x6600cc} />
-                    {/* <spotLight
-                        position={[10, -10, 10]}
-                        castShadow
-                        intensity={1}
-                        color={0x00ff55} />
-                    <directionalLight
-                        position={[40, 30, 20]}
-                        castShadow
-                        intensity={1}
-                        color={0x33ffff} /> */}
-                    <mesh
-                        castShadow
-                        receiveShadow
-                        position={[0, 0, -2]}>
-                        <boxGeometry args={[1, 1, 1]} />
-                        <meshStandardMaterial color='grey' />
-                    </mesh>
+// const Model = () => {
+//     const modelRef = useRef<Group>(null);
+//     const gltf = useLoader(GLTFLoader, '/path/to/model.glb');
 
-                    <mesh
-                        castShadow
-                        receiveShadow
-                        position={[2, 1, 2]}>
-                        <boxGeometry args={[1, 1, 1]} />
-                        <meshStandardMaterial color='grey' />
-                    </mesh>
-                        {/* <EffectComposer multisampling={3}>
-                            <Bloom
-                                blendFunction={BlendFunction.ADD}
-                                intensity={1.5}
-                                height={2000}
-                                kernelSize={KernelSize.LARGE}
-                                luminanceThreshold={0.001}
-                                luminanceSmoothing={0.0025} />
-                            <ChromaticAberration 
-                                blendFunction={BlendFunction.NORMAL}
-                                offset={[0.0005, 0.0012]} />
-                        </EffectComposer> */}
-                </Canvas>
-            </Suspense>
-        </div>
-    )
-}
+//     gltf.scene.traverse((child) => {
+//         if ((child as Mesh).isMesh) {
+//             (child as Mesh).material = new MeshStandardMaterial({
+//                 color: 0xffffff,
+//                 emissive: 0xff0000,
+//                 emissiveIntensity: 1,
+//             });
+//         }
+//     });
 
-export default LoginModel
+//     return (
+//         <group ref={modelRef} dispose={null}>
+//             <primitive object={gltf.scene} />
+//         </group>
+//     );
+// };
+
+// export default Model;

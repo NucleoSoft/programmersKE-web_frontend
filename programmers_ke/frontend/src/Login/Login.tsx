@@ -2,14 +2,14 @@ import React, { MutableRefObject, useRef } from 'react'
 import { Link } from 'react-router-dom'
 
 // import { googleSignIn, githubSignIn, twitterSignIn } from '../Firebase'
-import LoginModel from './LoginModel'
+// import LoginModel from './LoginModel'
 
 function Login(){
     return(
         
             <div className='bg-gradient-to-br from-primary to-secondary h-screen'>
                 <div className='bg-slate-900 h-full bg-opacity-70 flex justify-center'>
-                    <LoginModel />
+                    {/* <LoginModel /> */}
                     <LoginForm />
                 </div>
             </div>
