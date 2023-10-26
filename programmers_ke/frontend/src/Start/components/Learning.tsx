@@ -1,12 +1,15 @@
-import React from 'react'
+import { StreakCalendar } from './StreakCalendar';
 
 function Learning() {
   return (
-      <section className="bg-slate-200 dark:bg-slate-900 drop-shadow-lg
-                            col-span-2 rounded-lg border-1 border-white">
-          <h1 className='font-zrnic text-[20px] text-right mr-12 my-5 dark:text-white'>
-              Your Learning Path
+      <section className="glassDiv drop-shadow-lg p-2 overflow-y-scroll scrollBar
+                            col-span-1 row-span-full rounded-l-xl">
+          <h1 className='text-2xl text-center font-zrnic my-4 dark:text-white'>
+            Your Learning 
           </h1>
+          <hr className='mx-auto w-5/6 my-6 border-slate-400' />                      
+          <StreakCalendar/>
+          <hr className='mx-auto w-5/6 my-6 border-slate-400'/>
       </section>
   )
 }

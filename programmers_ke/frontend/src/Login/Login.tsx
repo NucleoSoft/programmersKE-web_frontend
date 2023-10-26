@@ -1,7 +1,6 @@
-import React, { MutableRefObject, useRef } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 
-// import { googleSignIn, githubSignIn, twitterSignIn } from '../Firebase'
 // import LoginModel from './LoginModel'
 
 function Login(){

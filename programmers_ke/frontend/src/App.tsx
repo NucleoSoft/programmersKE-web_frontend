@@ -36,14 +36,12 @@ function App() {
             <Route path="*" element={<ErrorPage />} />
           </Routes>
         </BrowserRouter>
-      
-      <WebLoader/>
     </div>
   )
 }
 
 
-function WebLoader() {
+export function WebLoader() {
   const animBox = useRef(null);
 
   useEffect(() => {
@@ -59,8 +57,9 @@ function WebLoader() {
   return (
     <div
       ref={animBox}
+      style={{ width: '100%', height: '100%' }}
       className='fixed z-50 left-0 top-0 bg-slate-900 
-      w-full h-full bg-opacity-50 backdrop-blur-2xl'
+      bg-opacity-50 backdrop-blur-2xl'
     />
   );
 }

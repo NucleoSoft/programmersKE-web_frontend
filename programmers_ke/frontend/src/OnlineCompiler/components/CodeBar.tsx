@@ -3,7 +3,6 @@ import useDarkMode from '../../hooks/useDarkMode';
 import React, { useState } from 'react'
 import Home from '../../Home/Home'
 import { motion } from 'framer-motion';
-
 import { VscArrowSmallDown } from 'react-icons/vsc';
 import { BsPlus } from 'react-icons/bs'
 import { FaJava } from 'react-icons/fa'
@@ -55,14 +54,14 @@ const CodeIcon = (props: { icon: React.ReactNode;
       )
     }
     return (
-    <button className="codeIcon group">{props.icon}
+    <div className="codeIcon group">{props.icon}
         <div className='grid grid-flow-col'>
         <h1 className='codeIconToolTip group-hover:scale-100'>
             {props.children}
             <Close icon={<RiCloseFill size={14}/>}/>
         </h1>
         </div>
-    </button>
+    </div>
     
     )
 }

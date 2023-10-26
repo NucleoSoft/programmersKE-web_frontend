@@ -6,7 +6,7 @@ import { SiFeedly } from 'react-icons/si'
 
 function SideTab() {
   return (
-    <div className='bg-transparent fixed rounded-r-lg w-10 h-auto my-[10%] left-0 z-50'>
+    <div className='bg-transparent fixed rounded-r-lg w-10 h-auto my-[10%] left-0 z-30'>
           <SideTabIcon icon={<RiHome2Line size='20'/>}/>
           <SideTabIcon icon={<BsInfoCircle size='20' />} />
           <SideTabIcon icon={<BsSliders size='18' />} />
