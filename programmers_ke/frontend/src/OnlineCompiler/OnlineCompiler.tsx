@@ -1,6 +1,5 @@
 import CodeBar from './components/CodeBar'
-import CodeSpace from './components/CodeSpace'
-import CodeEditor from './components/CodeEditor';
+
 
 import React from 'react';
 
@@ -14,11 +13,7 @@ function OnlineCompiler(){
                       bg-slate-200 bg-opacity-70
                        flex flex-col">
             <CodeBar />
-            <h1 className="font-audiowide p-2 w-full text-primary 
-                           text-[70px] text-right dark:text-secondary
-                           text-shadow-md shadow-primary dark:shadow-secondary">Online Compiler</h1>
-            {/* <CodeSpace/> */}
-            <CodeEditor/>
+           
         </div>
     </div>
     )
