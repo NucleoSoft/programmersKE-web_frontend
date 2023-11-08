@@ -12,7 +12,7 @@ function OnlineCompiler(){
         <div className="fixed h-screen w-full dark:bg-slate-900 dark:bg-opacity-80 
                       bg-slate-200 bg-opacity-70
                        flex flex-col">
-            <CodeBar />
+            <CodeBar/>
            
         </div>
     </div>

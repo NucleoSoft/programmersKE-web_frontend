@@ -5,16 +5,17 @@ import { BsPlus } from 'react-icons/bs'
 import { AiFillBackward } from 'react-icons/ai'
 import { RiCloseFill } from 'react-icons/ri'
 import LangModal from './LangModal';
-import { FaJava } from 'react-icons/fa';
-import { DiPython } from 'react-icons/di';
-import { SiCplusplus, SiJavascript, SiTypescript } from 'react-icons/si';
+import { FaJava, FaRust } from 'react-icons/fa';
+import { DiDart, DiPython } from 'react-icons/di';
+import { SiCplusplus, SiGoland, SiJavascript, SiRuby, SiTypescript } from 'react-icons/si';
 
+// const languages = ['JavaScript', 'Python', 'Java', 'C#', 'C++'];
 
-interface CodeBarProps {
-    selectedLanguage: string | null;
-}
-
-const CodeBar = ({ selectedLanguage }: CodeBarProps) => {
+const CodeBar = () => {
+    const [selectedLanguages, setSelectedLanguages] = useState<string[]>([]);
+    const handleAddLang = (language: string) => {
+        setSelectedLanguages([...selectedLanguages, language]);
+    };
     return(
         <div className="fixed h-screen bg-slate-300 w-16
                         top-0 left-0 shadow-primary dark:shadow-secondary dark:bg-slate-800
@@ -26,10 +27,12 @@ const CodeBar = ({ selectedLanguage }: CodeBarProps) => {
                         </BackIcon>
                     </Link>
                     <Line />             
-                    {selectedLanguage && <CodeIcon icon={getIconForLanguage(selectedLanguage)}>
-                        {selectedLanguage}  
-                        </CodeIcon>}
-                    <AddIcon icon={<BsPlus size="25" />}>
+            {selectedLanguages.map((language, index) => (
+                <CodeIcon icon={getIconForLanguage(language)} key = { index }>
+                    {language}
+                </CodeIcon>
+            ))}
+            <AddIcon icon={<BsPlus size="25" />} onAddLang={handleAddLang}>
                         Add a language
                     </AddIcon> 
         </div>
@@ -69,6 +72,12 @@ const getIconForLanguage = (selectedLanguage: string) => {
             return <SiCplusplus size="25" />;
         case 'Java':
             return <FaJava size="25" />;
+        case 'Rust':
+            return <FaRust size="25" />;
+        case 'Dart':
+            return <DiDart size="25" />;
+        case 'Ruby':
+            return <SiRuby size="25" />;    
         default:
             return null;
     }
@@ -88,22 +97,27 @@ const BackIcon = (props: {
     )
 }
 
-const AddIcon = (props: { icon:React.ReactNode; children:React.ReactNode; }) =>{
-    const [openmodal, setopenmodal] = useState(false);
-    const [selectedLanguage, setSelectedLanguage] = useState("");
+interface AddIconProps {
+    icon: React.ReactNode;
+    children: React.ReactNode;
+    onAddLang: (language: string) => void;
+}
 
-    const open = () => setopenmodal(true);
-    const close = () => setopenmodal(false);
+const AddIcon: React.FC<AddIconProps> = ({ icon, children, onAddLang }) => {
+    const [openmodal, setopenmodal] = useState(false);
+    
+    const handleOpen = () => setopenmodal(true);
+    const handleClose = () => setopenmodal(false);
 
     return (
     <>
-    <motion.button className="codeIcon group" onClick={() => (openmodal ? close() : open())}>
-        {props.icon}
+    <button className="codeIcon group" onClick={handleOpen}>
+        {icon}
         <h1 className='codeIconToolTip group-hover:scale-100'>
-            {props.children}
+            {children}
         </h1>
-    </motion.button>
-            <LangModal isOpen={openmodal} close={close} setSelectedLanguage={setSelectedLanguage} />
+    </button>
+            {openmodal && <LangModal onAddLang={onAddLang} onClose={handleClose} />}
     </>
     )
 }
