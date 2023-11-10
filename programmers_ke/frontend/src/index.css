@@ -38,7 +38,7 @@
     .codeIconToolTip
     {
         @apply fixed left-16 bg-slate-900 
-        dark:bg-slate-300 p-1 rounded-md text-white text-[12px]
+        dark:bg-slate-300 p-1 rounded-md text-white text-[15px]
         dark:text-slate-900 scale-0 transition-all 
         delay-300 font-novaflat
     }

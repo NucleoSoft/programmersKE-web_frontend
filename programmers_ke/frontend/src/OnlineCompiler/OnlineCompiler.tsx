@@ -1,7 +1,8 @@
-import CodeBar from './components/CodeBar'
-
-
 import React from 'react';
+import CodeSpace from './components/CodeSpace';
+import CodeBar from './components/CodeBar';
+// import CodeSpace from './components/CodeEditor';
+// import CodeBar from './components/CodeBar';
 
 function OnlineCompiler(){
 
@@ -12,8 +13,8 @@ function OnlineCompiler(){
         <div className="fixed h-screen w-full dark:bg-slate-900 dark:bg-opacity-80 
                       bg-slate-200 bg-opacity-70
                        flex flex-col">
-            <CodeBar/>
-           
+            <CodeBar/>            
+            <CodeSpace/>
         </div>
     </div>
     )

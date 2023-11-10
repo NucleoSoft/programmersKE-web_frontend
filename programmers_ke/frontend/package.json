@@ -11,9 +11,11 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.14",
+    "@monaco-editor/react": "^4.6.0",
     "@react-three/drei": "^9.68.3",
     "@react-three/fiber": "^8.13.0",
     "@react-three/postprocessing": "^2.11.4",
+    "axios": "^1.6.1",
     "dayjs": "^1.11.10",
     "framer-motion": "^10.12.12",
     "lottie-react": "^2.4.0",
