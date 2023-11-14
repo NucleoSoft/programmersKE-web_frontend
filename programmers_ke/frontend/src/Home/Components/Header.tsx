@@ -21,15 +21,15 @@ function Intro() {
       <div className='absolute top-28 left-28'>
           <h1
               className="my-7 font-audiowide text-[45px]
-                               text-left text-white text-shadow-md shadow-white"
+                               text-left text-white "
           >
-              Introducing the next generation
-              <br /> of learning programming
+              Introducing the next gen
+              <br /> of learning PL
           </h1>
           <hr className="my-7 w-6/12 border-primary" />
           <p
               className="my-7 font-adventpro text-left
-                              text-lg text-secondary text-shadow-lg shadow-secondary"
+                              text-lg text-secondary "
           >
               "An intuitive platform of resourceful knowledge in tech and
               programming.

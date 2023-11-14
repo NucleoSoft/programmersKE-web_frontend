@@ -29,7 +29,7 @@ function Model() {
                             <sphereGeometry args={[1, 32, 32]} />
                             <meshStandardMaterial color='yellow'/>
                         </mesh>
-                        <EffectComposer multisampling={3}>
+                        {/* <EffectComposer multisampling={3}>
                             <Bloom
                                 blendFunction={BlendFunction.ADD}
                                 blurPass={undefined}
@@ -41,7 +41,7 @@ function Model() {
                             <ChromaticAberration 
                                 blendFunction={BlendFunction.NORMAL}
                                 offset={[0.0005, 0.0012]} />
-                        </EffectComposer>
+                        </EffectComposer> */}
                 </Canvas>
             </Suspense>
         </div>

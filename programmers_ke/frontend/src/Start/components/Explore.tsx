@@ -60,7 +60,7 @@ const LessonCard: React.FC<LessonCardProps> = (props) => {
                       bg-gradient-to-r from-primary to-secondary group-hover:h-1/2
                       transition-all delay-300 drop-shadow-md">
         <h1 className='opacity-0 group-hover:opacity-100 transition-all delay-300 
-                      mx-auto font-zrnic text-xl text-white text-shadow-md shadow-white'>{props.children}</h1>
+                      mx-auto font-zrnic text-xl text-white '>{props.children}</h1>
       </div>
     </div>
   )
