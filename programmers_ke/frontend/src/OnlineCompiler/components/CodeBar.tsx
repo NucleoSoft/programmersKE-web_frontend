@@ -6,8 +6,8 @@ import { AiFillBackward } from 'react-icons/ai'
 import { RiCloseFill } from 'react-icons/ri'
 import LangModal from './LangModal';
 import { FaJava, FaRust } from 'react-icons/fa';
-import { DiDart, DiPython } from 'react-icons/di';
-import { SiCplusplus, SiJavascript, SiRuby, SiTypescript } from 'react-icons/si';
+import { DiDart, DiGo, DiPython } from 'react-icons/di';
+import { SiCplusplus, SiJavascript, SiKotlin, SiRuby, SiTypescript } from 'react-icons/si';
 
 const CodeBar = () => {
     const [selectedLanguages, setSelectedLanguages] = useState<string[]>([]);
@@ -99,6 +99,10 @@ const getIconForLanguage = (selectedLanguage: string) => {
             return <DiDart size="25" />;
         case 'Ruby':
             return <SiRuby size="25" />;
+        case 'Kotlin':
+            return <SiKotlin size="25" /> 
+        case 'Go':
+            return <DiGo size="25" />  
         default:
             return null;
     }

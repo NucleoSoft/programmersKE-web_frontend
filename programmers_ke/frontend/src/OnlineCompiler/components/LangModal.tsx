@@ -17,7 +17,7 @@ const LangModal: React.FC<LangModalProps> = ({ onAddLang, onClose }) => {
             >
                 <div className="relative w-1/3 h-1/2 my-6 mx-auto max-w-sm">
                     <div className="border-0 rounded-lg shadow-lg relative flex flex-col 
-                                                                                         w-full h-full glassDiv outline-none focus:outline-none">
+                                    w-full h-full bg-slate-300 dark:bg-slate-900 outline-none focus:outline-none">
                         <div className="flex flex-row justify-between w-full p-5 rounded-t">
                             <h3 className="text-2xl font-semibold dark:text-white">
                                 Add a language
