@@ -9,7 +9,7 @@ function Footer() {
                         h-full rounded-t-md grid grid-flow-col">
         <section className='col-span-5 rounded-tl-md backdrop-brightness-125'>
           <div className='row-span-1'>
-            <img alt='logo' src='../../../assets/Logo.svg' width={120} className="mx-auto my-5" />
+            <img alt='logo' src='../../../Logo.svg' width={120} className="mx-auto my-5" />
           </div>
           <Line />
           <Social />
@@ -111,7 +111,7 @@ function Footer() {
             </section>
           </div>
           <div className="row-span-3 p-3 w-full">
-            <div className='flex flex-row items-end'>
+            <div className='flex flex-row items-start'>
               <button className='rounded-md p-2 ml-72 text-sm text-white font-novaflat
                                       hover:bg-white hover:text-black transition-all delay-300
                                       ring-white ring-2 flex flex-row'>

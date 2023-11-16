@@ -1,10 +1,10 @@
 import lottie from 'lottie-web'
-import animationData from './_animations/WebLoader.json'
+import animationData from '../animations/WebLoader.json'
 import React, { useEffect, useRef } from "react"
-import Home from "./Home/Home"
+import LandingPage from "./LandingPage/LandingPage"
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import ErrorPage from './Error/404Page'
-import Start from "./Start/Start"
+import Home from "./Home/Home"
 import Tutorials from "./Tutorials/Tutorials"
 import Community from "./Community/Community"
 import Blogs from "./Blogs/Blogs"
@@ -21,8 +21,8 @@ function App() {
     <div>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/start" element={<Start />} />
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/home" element={<Home />} />
             <Route path="/tutorials" element={<Tutorials />} />
             <Route path="/community" element={<Community />} />
             <Route path="/tech" element={<Tech />} />

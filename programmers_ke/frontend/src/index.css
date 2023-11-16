@@ -17,7 +17,7 @@
     }
 
     .searchBar{
-      @apply relative bg-slate-400 p-2 bg-opacity-50
+      @apply relative bg-white p-2
       rounded-l-xl w-72 flex flex-row my-auto
       shadow-lg backdrop-blur-sm font-novaflat 
       focus:bg-white
@@ -81,13 +81,77 @@
 }
 
 .aurora-outer {
-    background: linear-gradient(-50deg, #00ff55 0%, #6600cc 70%, #6600cc 100%);
+    /* background: linear-gradient(-50deg, #00ff55 0%, #6600cc 70%, #6600cc 100%); */
     background-size: 200%;
+    animation: aurora-outer infinite ease-in-out 10s;
+}
+
+.aurora-center {
+    /* background: radial-gradient(rgba(0, 0, 0, 0.7), #000 100%); */
+    background-size: 180%;
+    animation: aurora-center infinite ease-in-out 20s;
 }
 
 .aurora-inner {
-    background: radial-gradient(rgba(0, 0, 0, 0.7), #000 100%);
-    background-size: 200%;
+    /* background: radial-gradient(rgba(0, 0, 0, 0.7), #000 100%); */
+    background-size: 300%;
+    animation: aurora-inner infinite ease-in-out 20s;
+}
+
+@keyframes aurora-outer {
+0% {
+        background-position: 0 0;
+    }
+
+    25% {
+        background-position: 0 100%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    75% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+@keyframes aurora-center {
+    0% {
+            background-position: 0 100%;
+        }
+        25% {
+            background-position: 100% 100%;
+        }
+        50% {
+            background-position: 100% 0;
+        }
+        75% {
+            background-position: 0 0;
+        }
+    
+        100% {
+            background-position: 0 100%;
+        }
+}
+
+@keyframes aurora-inner {
+    0% {
+        background-position: 100% 0;
+    }
+     25% {
+        background-position: 100% 100%;
+    }
+    50% {
+        background-position: 0 100%;
+    }
+    75% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
 }
 
 
@@ -96,9 +160,10 @@
     height: 150vh;
     width: screen;
     position: relative;
+
 }
 
-.aurora-outer {
+.aurora-center {
     display: block;
     height: 150vh;
     width: screen;

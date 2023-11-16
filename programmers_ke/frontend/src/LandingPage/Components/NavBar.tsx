@@ -8,6 +8,8 @@ import { FaRegLightbulb } from 'react-icons/fa'
 import { HiOutlineDesktopComputer } from 'react-icons/hi'
 import { RiChatQuoteLine, RiLoginBoxLine } from 'react-icons/ri'
 import React from 'react'
+import { Switch } from '@headlessui/react'
+import useDarkMode from '../../../hooks/useDarkMode'
 
 
 const NavBar = () => {
@@ -16,10 +18,10 @@ const NavBar = () => {
       <nav className="absolute w-full top-0 left-0 p-3
                           backdrop-blur-md
                           flex flex-row justify-between z-20">
-        <div className="w-[60%] flex flex-row justify-around my-1.5">
+        <div className="w-7/12 flex flex-row justify-around my-1.5">
           <Link to="/tutorials">
             <NavItem icon={<FaRegLightbulb size="15" />}>
-              <div className='fixed top-14 left-0 bg-slate-300
+              <div className='fixed top-16 left-0 bg-slate-300
                                     dark:bg-slate-900 p-3
                                     w-full h-[350px] grid grid-flow-auto gap-3'>
                 <section className='col-span-5 flex flex-col items-end'>
@@ -46,7 +48,7 @@ const NavBar = () => {
                   </div>
                   <div className='bg-white dark:bg-black col-span-1 rounded-r-lg'>
                     <p className='text-slate-900 dark:text-white font-adventpro text-[18px]
-                                           text-right p-3 my-auto'>
+                                  text-right p-3 my-auto'>
                       Whether you're starting out as a newbie in Computer Science <br />
                       with zero knowledge, or whetting your appetite to the <br />
                       next level of tech, these series of lessons and resources <br />
@@ -62,7 +64,7 @@ const NavBar = () => {
 
           <Link to="/tech">
             <NavItem icon={<HiOutlineDesktopComputer size="15" />}>
-              <div className='fixed top-14 left-0 bg-slate-300
+              <div className='fixed top-16 left-0 bg-slate-300
                                     dark:bg-slate-900 p-3
                                     w-full h-[350px] grid grid-flow-auto gap-3'>
                 <section className='col-span-5 flex flex-col items-end'>
@@ -107,7 +109,7 @@ const NavBar = () => {
           </Link>
           <Link to="/community">
             <NavItem icon={<BsPeopleFill size="15" />} >
-              <div className='fixed top-14 left-0 bg-slate-300
+              <div className='fixed top-16 left-0 bg-slate-300
                                     dark:bg-slate-900 p-3
                                     w-full h-[350px] grid grid-flow-auto gap-3'>
                 <section className='col-span-5 flex flex-col items-end'>
@@ -154,11 +156,12 @@ const NavBar = () => {
             <NavItem icon={<VscTerminalPowershell size="15" />} children={undefined} />
           </Link>
         </div>
-        <div className='pr-4 flex flex-row'>
+        <div className='pr-1 flex flex-row'>
           <SearchBar icon={<BsSearch size="15" />} />
           <Profile>
             <ProfileMenu />
           </Profile>
+          <Toggle />
         </div>
       </nav>
     </div>
@@ -172,9 +175,9 @@ const NavItem = (props: { children: React.ReactNode; icon: React.ReactNode }) =>
     <div className="relative group">
       <div className="absolute -inset-0.5 opacity-75 bg-gradient-to-r to-secondary from-primary rounded-xl 
                             blur-sm group-hover:opacity-100 animate-tilt"></div>
-      <button className="text-primary dark:text-secondary bg-white dark:bg-black p-3
-                          rounded-xl relative group-hover:bg-slate-900 group-hover:text-secondary dark:group-hover:bg-slate-300
-                          dark:group-hover:text-primary"
+      <button className="dark:text-primary text-secondary dark:bg-white bg-black p-3
+                          rounded-xl relative dark:group-hover:bg-slate-900 group-hover:text-primary group-hover:bg-slate-300
+                          dark:group-hover:text-secondary"
         onMouseEnter={() => setOpenNav(!openNav)} onMouseLeave={() => setOpenNav(!openNav)}>
         {openNav && props.children}
         {props.icon}
@@ -208,21 +211,21 @@ export const Profile = (props: { children: React.ReactNode }) => {
 }
 
 const ProfileMenu = () => {
-  const ProfileItem = (props: { children: React.ReactNode; leftIcon: React.ReactNode }) => {
-    return (
-      <>
-        <a href='#' className='w-11/12 flex flex-row px-4 text-white my-3'>
-          <span className='mx-2'>{props.leftIcon}</span>
-          {props.children}
-          {/* <span className>{props.rightIcon}</span> */}
-        </a>
-      </>
-    )
-  }
+  // const ProfileItem = (props: { children: React.ReactNode; leftIcon: React.ReactNode }) => {
+  //   return (
+  //     <>
+  //       <a href='#' className='w-11/12 flex flex-row text-white my-3'>
+  //         <span className='mx-2'>{props.leftIcon}</span>
+  //         {props.children}
+  //         {/* <span className>{props.rightIcon}</span> */}
+  //       </a>
+  //     </>
+  //   )
+  // }
   const ProfileItem2 = (props: { children: React.ReactNode; leftIcon: React.ReactNode }) => {
     return (
       <>
-        <button className='bg-primary flex flex-row w-11/12 my-3 py-2
+        <button className='bg-primary flex flex-row w-11/12 py-2
                           text-secondary mx-auto rounded-lg font-novaflat'>
           <span className='mx-2 my-auto'>{props.leftIcon}</span>
           {props.children}
@@ -233,11 +236,11 @@ const ProfileMenu = () => {
   }
   return (
     <div className='absolute top-16 right-16 bg-white 
-                    dark:bg-black dark:bg-opacity-70 bg-opacity-70 w-1/5
-                    rounded-lg h-auto p-4 z-20'>
+                    dark:bg-black w-1/4 flex flex-col justify-evenly
+                    rounded-lg h-auto p-3 z-20'>
       <Link to={'/profile'}>
-        <img alt='profilePic' src="../../../assets/default_Profile/layered-steps-haikei-6.svg" className='w-16 h-16 
-                  rounded-full bg-cover group ml-[65%]'/>
+        <img alt='profilePic' src="../../../assets/default_Profile/layered-steps-haikei-6.svg" className='w-16 h-16 mx-auto
+                  rounded-full bg-cover group'/>
       </Link>
       <Link to='/login'>
         <ProfileItem2 leftIcon={<RiLoginBoxLine size="20" />}>Login</ProfileItem2>
@@ -260,6 +263,32 @@ const DropdownLink = (props: { children: React.ReactNode; }) => {
     </li>
   )
 }
+
+export const Toggle = () => {
+  const [darkMode, setdarkMode] = useDarkMode();
+  const handleMode = () => setdarkMode(!darkMode)
+
+  const [enabled, setenabled] = useState()
+  return (
+    <Switch.Group>
+      {/* <Switch.Label className='font-novaflat text-black dark:text-white text-[12px]'>Dark Mode</Switch.Label> */}
+      <Switch
+        checked={enabled}
+        onChange={setenabled}
+        onClick={handleMode}
+        className={`${enabled ? 'bg-primary' : 'bg-secondary'
+          } relative inline-flex h-6 w-11 items-center rounded-full drop-shadow-md my-auto transition-all ease-in-out duration-300`}
+      >
+        <span
+          className={`${enabled ? 'translate-x-6 bg-white drop-shadow-[0_0_2px_#fff]' :
+            'translate-x-1 bg-black drop-shadow-[0_0_2px_#000]'
+            } inline-block h-4 w-4 transform rounded-full transition-all ease-in-out duration-300`}
+        />
+      </Switch>
+    </Switch.Group>
+  )
+}
+
 
 
 export default NavBar
