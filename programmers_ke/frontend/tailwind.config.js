@@ -16,26 +16,17 @@ export default {
         md: '0px 0px 8px var(--tw-shadow-color)',
         lg: '0px 0px 16px var(--tw-shadow-color)',
       },
-
-      backgroundImage: {
-        'hero-image': 'url(./assets/images/Nairobi.jpeg)',
-        'error-image': 'url(./assets/blurry-gradient-haikei.svg)',
-        'footer-image': 'url(./assets/wave-haikei.svg)',
-        'nav-image1':'url(./assets/images/Tutorials2.png)',
-        'nav-image2':'url(./assets/images/Tech.png)',
-        'nav-image3':'url(./assets/images/Community.png)',
-        'war-image': 'url(./assets/images/Mariupol.png)',
-      },
-
-      colors:
+      
+    colors:
       {
         transparent: 'transparent',
         currentColor: 'currentColor',
         primary: '#6600cc',
         secondary: '#00ff55',
         'sky-blue': '#33ffff',
+        
       },
-      fontFamily:
+    fontFamily:
       {
         'adventpro': '"Advent Pro"',
         'zrnic': 'Zrnic',
@@ -47,6 +38,7 @@ export default {
   plugins: [
     require("tailwindcss-scrollbar"),
     require("tailwindcss-textshadow"),
+    require("tailwindcss-gradients"),
 
     plugin(function ({matchUtilities, theme})
     {

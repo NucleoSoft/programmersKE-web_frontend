@@ -6,7 +6,7 @@ import Model from './Model'
 function Header() {
     return (
         <section className="aurora-outer bg-gradient-to-tr from-secondary to-primary">
-            <section className="aurora-center bg-gradient-to-r from-white dark:from-black to-transparent dark:to-transparent">
+            <section className="aurora-center bg-gradient-to-t from-white dark:from-black to-transparent dark:to-transparent">
                 <section className="aurora-inner bg-gradient-to-tl from-slate-200 via-transparent to-slate-100
                                     dark:from-slate-900 dark:via-transparent dark:to-slate-950">
                     <NavBar />

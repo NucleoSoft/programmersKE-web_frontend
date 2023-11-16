@@ -28,7 +28,7 @@ const CodeBar = () => {
         <div className="fixed h-screen bg-slate-300 w-16
                         top-0 left-0 shadow-primary dark:shadow-secondary dark:bg-slate-800
                         hover:shadow-secondary dark:hover:shadow-primary shadow-lg transition-all 
-                        delay-300 flex flex-col z-20 ">
+                        delay-300 flex flex-col z-20">
             <Link to="/home">
                 <BackIcon icon={<AiFillBackward size="25" />}>
                     Go Back Home
