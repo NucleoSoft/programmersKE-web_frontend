@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import NavBar from '../LandingPage/Components/NavBar'
+import NavBar from '../LandingPage/Components/NavBar';
 import StartContent from './components/StartContent';
 
 function Home() {

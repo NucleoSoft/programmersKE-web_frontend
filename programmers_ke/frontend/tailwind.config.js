@@ -1,5 +1,7 @@
-// const colors = require('tailwindcss/colors')
-const plugin = require('tailwindcss/plugin')
+import plugin from 'tailwindcss/plugin'
+import scrollbar from 'tailwindcss-scrollbar'
+import textshadow from 'tailwindcss-textshadow'
+import gradients from 'tailwindcss-gradients'
 
 export default {
   mode: 'jit',
@@ -16,7 +18,12 @@ export default {
         md: '0px 0px 8px var(--tw-shadow-color)',
         lg: '0px 0px 16px var(--tw-shadow-color)',
       },
-      
+    gradients: {
+      'radial': {
+          type: 'radial',
+          colors: ['white', 'transparent'],
+        },
+      },
     colors:
       {
         transparent: 'transparent',
@@ -36,9 +43,9 @@ export default {
     },
   },
   plugins: [
-    require("tailwindcss-scrollbar"),
-    require("tailwindcss-textshadow"),
-    require("tailwindcss-gradients"),
+    scrollbar,
+    textshadow,
+    gradients,
 
     plugin(function ({matchUtilities, theme})
     {

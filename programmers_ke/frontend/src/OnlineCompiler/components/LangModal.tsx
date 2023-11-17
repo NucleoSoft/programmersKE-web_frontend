@@ -21,7 +21,7 @@ const LangModal: React.FC<LangModalProps> = ({ onAddLang, onClose }) => {
                     <div className="border-0 rounded-lg shadow-lg relative flex flex-col 
                                     w-full h-full bg-slate-300 dark:bg-slate-900 outline-none focus:outline-none">
                         <div className="flex flex-row justify-between w-full p-5 rounded-t">
-                            <h3 className="text-2xl font-semibold dark:text-white">
+                            <h3 className="text-2xl font-novaflat mt-5 dark:text-white">
                                 Add a language
                             </h3>
                             <button

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 // import { motion } from 'framer-motion'
 
@@ -9,7 +9,7 @@ import { HiOutlineDesktopComputer } from 'react-icons/hi'
 import { RiChatQuoteLine, RiLoginBoxLine } from 'react-icons/ri'
 import React from 'react'
 import { Switch } from '@headlessui/react'
-import useDarkMode from '../../../hooks/useDarkMode'
+import { useDarkMode, useLocalStorage } from '../../../hooks/useDarkMode'
 
 
 const NavBar = () => {
@@ -266,15 +266,20 @@ const DropdownLink = (props: { children: React.ReactNode; }) => {
 
 export const Toggle = () => {
   const [darkMode, setdarkMode] = useDarkMode();
-  const handleMode = () => setdarkMode(!darkMode)
+  const handleMode = (): void => setdarkMode(!darkMode)
 
-  const [enabled, setenabled] = useState()
+  const [enabled, setEnabled] = useLocalStorage('dark-theme', false);
+
+  useEffect(() => {
+    setEnabled(darkMode);
+  }, [darkMode, setEnabled]);
+
   return (
     <Switch.Group>
       {/* <Switch.Label className='font-novaflat text-black dark:text-white text-[12px]'>Dark Mode</Switch.Label> */}
       <Switch
         checked={enabled}
-        onChange={setenabled}
+        onChange={setEnabled}
         onClick={handleMode}
         className={`${enabled ? 'bg-primary' : 'bg-secondary'
           } relative inline-flex h-6 w-11 items-center rounded-full drop-shadow-md my-auto transition-all ease-in-out duration-300`}

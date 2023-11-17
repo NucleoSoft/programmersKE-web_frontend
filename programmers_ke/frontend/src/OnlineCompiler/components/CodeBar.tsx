@@ -5,9 +5,9 @@ import { BsPlus } from 'react-icons/bs'
 import { AiFillBackward } from 'react-icons/ai'
 import { RiCloseFill } from 'react-icons/ri'
 import LangModal from './LangModal';
-import { FaJava, FaRust } from 'react-icons/fa';
-import { DiDart, DiGo, DiPython } from 'react-icons/di';
-import { SiCplusplus, SiJavascript, SiKotlin, SiRuby, SiTypescript } from 'react-icons/si';
+import { FaErlang, FaJava, FaRust, FaSwift } from 'react-icons/fa';
+import { DiDart, DiGo, DiHaskell, DiPhp, DiProlog, DiPython } from 'react-icons/di';
+import { SiCplusplus, SiElixir, SiFortran, SiJavascript, SiKotlin, SiR, SiRuby, SiScala, SiTypescript } from 'react-icons/si';
 
 const CodeBar = () => {
     const [selectedLanguages, setSelectedLanguages] = useState<string[]>([]);
@@ -81,31 +81,30 @@ const CodeIcon = (props: {
     )
 }
 
+const languageIcons = {
+  'Elixir': <SiElixir size="25" />,
+  'Erlang': <FaErlang size="25" />,
+  'Prolog': <DiProlog size="25" />,   
+  'JavaScript': <SiJavascript size="25" />,
+  'TypeScript': <SiTypescript size="25" />,
+  'Python': <DiPython size="25" />,
+  'C++': <SiCplusplus size="25" />,
+  'Java': <FaJava size="25" />,
+  'Rust': <FaRust size="25" />,
+  'Scala': <SiScala size="25" />,
+  'Swift': <FaSwift size="25" />,
+  'PHP': <DiPhp size="25" />,
+  'Dart': <DiDart size="25" />,
+  'R': <SiR size="25" />,
+  'Ruby': <SiRuby size="25" />,
+  'Kotlin': <SiKotlin size="25" />,
+  'Go': <DiGo size="25" />,
+  'Fortran': <SiFortran size="25" />,
+  'Haskell': <DiHaskell size="25" />,
+};
+
 const getIconForLanguage = (selectedLanguage: string) => {
-    switch (selectedLanguage) {
-        case 'JavaScript':
-            return <SiJavascript size="25" />;
-        case 'TypeScript':
-            return <SiTypescript size="25" />;
-        case 'Python':
-            return <DiPython size="25" />;
-        case 'C++':
-            return <SiCplusplus size="25" />;
-        case 'Java':
-            return <FaJava size="25" />;
-        case 'Rust':
-            return <FaRust size="25" />;
-        case 'Dart':
-            return <DiDart size="25" />;
-        case 'Ruby':
-            return <SiRuby size="25" />;
-        case 'Kotlin':
-            return <SiKotlin size="25" /> 
-        case 'Go':
-            return <DiGo size="25" />  
-        default:
-            return null;
-    }
+    return languageIcons[selectedLanguage] || null;
 };
 
 const BackIcon = (props: {
