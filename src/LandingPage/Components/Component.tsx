@@ -1,4 +1,3 @@
-import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 function Component(props) {
@@ -603,4 +602,4 @@ function Component(props) {
 
 useGLTF.preload("../../assets/LandingPage.glb");
 
-export default Component
+export default Component;
