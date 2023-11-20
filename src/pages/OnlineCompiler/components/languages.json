@@ -1,133 +1,133 @@
 [
     {
         "language": "JavaScript",
-        "imgSrc": "../../../assets/icons/color_/javascript-svgrepo-com.svg",
+        "imgSrc": "../../../assets/icons/color/javascript-svgrepo-com.svg",
         "id": 93,
         "name": "JavaScript (Node.js 18.15.0)"
     },
     {
         "language": "TypeScript",
-        "imgSrc": "../../../assets/icons/color_/typescript-icon-svgrepo-com.svg",
+        "imgSrc": "../../../assets/icons/color/typescript-icon-svgrepo-com.svg",
         "id": 94,
         "name": "TypeScript (5.0.3)"
     },
     {
         "language": "Kotlin",
-        "imgSrc": "../../../assets/icons/color_/kotlin-svgrepo-com.svg",
+        "imgSrc": "../../../assets/icons/color/kotlin-svgrepo-com.svg",
         "id": 78,
         "name": "Kotlin (1.3.70)"
     },
     {
         "language": "Scala",
-        "imgSrc": "../../../assets/icons/color_/scala-svgrepo-com.svg",
+        "imgSrc": "../../../assets/icons/color/scala-svgrepo-com.svg",
         "id": 81,
         "name": "Scala (2.13.2)"
     },
     {
         "language": "Java",
-        "imgSrc": "../../../assets/icons/color_/java-svgrepo-com.svg",
+        "imgSrc": "../../../assets/icons/color/java-svgrepo-com.svg",
         "id": 62,
         "name": "Java (OpenJDK 13.0.1)"
     },
     {
         "language": "Ruby",
-        "imgSrc": "../../../assets/icons/color_/ruby-svgrepo-com.svg",
+        "imgSrc": "../../../assets/icons/color/ruby-svgrepo-com.svg",
         "id": 72,
         "name": "Ruby (2.7.0)"
     },
     {
         "language": "Common LISP",
-        "imgSrc": "../../../assets/icons/color_/lisp-svgrepo-com.svg",
+        "imgSrc": "../../../assets/icons/color/lisp-svgrepo-com.svg",
         "id": 55,
         "name": "Common Lisp (SBCL 2.0.0)"
     },
     {
         "language": "Assembly",
-        "imgSrc": "../../../assets/icons/color_/assembly-svgrepo-com.svg",
+        "imgSrc": "../../../assets/icons/color/assembly-svgrepo-com.svg",
          "id": 45,
         "name": "Assembly (NASM 2.14.02)"
     },
     {
         "language": "Prolog",
-        "imgSrc": "../../../assets/icons/color_/prolog-svgrepo-com.svg",
+        "imgSrc": "../../../assets/icons/color/prolog-svgrepo-com.svg",
         "id": 69,
         "name": "Prolog (GNU Prolog 1.4.5)"
     },
     {
         "language": "C",
-        "imgSrc": "../../../assets/icons/color_/c-programming.svg",
+        "imgSrc": "../../../assets/icons/color/c-programming.svg",
         "id": 75,
         "name": "C (Clang 7.0.1)"
     },
     {
         "language": "C++",
-        "imgSrc": "../../../assets/icons/color_/c-plusplus-svgrepo-com.svg",
+        "imgSrc": "../../../assets/icons/color/c-plusplus-svgrepo-com.svg",
         "id": 76,
         "name": "C++ (Clang 7.0.1)"
     },
     {
         "language": "Go",
-        "imgSrc": "../../../assets/icons/color_/go-gopher-svgrepo-com.svg",
+        "imgSrc": "../../../assets/icons/color/go-gopher-svgrepo-com.svg",
         "id": 95,
         "name": "Go (1.18.5)"
     },
     {
         "language": "Fortran",
-        "imgSrc": "../../../assets/icons/color_/fortran-svgrepo-com.svg",
+        "imgSrc": "../../../assets/icons/color/fortran-svgrepo-com.svg",
         "id": 59,
         "name": "Fortran (GFortran 9.2.0)"        
     },
     {
         "language": "Haskell",
-        "imgSrc": "../../../assets/icons/color_/haskell-svgrepo-com.svg",
+        "imgSrc": "../../../assets/icons/color/haskell-svgrepo-com.svg",
         "id": 61,
         "name": "Haskell (GHC 8.8.1)"
     },
     {
         "language": "C#",
-        "imgSrc": "../../../assets/icons/color_/c-sharp-svgrepo-com.svg",
+        "imgSrc": "../../../assets/icons/color/c-sharp-svgrepo-com.svg",
         "id": 63,
         "name": "C# (Mono 6.6.0.161)"
     },
     {
         "language": "Python",
-        "imgSrc": "../../../assets/icons/color_/python-svgrepo-com.svg",
+        "imgSrc": "../../../assets/icons/color/python-svgrepo-com.svg",
         "id": 71,
         "name": "Python (3.8.1)"
     },
     {
         "language": "Dart",
-        "imgSrc": "../../../assets/icons/color_/dart-svgrepo-com.svg",
+        "imgSrc": "../../../assets/icons/color/dart-svgrepo-com.svg",
         "id": 90,
         "name": "Dart (2.19.2)"
     },
     {
         "language": "PHP",
-        "imgSrc": "../../../assets/icons/color_/php-logo-svgrepo-com.svg",
+        "imgSrc": "../../../assets/icons/color/php-logo-svgrepo-com.svg",
         "id": 68,
         "name": "PHP (7.4.1)"
     },
     {
         "language": "Elixir",
-        "imgSrc": "../../../assets/icons/color_/elixir-svgrepo-com.svg",
+        "imgSrc": "../../../assets/icons/color/elixir-svgrepo-com.svg",
         "id": 68,
         "name": "Elixir (1.9.4)"
     },
     {
         "language": "Swift",
-        "imgSrc": "../../../assets/icons/color_/swift-svgrepo-com.svg",
+        "imgSrc": "../../../assets/icons/color/swift-svgrepo-com.svg",
         "id": 83,
         "name": "Swift (5.2.3)"
     },
     {
         "language": "Rust",
-        "imgSrc": "../../../assets/icons/color_/rust-svgrepo-com.svg",
+        "imgSrc": "../../../assets/icons/color/rust-svgrepo-com.svg",
         "id": 73,
         "name": "Rust (1.40.0)"
     },
     {
         "language": "R",
-        "imgSrc": "../../../assets/icons/color_/r-svgrepo-com.svg",
+        "imgSrc": "../../../assets/icons/color/r-svgrepo-com.svg",
         "id": 80,
         "name": "R (4.0.0)"
     }
