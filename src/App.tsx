@@ -2,20 +2,20 @@ import { useEffect, useRef } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import lottie from "lottie-web";
 
-import animationData from "../animations/WebLoader.json";
-import LandingPage from "./LandingPage/LandingPage";
-import ErrorPage from "./Error/404Page";
-import Home from "./Home/Home";
-import Tutorials from "./Tutorials/Tutorials";
-import Community from "./Community/Community";
-import Blogs from "./Blogs/Blogs";
-import News from "./News/News";
-import Tech from "./Tech/Tech";
-import OnlineCompiler from "./OnlineCompiler/OnlineCompiler";
-import Login from "./Login/Login";
-import Profile from "./Profile/Profile";
-import Signup from "./Signup/Signup";
-import Settings from "./Settings/Settings";
+import animationData from "../src/animations/WebLoader.json";
+import LandingPage from "../src/pages/LandingPage/LandingPage";
+import ErrorPage from "../src/pages/Error/404Page";
+import Home from "../src/pages/Home/Home";
+import Tutorials from "../src/pages/Tutorials/Tutorials";
+import Community from "../src/pages/Community/Community";
+import Blogs from "../src/pages/Blogs/Blogs";
+import News from "../src/pages/News/News";
+import Tech from "../src/pages/Tech/Tech";
+import OnlineCompiler from "../src/pages/OnlineCompiler/OnlineCompiler";
+import Login from "../src/pages/Login/Login";
+import Profile from "../src/pages/Profile/Profile";
+import Signup from "../src/pages/Signup/Signup";
+import Settings from "../src/pages/Settings/Settings";
 
 function App() {
   return (
