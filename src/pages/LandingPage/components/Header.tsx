@@ -1,4 +1,4 @@
-import NavBar from "./NavBar";
+import NavBar from "../../../components/NavBar";
 import SideTab from "./SideTab";
 import Model from "./Model";
 

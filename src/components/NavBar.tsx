@@ -9,7 +9,7 @@ import { HiOutlineDesktopComputer } from 'react-icons/hi'
 import { RiChatQuoteLine, RiLoginBoxLine } from 'react-icons/ri'
 import React from 'react'
 import { Switch } from '@headlessui/react'
-import { useDarkMode, useLocalStorage } from '../../../hooks/useDarkMode'
+import { useDarkMode, useLocalStorage } from '../hooks/useDarkMode'
 
 
 const NavBar = () => {

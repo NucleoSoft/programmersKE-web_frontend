@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import NavBar from "../LandingPage/Components/NavBar";
+import NavBar from "../../components/NavBar";
 import StartContent from "./components/StartContent";
 
 function Home() {
