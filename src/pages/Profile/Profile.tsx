@@ -17,7 +17,7 @@ function Profile() {
             <hr className="border-black dark:border-white mb-3"/>
             <Socials/>
           </section>
-          <img src="../../assets/default_Profile/layered-steps-haikei-6.svg" width='250' alt="profilePic" className='rounded-full ml-[50%]'/>
+          <img src="./assets/default_Profile/layered-steps-haikei-6.svg" width='250' alt="profilePic" className='rounded-full ml-[50%]'/>
         </div>
       </div>
     <EditProfile/>
@@ -28,10 +28,10 @@ function Profile() {
 const Socials = () => {
   return (
     <div className='grid grid-flow-col gap-5'>
-      <img alt='github' src='../../assets/icons/color_/github-svgrepo-com.svg' width={20} />
-      <img alt='github' src='../../assets/icons/color_/twitter-svgrepo-com.svg' width={20} />
-      <img alt='github' src='../../assets/icons/color_/linkedin-svgrepo-com.svg' width={20} />
-      <img alt='github' src='../../assets/icons/color_/slack-svgrepo-com.svg' width={20} />
+      <img alt='github' src='./assets/icons/color/github-svgrepo-com.svg' width={20} />
+      <img alt='github' src='./assets/icons/color/twitter-svgrepo-com.svg' width={20} />
+      <img alt='github' src='./assets/icons/color/linkedin-svgrepo-com.svg' width={20} />
+      <img alt='github' src='./assets/icons/color/slack-svgrepo-com.svg' width={20} />
     </div>
   )
 }

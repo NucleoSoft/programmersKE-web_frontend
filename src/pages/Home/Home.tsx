@@ -41,7 +41,7 @@ const ChatBot = (props: { children: React.ReactNode }) => {
     >
       <img
         alt="chatbot"
-        src="../../assets/icons/utils/chatbot-svgrepo-com.svg"
+        src="./assets/icons/utils/chatbot-svgrepo-com.svg"
         className="w-8"
       />
       {open && props.children}

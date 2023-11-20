@@ -11,7 +11,7 @@ function errorPage() {
     >
       <img
         alt="404image"
-        src="../../assets/images/404.png"
+        src="./assets/images/404.png"
         width="1000px"
         className="mx-auto"
       />

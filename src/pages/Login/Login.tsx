@@ -52,15 +52,15 @@ function SignInOps() {
 
         <div className='flex flex-row my-5 w-full justify-center'>
             <button className='SignInOps group'>
-                <img src='../../assets/icons/color_/google-svgrepo-com.svg' className='w-7' />
+                <img src='./assets/icons/color/google-svgrepo-com.svg' className='w-7' />
                  <Tooltip>Google</Tooltip>
             </button>
             <button className='SignInOps group'>
-                <img alt='Github' src='../../assets/icons/color_/github-svgrepo-com.svg' className='w-7' />
+                <img alt='Github' src='./assets/icons/color/github-svgrepo-com.svg' className='w-7' />
                  <Tooltip>Github</Tooltip>
             </button>
             <button className='SignInOps group'>
-                <img alt='Twitter' src='../../assets/icons/color_/twitter-svgrepo-com.svg' className='w-7' />
+                <img alt='Twitter' src='./assets/icons/color/twitter-svgrepo-com.svg' className='w-7' />
                 <Tooltip>Twitter</Tooltip>
             </button>
         </div>

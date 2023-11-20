@@ -11,6 +11,9 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
+    backgroundImage: {
+      'gradient-1': "url('./assets/images/404.png')",
+    },
     textShadow:
       {
         default:'0px 2px 8px var(--tw-shadow-color)',

@@ -202,7 +202,7 @@ export const Profile = (props: { children: React.ReactNode }) => {
   const [open, setopen] = useState(false);
   return (
     <button className="mx-10 items-center flex flex-row" onClick={() => setopen(!open)}>
-      <img alt='profilePic' src="../../../assets/default_Profile/layered-steps-haikei-6.svg" className='w-8 h-8 
+      <img alt='profilePic' src="../.././assets/default_Profile/layered-steps-haikei-6.svg" className='w-8 h-8 
               rounded-full border-sky-blue border-2 bg-cover group'/>
 
       {open && props.children}
@@ -239,7 +239,7 @@ const ProfileMenu = () => {
                     dark:bg-black w-1/4 flex flex-col justify-evenly
                     rounded-lg h-auto p-3 z-20'>
       <Link to={'/profile'}>
-        <img alt='profilePic' src="../../../assets/default_Profile/layered-steps-haikei-6.svg" className='w-16 h-16 mx-auto
+        <img alt='profilePic' src="./assets/default_Profile/layered-steps-haikei-6.svg" className='w-16 h-16 mx-auto
                   rounded-full bg-cover group'/>
       </Link>
       <Link to='/login'>

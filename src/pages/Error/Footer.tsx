@@ -3,7 +3,7 @@ const Footer = () => {
     <div>
       <img
         alt="footer"
-        src="../../assets/wave-haikei.svg"
+        src="./assets/wave-haikei.svg"
         className="w-full absolute bottom-0"
       />
     </div>
