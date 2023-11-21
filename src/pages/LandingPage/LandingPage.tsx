@@ -1,7 +1,7 @@
-import Header from "./Components/Header";
-import Footer from "./Components/Footer";
-import Carousel from "./Components/Carousel";
-import LanguageMenu from "./Components/LanguageMenu";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Carousel from "./components/Carousel";
+import LanguageMenu from "./components/LanguageMenu";
 
 function LandingPage() {
   return (

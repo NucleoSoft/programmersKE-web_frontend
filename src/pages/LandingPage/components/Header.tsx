@@ -1,6 +1,6 @@
 import NavBar from "../../../components/NavBar";
-import SideTab from "./SideTab";
-import Model from "./Model";
+import SideTab from "../components/SideTab";
+// import LandingModel from "../components/LandingModel";
 
 function Header() {
   return (
@@ -9,7 +9,7 @@ function Header() {
         <section className="aurora-inner bg-gradient-to-tl from-slate-200 via-transparent to-slate-100 dark:from-slate-900 dark:via-transparent dark:to-slate-950">
           <NavBar />
           <SideTab />
-          <Model />
+          {/* <LandingModel /> */}
           <Intro />
         </section>
       </section>

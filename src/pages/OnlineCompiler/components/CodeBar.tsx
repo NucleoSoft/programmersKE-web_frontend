@@ -23,7 +23,7 @@ const CodeBar = () => {
     const handleRemoveLang = (language: string) => {
         setSelectedLanguages(selectedLanguages.filter((lang) => lang !== language));
     };
-    
+
     return (
         <div className="fixed h-screen bg-slate-300 w-16
                         top-0 left-0 shadow-primary dark:shadow-secondary dark:bg-slate-800
@@ -36,12 +36,12 @@ const CodeBar = () => {
             </Link>
             <Line />
             {selectedLanguages.map((language, index) => (
-                <CodeIcon 
-                    icon={getIconForLanguage(language)} 
+                <CodeIcon
+                    icon={getIconForLanguage(language)}
                     key={index}
                     language={language}
                     onRemoveLang={() => handleRemoveLang(language)}
-                    >
+                >
                     {language}
                 </CodeIcon>
             ))}
@@ -59,17 +59,17 @@ const CodeIcon = (props: {
     onRemoveLang: () => void;
 }) => {
 
-    const Close = (props: { icon: React.ReactNode; onRemove: () => void;}) => {
+    const Close = (props: { icon: React.ReactNode; onRemove: () => void; }) => {
         return (
             <button className='ml-8 hover:text-red-600' onClick={props.onRemove}>{props.icon}</button>
         )
     }
     return (
         <motion.div className="codeIcon group"
-            // initial={{ scale: 0 }}
-            // animate={{ scale: 1 }}
-            // transition={{ type: 'spring', stiffness: 260, damping: 20 }}
-            >{props.icon}
+        // initial={{ scale: 0 }}
+        // animate={{ scale: 1 }}
+        // transition={{ type: 'spring', stiffness: 260, damping: 20 }}
+        >{props.icon}
             <div className='flex flex-row justify-between'>
                 <h1 className='codeIconToolTip group-hover:scale-100'>
                     {props.children}
@@ -81,26 +81,30 @@ const CodeIcon = (props: {
     )
 }
 
-const languageIcons = {
-  'Elixir': <SiElixir size="25" />,
-  'Erlang': <FaErlang size="25" />,
-  'Prolog': <DiProlog size="25" />,   
-  'JavaScript': <SiJavascript size="25" />,
-  'TypeScript': <SiTypescript size="25" />,
-  'Python': <DiPython size="25" />,
-  'C++': <SiCplusplus size="25" />,
-  'Java': <FaJava size="25" />,
-  'Rust': <FaRust size="25" />,
-  'Scala': <SiScala size="25" />,
-  'Swift': <FaSwift size="25" />,
-  'PHP': <DiPhp size="25" />,
-  'Dart': <DiDart size="25" />,
-  'R': <SiR size="25" />,
-  'Ruby': <SiRuby size="25" />,
-  'Kotlin': <SiKotlin size="25" />,
-  'Go': <DiGo size="25" />,
-  'Fortran': <SiFortran size="25" />,
-  'Haskell': <DiHaskell size="25" />,
+type LanguageIcon = {
+    [key: string]: JSX.Element;
+};
+
+const languageIcons: LanguageIcon = {
+    'Elixir': <SiElixir size="25" />,
+    'Erlang': <FaErlang size="25" />,
+    'Prolog': <DiProlog size="25" />,
+    'JavaScript': <SiJavascript size="25" />,
+    'TypeScript': <SiTypescript size="25" />,
+    'Python': <DiPython size="25" />,
+    'C++': <SiCplusplus size="25" />,
+    'Java': <FaJava size="25" />,
+    'Rust': <FaRust size="25" />,
+    'Scala': <SiScala size="25" />,
+    'Swift': <FaSwift size="25" />,
+    'PHP': <DiPhp size="25" />,
+    'Dart': <DiDart size="25" />,
+    'R': <SiR size="25" />,
+    'Ruby': <SiRuby size="25" />,
+    'Kotlin': <SiKotlin size="25" />,
+    'Go': <DiGo size="25" />,
+    'Fortran': <SiFortran size="25" />,
+    'Haskell': <DiHaskell size="25" />,
 };
 
 const getIconForLanguage = (selectedLanguage: string) => {
