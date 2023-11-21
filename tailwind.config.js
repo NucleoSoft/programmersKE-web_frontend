@@ -34,7 +34,8 @@ export default {
         primary: '#6600cc',
         secondary: '#00ff55',
         'sky-blue': '#33ffff',
-        
+        'dark-theme': '#1e293b',
+        'light-theme': '#7d99a2'
       },
     fontFamily:
       {
