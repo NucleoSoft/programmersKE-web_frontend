@@ -10,6 +10,7 @@ import { RiChatQuoteLine, RiLoginBoxLine } from 'react-icons/ri'
 import React from 'react'
 import { Switch } from '@headlessui/react'
 import { useDarkMode, useLocalStorage } from '../hooks/useDarkMode'
+import { AnimatePresence, motion } from 'framer-motion'
 
 
 const NavBar = () => {
@@ -19,8 +20,7 @@ const NavBar = () => {
                           backdrop-blur-md
                           flex flex-row justify-between z-20">
         <div className="w-7/12 flex flex-row justify-around my-1.5">
-          <Link to="/tutorials">
-            <NavItem icon={<FaRegLightbulb size="15" />}>
+          <NavItem icon={<FaRegLightbulb size="15" />}>
               <div className='fixed top-16 left-0 bg-slate-300
                                     dark:bg-slate-900 p-3
                                     w-full h-[350px] grid grid-flow-auto gap-3'>
@@ -60,9 +60,7 @@ const NavBar = () => {
                 </section>
               </div>
             </NavItem>
-          </Link>
-
-          <Link to="/tech">
+     
             <NavItem icon={<HiOutlineDesktopComputer size="15" />}>
               <div className='fixed top-16 left-0 bg-slate-300
                                     dark:bg-slate-900 p-3
@@ -106,8 +104,7 @@ const NavBar = () => {
                 </section>
               </div>
             </NavItem>
-          </Link>
-          <Link to="/community">
+         
             <NavItem icon={<BsPeopleFill size="15" />} >
               <div className='fixed top-16 left-0 bg-slate-300
                                     dark:bg-slate-900 p-3
@@ -145,13 +142,11 @@ const NavBar = () => {
                 </section>
               </div>
             </NavItem>
-          </Link>
-          <Link to="/blogs">
+      
             <NavItem icon={<RiChatQuoteLine size="15" />} children={undefined} />
-          </Link>
-          <Link to="/news">
+         
             <NavItem icon={<BsNewspaper size="15" />} children={undefined} />
-          </Link>
+         
           <Link to="/online_compiler">
             <NavItem icon={<VscTerminalPowershell size="15" />} children={undefined} />
           </Link>
@@ -171,17 +166,34 @@ const NavBar = () => {
 
 const NavItem = (props: { children: React.ReactNode; icon: React.ReactNode }) => {
   const [openNav, setOpenNav] = useState(false)
+  const [hovered, setHovered] = useState(false)
   return (
     <div className="relative group">
       <div className="absolute -inset-0.5 opacity-75 bg-gradient-to-r to-secondary from-primary rounded-xl 
                             blur-sm group-hover:opacity-100 animate-tilt"></div>
-      <button className="dark:text-primary text-secondary dark:bg-white bg-black p-3
+  <motion.button className="dark:text-primary text-secondary dark:bg-white bg-black p-3
                           rounded-xl relative dark:group-hover:bg-slate-900 group-hover:text-primary group-hover:bg-slate-300
-                          dark:group-hover:text-secondary"
-        onMouseEnter={() => setOpenNav(!openNav)} onMouseLeave={() => setOpenNav(!openNav)}>
+                          dark:group-hover:text-secondary flex flex-row"
+        onClick={() => setOpenNav(!openNav)}
+        // onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+        // initial={{ }}
+        >
         {openNav && props.children}
         {props.icon}
-      </button>
+        {hovered && (
+          <AnimatePresence>
+            <motion.span
+              className="ml-2"
+              initial={{ x: 100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: 100, opacity: 0 }}
+            >
+              {props.children}
+            </motion.span>
+          </AnimatePresence>
+        )}
+      </motion.button>
     </div>
 
   )
