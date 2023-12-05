@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaPlay } from 'react-icons/fa'
 import { RiFlowChart } from 'react-icons/ri'
+import { handleCompile } from './Compile'
 
 const CodeOutput = () => {
     return (
@@ -23,7 +24,7 @@ const CodeOutput = () => {
 const CodeRun = () => {
     return (
         <div className='rounded-md flex flex-row justify-between p-3 w-full h-1/5'>
-            <button type='button' onClick={() => console.log('run code')}
+            <button type='button' onClick={handleCompile}
                 className='flex flex-row justify-evenly items-center h-14 w-40 bg-slate-900
                          hover:bg-gradient-to-r from-primary to-secondary 
                          p-2 rounded-md text-white'>

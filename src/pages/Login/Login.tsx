@@ -17,7 +17,7 @@ function Login(){
 
 function LoginForm() {
   return (
-      <div className="absolute top-24 w-4/12 glassDiv">
+      <div className="absolute top-24 w-4/12 glassDiv rounded-md">
           <h1 className="font-zrnic text-[30px] text-secondary text-center my-5">Welcome Back!</h1>
           <Form />
           <a href="#" className='ml-12 font-novaflat text-sm text-white'>Piss I forgot my password!</a>
