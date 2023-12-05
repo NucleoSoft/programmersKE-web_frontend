@@ -43,7 +43,7 @@ const NavBar = () => {
                 <section className='row-span-6 drop-shadow-lg 
                                             col-span-4 grid grid-flow-col'>
                   <div className='col-span-4 overflow-hidden 
-                                            rounded-l-lg bg-nav-image1 bg-cover'>
+                                            rounded-l-lg bg-tutorials_image bg-cover'>
 
                   </div>
                   <div className='bg-white dark:bg-black col-span-1 rounded-r-lg'>
@@ -87,7 +87,7 @@ const NavBar = () => {
                 </section>
                 <section className='row-span-6 drop-shadow-lg 
                                             col-span-4 grid grid-flow-col'>
-                  <div className='col-span-4 bg-nav-image2 bg-cover rounded-l-lg'>
+                <div className='col-span-4 bg-learn_image bg-cover rounded-l-lg'>
 
                   </div>
                   <div className='bg-white dark:bg-black col-span-1 rounded-r-lg'>
@@ -126,7 +126,7 @@ const NavBar = () => {
                 </section>
                 <section className='row-span-6 drop-shadow-lg 
                                             col-span-4 grid grid-flow-col'>
-                  <div className='col-span-4 bg-nav-image3 bg-cover rounded-l-lg'>
+                  <div className='col-span-4 bg-community_image bg-cover rounded-l-lg'>
 
                   </div>
                   <div className='bg-white dark:bg-black col-span-1 rounded-r-lg'>

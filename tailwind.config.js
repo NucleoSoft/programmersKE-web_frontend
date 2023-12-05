@@ -13,6 +13,9 @@ export default {
     extend: {
     backgroundImage: {
       'gradient-1': "url('./assets/images/404.png')",
+      'tutorial_image': "url('./assets/images/Tutorial.png')",
+      'learn_image' : "url('./assets/images/Tech.png')",
+      'community_image' : "url('./assets/images/Community.png')",
     },
     textShadow:
       {
