@@ -20,7 +20,7 @@ function errorPage() {
           className="text-[70px] text-center font-audiowide
                         text-white text-shadow-md shadow-white"
         >
-          Yikess!
+          Bruh!
         </h1>
         <h3
           className="text-center m-2 text-black mt-4 font-novaflat
