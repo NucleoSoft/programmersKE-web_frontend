@@ -157,3 +157,4 @@ sketch
 *.c
 
 # End of https://www.toptal.com/developers/gitignore/api/node,react
+node_modules
